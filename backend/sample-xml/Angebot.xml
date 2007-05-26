@@ -1,0 +1,741 @@
+<?xml version="1.0"?>
+<hudora_katalog>
+  <language>de</language>
+  <draft>True</draft>
+  <preis1description>GH Preis</preis1description>
+  <preis2description/>
+  <preis3description/>
+  <preis4description/>
+  <valid_until>2007-01-20</valid_until>
+  <kundennummer>33333</kundennummer>
+  <firma>Pyramid Telemetrics</firma>
+  <lieferantennummer/>
+  <angebotsnummer>WB00000</angebotsnummer>
+  <updated_at>2007-01-20</updated_at>
+  <catalog>
+    <product>
+      <level/>
+      <artnr>01104</artnr>
+      <brand>hudora</brand>
+      <get_brand_display>HUDORA</get_brand_display>
+      <name>joey's Skate Set, Gr&#xF6;&#xDF;e 30-33 mit Rucksack und Protektoren</name>
+      <for_customer/>
+      <get_for_customer_display/>
+      <langtext>joey's Skate Set, Gr&#xF6;&#xDF;e 30-33</langtext>
+      <name_en>joey's Skate Set, size 30-33, backpack+protectors</name_en>
+      <kurztext>joey's Skate Set</kurztext>
+      <bontext>Skate Set</bontext>
+      <preislistentext>joey's Skate Set, Gr&#xF6;&#xDF;e 30-33 mit Rucksack und Protektoren</preislistentext>
+      <angebotstext>Kinderinliner
+Schlagsicheres PP Chassis
+Schlagsichere PP Manschette
+Klettverschluss und Push-Lock Schnalle
+Gegossene PU Rollen, 82A
+ABEC 3 Kugellager, Carbon
+
+Rollengr&#xF6;&#xDF;e:
+Gr&#xF6;&#xDF;e 30 - 33: 64 x 24 mm
+Gr&#xF6;&#xDF;e 34-37 und 38-41: 72 x 24 mm
+
+Biomechanisches Protektoren Set:
+Gr&#xF6;&#xDF;e 30-33: S
+Gr&#xF6;&#xDF;e 34-37: M
+Gr&#xF6;&#xDF;e 38-41: L
+</angebotstext>
+      <angebotstext_en>Inline skate for children
+shockproof PP chassis 
+shockproof PP cuff
+Velcro fasteners and push lock buckels
+casted PU Wheels, 82A
+bearings ABEC 3, carcon
+
+size of wheels:
+size 30-33: 64 x 24 mm
+size 34-37 and 38-41: 72 x 24 mm
+
+biomechanical protectors set
+size 30-33: S
+size 34-37: M
+size 38-41: L
+</angebotstext_en>
+      <highlight1/>
+      <highlight2/>
+      <highlight3/>
+      <highlight4/>
+      <highlight5/>
+      <specifcation>Set with joey skate (model same as fairline in 2006)(blue, PU casted wheels (S=64x24mm), ABEC 3 Carbon, rubber stopper, in 4 sizes adjustable, powerstrap, push lock buckle) and biomechanical protective set in size 30-33 (S protectives), 1 Extra stopper and toolset inclusively,in nylon/pvc bag w/ hangtag
+</specifcation>
+      <reklame>Reklame-Langtext:
+Das Inliner-Komplettset f&#xFC;r Kinder. Verstellbarer joey Semisoft Kinderinliner f&#xFC;r schnell wachsende Kinderf&#xFC;&#xDF;e und biomechanisches Protektorenset im praktischen Rucksack. 
+Kinder Inliner &#xFC;ber  4 Gr&#xF6;&#xDF;en verstellbar. Erh&#xE4;ltlich in Kombigr&#xF6;&#xDF;en 30 - 33, 34 - 37 und 38 - 41. Klettverschluss und Push-Lock Schnalle. Der Boot ist atmungsaktiv, aus strapazierf&#xE4;higem Nylongewebe. Robuste PP-Schale und Chassis. Stabile Manschette aus PP f&#xFC;r guten Kn&#xF6;chelhalt. Gegossene PU Rollen, 82A, Gr&#xF6;&#xDF;e 30 - 33: 64 x 24 mm,
+Gr&#xF6;&#xDF;e 34 - 37: 72 x 24 mm, Gr&#xF6;&#xDF;e 38 - 41: 72 x 24 mm, Kugellager ABEC 3, Carbon. 
+Biomechanische Handgelenk-, Knie und Ellbogenschoner. Vorgeformte Hartschalen mit anatomisch abgestimmter Passform f&#xFC;r perfekten Sitz. Sto&#xDF;feste Oberschale und sto&#xDF;d&#xE4;mpfende, bequeme Schaumpolsterung verhindert Druck und Scheuerstellen. Von f&#xFC;hrenden Orthop&#xE4;den entwickelt.
+Protektoren f&#xFC;r die Gr&#xF6;&#xDF;en: 30 - 33 = S, 34 - 37 = M, 38 - 41 = M
+
+Reklame-Kurztext:
+Verstellbarer Kinder Inliner mit Protektoren im Rucksack. Kinder Inliner &#xFC;ber 4 Gr&#xF6;&#xDF;en verstellbar, aus schlagsicheres PP Chassis, schlagsichere PP Manschette, Klettverschluss und Push-Lock Schnalle, gegossene PU Rollen, 82A, ABEC 3 Kugellager, Carbon, Rollengr&#xF6;&#xDF;e: Gr&#xF6;&#xDF;e 30 - 33: 64 x 24 mm. Biomechanische Handgelenk-, Knie und Ellbogenschoner von f&#xFC;hrenden Orthop&#xE4;den entwickelt. Gr&#xF6;&#xDF;e 30-33: S
+</reklame>
+      <webtext/>
+      <aka/>
+      <einheit>stueck</einheit>
+      <get_einheit_display>St&#xFC;ck</get_einheit_display>
+      <ean>4005998011041</ean>
+      <ean_id>13445</ean_id>
+      <product_weight/>
+      <product_size_l/>
+      <product_size_b/>
+      <product_size_h/>
+      <package_weight>2440</package_weight>
+      <package_size_l>200</package_size_l>
+      <package_size_b>270</package_size_b>
+      <package_size_h>300</package_size_h>
+      <package_info>Rucksack/Hang-Tag</package_info>
+      <get_package_info_display>Rucksack/Hang-Tag</get_package_info_display>
+      <euroloch>type1</euroloch>
+      <get_euroloch_display>Typ 1 - Rundloch</get_euroloch_display>
+      <products_per_ve1/>
+      <ve1_weight/>
+      <ve1_size_l/>
+      <ve1_size_b/>
+      <ve1_size_h/>
+      <no_export_package>False</no_export_package>
+      <export_package_ean>4005998000854</export_package_ean>
+      <export_package_ean_id>50097</export_package_ean_id>
+      <export_package_weight>11760</export_package_weight>
+      <export_package_size_l>527</export_package_size_l>
+      <export_package_size_b>267</export_package_size_b>
+      <export_package_size_h>432</export_package_size_h>
+      <products_per_export_package>4</products_per_export_package>
+      <export_packages_per_layer/>
+      <export_packages_per_pallet>24</export_packages_per_pallet>
+      <pallet_height/>
+      <to_big_for_pallet>False</to_big_for_pallet>
+      <pallet_ean>4005998041468</pallet_ean>
+      <pallet_ean_id>1541</pallet_ean_id>
+      <logistik_info/>
+      <pallet_scheme/>
+      <pallet_photo/>
+      <entsorgungssystem>gruener punkt</entsorgungssystem>
+      <get_entsorgungssystem_display>Gruener Punkt</get_entsorgungssystem_display>
+      <gewicht_pappe>5</gewicht_pappe>
+      <gewicht_kunststoff/>
+      <battery/>
+      <get_battery_display/>
+      <battery_quantity/>
+      <battery_weight/>
+      <has_barcode>False</has_barcode>
+      <fob_port>shenzen ports</fob_port>
+      <get_fob_port_display>Shenzen ports</get_fob_port_display>
+      <statistische_waren_nr>95067030</statistische_waren_nr>
+      <country_of_origin>CN</country_of_origin>
+      <get_country_of_origin_display>China</get_country_of_origin_display>
+      <zollsatz>2.70</zollsatz>
+      <zollsatz_praeferiert/>
+      <supplier>2 - 90033</supplier>
+      <supplier_id>2</supplier_id>
+      <supplier_artnr>CR336</supplier_artnr>
+      <for_toddlers>False</for_toddlers>
+      <toy>False</toy>
+      <user_weight/>
+      <mandantory_compliance/>
+      <einstufung>A</einstufung>
+      <get_einstufung_display>A - Katalogprodukt / ab Lager lieferbar</get_einstufung_display>
+      <category>Rollsport / Skates</category>
+      <category_id>3</category_id>
+      <warenklassifikation>4495</warenklassifikation>
+      <get_warenklassifikation_display>4495</get_warenklassifikation_display>
+      <fedas/>
+      <fedas_id/>
+      <abis/>
+      <get_abis_display/>
+      <successor/>
+      <successor_id/>
+      <parent/>
+      <parent_id/>
+      <size_of/>
+      <size_of_id/>
+      <variant_of/>
+      <variant_of_id/>
+      <version_of/>
+      <version_of_id/>
+      <spare>False</spare>
+      <tentative>False</tentative>
+      <is_hidden>False</is_hidden>
+      <is_meta>False</is_meta>
+      <price_webshop/>
+      <annote/>
+      <handbook/>
+      <catalog_page/>
+      <sprengzeichnung/>
+      <products_in_20ft_container>1960</products_in_20ft_container>
+      <products_in_40ft_container>4000</products_in_40ft_container>
+      <products_in_40fthq_container>4400</products_in_40fthq_container>
+      <created_at>2006-06-28</created_at>
+      <updated_at>2007-01-05</updated_at>
+      <toddlers_reason/>
+      <features>ABEC 3 Lager, Intertek/GS, CE, &#xD6;kotest, Gr&#xF6;&#xDF;enverstellbar, Stiftung Warentest Protektoren</features>
+      <certifications/>
+      <catalog>Katalog 2007, Neuheiten 2007</catalog>
+      <languages/>
+      <set_consiting_of/>
+      <spare_for/>
+      <get_sidebar_image_url>http://www.hudora.de/media/,/-/product/image/1c8c1efa05a6f399ea44a63fbb7b68e7.jpg/sidebar.jpeg</get_sidebar_image_url>
+      <get_product_image_url>http://www.hudora.de/media/,/-/product/image/f1643e9666b1d61ab3ab42bb6cc6f2fa.jpg/svga.jpeg</get_product_image_url>
+      <get_ean_image_url>http://www.hudora.de/media/,/barcodes/ean/4005998011041.png</get_ean_image_url>
+      <get_export_package_ean_image_url>http://www.hudora.de/media/,/barcodes/ean/4005998000854.png</get_export_package_ean_image_url>
+      <get_products_in_20ft_container>1960</get_products_in_20ft_container>
+      <get_products_in_40ft_container>4000</get_products_in_40ft_container>
+      <get_products_in_40fthq_container>4400</get_products_in_40fthq_container>
+      <est_products_in_20ft_container>1887</est_products_in_20ft_container>
+      <est_products_in_40ft_container>3798</est_products_in_40ft_container>
+      <est_products_in_40fthq_container>4248</est_products_in_40fthq_container>
+      <product_size>NonexNonexNone</product_size>
+      <package_size>200x270x300</package_size>
+      <ve1_size>NonexNonexNone</ve1_size>
+      <export_package_size>527x267x432</export_package_size>
+      <export_package_size_cm>52.7x26.7x43.2</export_package_size_cm>
+      <export_package_size_cm_l>52.7</export_package_size_cm_l>
+      <export_package_size_cm_b>26.7</export_package_size_cm_b>
+      <export_package_size_cm_h>43.2</export_package_size_cm_h>
+      <pallet_volume>1.458870912</pallet_volume>
+      <package_volume>0.0162</package_volume>
+      <ve1_volume/>
+      <export_package_volume>0.060786288</export_package_volume>
+      <package_weight_kg>2.44</package_weight_kg>
+      <ve1_weight_kg/>
+      <export_package_weight_kg>11.8</export_package_weight_kg>
+      <pallet_weight_kg>282.2</pallet_weight_kg>
+      <softm_bezeichnung>("joey's Skate Set, Gr\xc3", '\xb6\xc3\x9fe 30-33', '')</softm_bezeichnung>
+      <amazon_name>HUDORA 01104 - joey's Skate Set, Gr&#xF6;&#xDF;e 30-33 mit Rucksack und Protektoren</amazon_name>
+      <palettenfaktor>96</palettenfaktor>
+      <mindestabnahmemenge>4</mindestabnahmemenge>
+      <sizes/>
+      <pallet_weight>282240</pallet_weight>
+      <gruener_punkt>True</gruener_punkt>
+      <feature_set>
+        <feature>
+          <name>Intertek/GS</name>
+          <id>12</id>
+          <file>Intertek_GS</file>
+        </feature>
+        <feature>
+          <name>CE</name>
+          <id>13</id>
+          <file>CE</file>
+        </feature>
+        <feature>
+          <name>&#xC3;&#x96;kotest</name>
+          <id>15</id>
+          <file>__kotest</file>
+        </feature>
+        <feature>
+          <name>Stiftung Warentest Protektoren</name>
+          <id>29</id>
+          <file>Stiftung_Warentest_Protektoren</file>
+        </feature>
+      </feature_set>
+      <images>
+        <image>
+          <id>3145</id>
+          <url>http://www.hudora.de/media/-/product/image/be1d8c77d3825cc68d8737d428e83397.jpg</url>
+          <title>01104-06_joey_Skate-Set_PRO_c.jpg</title>
+          <kind>Produktbild</kind>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <thumb>http://www.hudora.de/media/,/-/product/image/be1d8c77d3825cc68d8737d428e83397.jpg/thumb.jpeg</thumb>
+          <svga>http://www.hudora.de/media/,/-/product/image/be1d8c77d3825cc68d8737d428e83397.jpg/svga.jpeg</svga>
+        </image>
+        <image>
+          <id>3146</id>
+          <url>http://www.hudora.de/media/-/product/image/1c8c1efa05a6f399ea44a63fbb7b68e7.jpg</url>
+          <title>01104-06_joey_Skate-Set_TEST.jpg</title>
+          <kind>Actionbild</kind>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <thumb>http://www.hudora.de/media/,/-/product/image/1c8c1efa05a6f399ea44a63fbb7b68e7.jpg/thumb.jpeg</thumb>
+          <svga>http://www.hudora.de/media/,/-/product/image/1c8c1efa05a6f399ea44a63fbb7b68e7.jpg/svga.jpeg</svga>
+        </image>
+        <image>
+          <id>3147</id>
+          <url>http://www.hudora.de/media/-/product/image/f1643e9666b1d61ab3ab42bb6cc6f2fa.jpg</url>
+          <title>01104-06_joey_Skate-Set_PRO_a.jpg</title>
+          <kind>Produktbild</kind>
+          <preference>1</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <thumb>http://www.hudora.de/media/,/-/product/image/f1643e9666b1d61ab3ab42bb6cc6f2fa.jpg/thumb.jpeg</thumb>
+          <svga>http://www.hudora.de/media/,/-/product/image/f1643e9666b1d61ab3ab42bb6cc6f2fa.jpg/svga.jpeg</svga>
+        </image>
+        <image>
+          <id>3148</id>
+          <url>http://www.hudora.de/media/-/product/image/19eb9d33792bb9531353ec77f10f33d6.jpg</url>
+          <title>01104-06_joey_Skate-Set_PRO_b.jpg</title>
+          <kind>Produktbild</kind>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <thumb>http://www.hudora.de/media/,/-/product/image/19eb9d33792bb9531353ec77f10f33d6.jpg/thumb.jpeg</thumb>
+          <svga>http://www.hudora.de/media/,/-/product/image/19eb9d33792bb9531353ec77f10f33d6.jpg/svga.jpeg</svga>
+        </image>
+      </images>
+    </product>
+    <product>
+      <level/>
+      <artnr>01013</artnr>
+      <brand>hudora</brand>
+      <get_brand_display>HUDORA</get_brand_display>
+      <name>Skateboard mit Rucksack, ABEC 1</name>
+      <for_customer/>
+      <get_for_customer_display/>
+      <langtext>Skateboard Set Backpack</langtext>
+      <name_en>Skateboard in backpack, ABEC 1</name_en>
+      <kurztext>Skateboard Set</kurztext>
+      <bontext>Skateboard</bontext>
+      <preislistentext>Skateboard mit Rucksack, ABEC 1</preislistentext>
+      <angebotstext>Board aus 9-schichtigem Ahorn
+Decktop mit rutschfestem Sandgrip
+Heavy duty Aluminium-Truck und Base 
+Helle PU Rollen, 50 x 30 mm
+Kugellager ABEC 1, Carbon
+Boardgr&#xF6;&#xDF;e 78,8 x 20,3 cm
+Rucksack mit verst&#xE4;rktem R&#xFC;cken und Boardschutz oben, verstellbarem Tragegurt
+Aus Nylon mit 5 Taschen inkl. Handytasche 
+Gr&#xF6;&#xDF;e ca. 42 x 22 x 10 cm.
+
+</angebotstext>
+      <angebotstext_en>board from 9-ply maple
+deck surface with anti-slip sand grip
+heavy duty Aluminium truck and base
+bright PU wheels, 50 x 30 mm
+bearings ABEC 1, carbon
+size 78,8 x 20,3 cm
+rucksack with reinforced back and board guard on top, adjustable carrying straps
+made from Nylon with 5 pockets incl. pocket for mobile 
+size approx. 42 x 22 x 10 cm</angebotstext_en>
+      <highlight1/>
+      <highlight2/>
+      <highlight3/>
+      <highlight4/>
+      <highlight5/>
+      <specifcation>Skateboardset 1*,9 layered maple
+Alu Truck, Nylon-Skaterbag,Abec 1, board: 78,8x20,3 x 1,2cm, ABEC 1 Carbon bearing, PU wheels, 50x30 mm
+Rucksack: 42 x 22 x 10 cm, Nylon, adj. strap, 5 bag stitched on, incl. zipper bag and mobile bag</specifcation>
+      <reklame>Reklame-Langtext:
+Der pure Fahrspa&#xDF; f&#xFC;r Anf&#xE4;nger. Skaterset mit Board und passendem Multifunktions-Boarder
+-Rucksack. F&#xFC;r den leichten Transport bis zur Skate-Area. Skateboard aus Ahorn, in neun Schichten laminiert. Decktop mit rutschfestem Sandgrip. Heavy duty Aluminium-Truck und Base. Helle PU Rollen, 50 x 30 mm. Kugellager ABEC 1, Carbon. Boardgr&#xF6;&#xDF;e 78,8 x 20,3 cm. Allround-Rucksack mit verst&#xE4;rktem R&#xFC;cken und Boardschutz oben und unten. Trendig schr&#xE4;g zu tragen mit einem gepolsterten, verstellbarem Tragegurt. Rucksack aus Nylon mit 5 Taschen inkl. Handytasche. Gr&#xF6;&#xDF;e ca. 42 x 22 x 10 cm. T&#xDC;V RHEINLAND/GS gepr&#xFC;ft.
+
+Reklame-Kurztext:
+Skateboard aus 9-schichtigem Ahorn, Decktop mit rutschfestem Sandgrip, Heavy duty Aluminium-Truck und Base, helle PU Rollen, 50 x 30 mm, Kugellager ABEC 1, Carbon, Boardgr&#xF6;&#xDF;e 78,8 x 20,3 cm, Rucksack mit verst&#xE4;rktem R&#xFC;cken und Boardschutz oben, verstellbarem Tragegurt
+Aus Nylon mit 5 Taschen inkl. Handytasche, Gr&#xF6;&#xDF;e ca. 42 x 22 x 10 cm. T&#xDC;V RHEINLAND/GS gepr&#xFC;ft.</reklame>
+      <webtext/>
+      <aka/>
+      <einheit>stueck</einheit>
+      <get_einheit_display>St&#xFC;ck</get_einheit_display>
+      <ean>4005998010136</ean>
+      <ean_id>50099</ean_id>
+      <product_weight/>
+      <product_size_l/>
+      <product_size_b/>
+      <product_size_h/>
+      <package_weight>2700</package_weight>
+      <package_size_l>150</package_size_l>
+      <package_size_b>205</package_size_b>
+      <package_size_h>800</package_size_h>
+      <package_info>Hang-Tag</package_info>
+      <get_package_info_display>Hang-Tag</get_package_info_display>
+      <euroloch>type1</euroloch>
+      <get_euroloch_display>Typ 1 - Rundloch</get_euroloch_display>
+      <products_per_ve1/>
+      <ve1_weight/>
+      <ve1_size_l/>
+      <ve1_size_b/>
+      <ve1_size_h/>
+      <no_export_package>False</no_export_package>
+      <export_package_ean>4005998000878</export_package_ean>
+      <export_package_ean_id>50100</export_package_ean_id>
+      <export_package_weight>12000</export_package_weight>
+      <export_package_size_l>854</export_package_size_l>
+      <export_package_size_b>213</export_package_size_b>
+      <export_package_size_h>353</export_package_size_h>
+      <products_per_export_package>4</products_per_export_package>
+      <export_packages_per_layer/>
+      <export_packages_per_pallet>22</export_packages_per_pallet>
+      <pallet_height/>
+      <to_big_for_pallet>False</to_big_for_pallet>
+      <pallet_ean>4005998046999</pallet_ean>
+      <pallet_ean_id>2113</pallet_ean_id>
+      <logistik_info/>
+      <pallet_scheme/>
+      <pallet_photo/>
+      <entsorgungssystem>gruener punkt</entsorgungssystem>
+      <get_entsorgungssystem_display>Gruener Punkt</get_entsorgungssystem_display>
+      <gewicht_pappe>400</gewicht_pappe>
+      <gewicht_kunststoff>14</gewicht_kunststoff>
+      <battery/>
+      <get_battery_display/>
+      <battery_quantity/>
+      <battery_weight/>
+      <has_barcode>False</has_barcode>
+      <fob_port>fuzhou</fob_port>
+      <get_fob_port_display>Fuzhou</get_fob_port_display>
+      <statistische_waren_nr>950669990</statistische_waren_nr>
+      <country_of_origin>CN</country_of_origin>
+      <get_country_of_origin_display>China</get_country_of_origin_display>
+      <zollsatz/>
+      <zollsatz_praeferiert/>
+      <supplier>2 - 90033</supplier>
+      <supplier_id>2</supplier_id>
+      <supplier_artnr>CR3108SB+BAG</supplier_artnr>
+      <for_toddlers>False</for_toddlers>
+      <toy>False</toy>
+      <user_weight/>
+      <mandantory_compliance/>
+      <einstufung>A</einstufung>
+      <get_einstufung_display>A - Katalogprodukt / ab Lager lieferbar</get_einstufung_display>
+      <category>Rollsport / Skateboards</category>
+      <category_id>4</category_id>
+      <warenklassifikation>4495</warenklassifikation>
+      <get_warenklassifikation_display>4495</get_warenklassifikation_display>
+      <fedas/>
+      <fedas_id/>
+      <abis/>
+      <get_abis_display/>
+      <successor/>
+      <successor_id/>
+      <parent/>
+      <parent_id/>
+      <size_of/>
+      <size_of_id/>
+      <variant_of/>
+      <variant_of_id/>
+      <version_of/>
+      <version_of_id/>
+      <spare>False</spare>
+      <tentative>False</tentative>
+      <is_hidden>False</is_hidden>
+      <is_meta>False</is_meta>
+      <price_webshop/>
+      <annote/>
+      <handbook/>
+      <catalog_page/>
+      <sprengzeichnung/>
+      <products_in_20ft_container>1824</products_in_20ft_container>
+      <products_in_40ft_container>3736</products_in_40ft_container>
+      <products_in_40fthq_container>4084</products_in_40fthq_container>
+      <created_at>2006-06-28</created_at>
+      <updated_at>2007-01-05</updated_at>
+      <toddlers_reason/>
+      <features>ABEC 1 Lager, T&#xDC;V S&#xDC;D/GS</features>
+      <certifications/>
+      <catalog>Katalog 2007, Neuheiten 2007</catalog>
+      <languages/>
+      <set_consiting_of/>
+      <spare_for/>
+      <get_sidebar_image_url>http://www.hudora.de/media/,/-/product/image/06499ed9c90a75370a43c046ac8c8453.jpg/sidebar.jpeg</get_sidebar_image_url>
+      <get_product_image_url>http://www.hudora.de/media/,/-/product/image/1fb5ccbaa856d11d5973dff3530c76ac.jpg/svga.jpeg</get_product_image_url>
+      <get_ean_image_url>http://www.hudora.de/media/,/barcodes/ean/4005998010136.png</get_ean_image_url>
+      <get_export_package_ean_image_url>http://www.hudora.de/media/,/barcodes/ean/4005998000878.png</get_export_package_ean_image_url>
+      <get_products_in_20ft_container>1824</get_products_in_20ft_container>
+      <get_products_in_40ft_container>3736</get_products_in_40ft_container>
+      <get_products_in_40fthq_container>4084</get_products_in_40fthq_container>
+      <est_products_in_20ft_container>1785</est_products_in_20ft_container>
+      <est_products_in_40ft_container>3597</est_products_in_40ft_container>
+      <est_products_in_40fthq_container>4020</est_products_in_40fthq_container>
+      <product_size>NonexNonexNone</product_size>
+      <package_size>150x205x800</package_size>
+      <ve1_size>NonexNonexNone</ve1_size>
+      <export_package_size>854x213x353</export_package_size>
+      <export_package_size_cm>85.4x21.3x35.3</export_package_size_cm>
+      <export_package_size_cm_l>85.4</export_package_size_cm_l>
+      <export_package_size_cm_b>21.3</export_package_size_cm_b>
+      <export_package_size_cm_h>35.3</export_package_size_cm_h>
+      <pallet_volume>1.412650932</pallet_volume>
+      <package_volume>0.0246</package_volume>
+      <ve1_volume/>
+      <export_package_volume>0.064211406</export_package_volume>
+      <package_weight_kg>2.70</package_weight_kg>
+      <ve1_weight_kg/>
+      <export_package_weight_kg>12.0</export_package_weight_kg>
+      <pallet_weight_kg>264.0</pallet_weight_kg>
+      <softm_bezeichnung>('Skateboard Set Backpa', 'ck', '')</softm_bezeichnung>
+      <amazon_name>HUDORA 01013 - Skateboard mit Rucksack, ABEC 1</amazon_name>
+      <palettenfaktor>88</palettenfaktor>
+      <mindestabnahmemenge>4</mindestabnahmemenge>
+      <sizes/>
+      <pallet_weight>264000</pallet_weight>
+      <gruener_punkt>True</gruener_punkt>
+      <feature_set>
+        <feature>
+          <name>T&#xC3;&#x9C;V S&#xC3;&#x9C;D/GS</name>
+          <id>9</id>
+          <file>T__V_S__D_GS</file>
+        </feature>
+      </feature_set>
+      <images>
+        <image>
+          <id>3116</id>
+          <url>http://www.hudora.de/media/-/product/image/b872e586a7e9c75597f8f4ead1ebc514.jpg</url>
+          <title>01013_Skateboard_Backpack-Set_DET.jpg</title>
+          <kind>Actionbild</kind>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <thumb>http://www.hudora.de/media/,/-/product/image/b872e586a7e9c75597f8f4ead1ebc514.jpg/thumb.jpeg</thumb>
+          <svga>http://www.hudora.de/media/,/-/product/image/b872e586a7e9c75597f8f4ead1ebc514.jpg/svga.jpeg</svga>
+        </image>
+        <image>
+          <id>3117</id>
+          <url>http://www.hudora.de/media/-/product/image/501ec69bad5ffe7f986d738bc063063a.jpg</url>
+          <title>01013_Skateboard_Backpack-Set_PRO_a.jpg</title>
+          <kind>Produktbild</kind>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <thumb>http://www.hudora.de/media/,/-/product/image/501ec69bad5ffe7f986d738bc063063a.jpg/thumb.jpeg</thumb>
+          <svga>http://www.hudora.de/media/,/-/product/image/501ec69bad5ffe7f986d738bc063063a.jpg/svga.jpeg</svga>
+        </image>
+        <image>
+          <id>3118</id>
+          <url>http://www.hudora.de/media/-/product/image/06499ed9c90a75370a43c046ac8c8453.jpg</url>
+          <title>01013_Skateboard_Backpack-Set_PRO_b.jpg</title>
+          <kind>Produktbild</kind>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <thumb>http://www.hudora.de/media/,/-/product/image/06499ed9c90a75370a43c046ac8c8453.jpg/thumb.jpeg</thumb>
+          <svga>http://www.hudora.de/media/,/-/product/image/06499ed9c90a75370a43c046ac8c8453.jpg/svga.jpeg</svga>
+        </image>
+        <image>
+          <id>3372</id>
+          <url>http://www.hudora.de/media/-/product/image/1fb5ccbaa856d11d5973dff3530c76ac.jpg</url>
+          <title>01013_komplett</title>
+          <kind>Produktbild</kind>
+          <preference>1</preference>
+          <logo>nein</logo>
+          <clipped>ja</clipped>
+          <thumb>http://www.hudora.de/media/,/-/product/image/1fb5ccbaa856d11d5973dff3530c76ac.jpg/thumb.jpeg</thumb>
+          <svga>http://www.hudora.de/media/,/-/product/image/1fb5ccbaa856d11d5973dff3530c76ac.jpg/svga.jpeg</svga>
+        </image>
+      </images>
+    </product>
+    <product>
+      <level/>
+      <artnr>65315</artnr>
+      <brand>hudora</brand>
+      <get_brand_display>HUDORA</get_brand_display>
+      <name>Stepper UP SR 2.0</name>
+      <for_customer/>
+      <get_for_customer_display/>
+      <langtext>Stepper UP SR 2.0</langtext>
+      <name_en>Stepper UP SR 2.0</name_en>
+      <kurztext>Stepper UP SR 2.0</kurztext>
+      <bontext>Stepper</bontext>
+      <preislistentext>Stepper UP SR 2.0</preislistentext>
+      <angebotstext>Multifunktionscomputer: Schrittzahl, Schritte pro Minute, Zeitmessung, Kalorienverbrauch, automatische Abfrage
+Gleichm&#xE4;&#xDF;iger, einstellbarer Tretwiderstand &#xFC;ber hydraulische Zylinder
+Stabiler Stahlrohrahmen
+Rutschfeste, breite Trittfl&#xE4;chen
+Kunststofff&#xFC;&#xDF;e f&#xFC;r sicheren Halt
+Max. Benutzergewicht: 100 kg
+
+Schwarz/Rot
+Gewicht 7 kg</angebotstext>
+      <angebotstext_en>multifunctional computer: display of steps made, steps per minute, measurement of time and consumed
+calories, automatic monitoring
+regular, adjustable step resistance with hydraulic cylinder
+robust steel tube frame
+anti-slip, broad step area 
+plastic feet for high stability
+max. User weight 100 kg
+black/red
+weight: 7 kg</angebotstext_en>
+      <highlight1/>
+      <highlight2/>
+      <highlight3/>
+      <highlight4/>
+      <highlight5/>
+      <specifcation>1pc stepper, computer with 5 functions; black/red; material: ABS; GS approved quality
+</specifcation>
+      <reklame>Reklame-Langtext:
+Kraft-Ausdauerger&#xE4;t. Ausstattung: Multifunktionscomputer mit Digitalanzeige (Automatische Abfrage von 4 Funktionen: Anzahl der Schritte, Schritte pro Minute, Zeitmessung und Kalorienverbrauch.  Gleichm&#xE4;&#xDF;iger Tretwiderstand &#xFC;ber hydraulische Zylinder. Der Widerstand l&#xE4;&#xDF;t sich auch individuell einstellen. Die rutschfesten, breiten Trittfl&#xE4;chen bieten Sicherheit und machen treppen&#xE4;hnliche Steigbewegungen m&#xF6;glich. Platz sparend zu verstauen und leicht zu transportieren. Gewicht 7 kg. Max. Benutzergewicht: 100 kg. Intertek/GS gepr&#xFC;ft.
+
+Reklame-Kurztext:
+Stepper mit Multifunktionscomputer. Automatische Abfrage folgender Funktionen: Schrittzahl, Schritte pro Minute, Zeitmessung, Kalorienverbrauch. Gleichm&#xE4;&#xDF;iger, einstellbarer Tretwiderstand &#xFC;ber hydraulische Zylinder, rutschfeste, breite Trittfl&#xE4;chen, Max. Benutzergewicht: 100 kg, Gewicht 7 kg. Intertek/GS gepr&#xFC;ft.</reklame>
+      <webtext/>
+      <aka/>
+      <einheit>stueck</einheit>
+      <get_einheit_display>St&#xFC;ck</get_einheit_display>
+      <ean>4005998653159</ean>
+      <ean_id>511198</ean_id>
+      <product_weight>7500</product_weight>
+      <product_size_l/>
+      <product_size_b/>
+      <product_size_h/>
+      <package_weight>7500</package_weight>
+      <package_size_l>190</package_size_l>
+      <package_size_b>450</package_size_b>
+      <package_size_h>325</package_size_h>
+      <package_info>Karton mit Farbposter</package_info>
+      <get_package_info_display>Karton mit Farbposter</get_package_info_display>
+      <euroloch/>
+      <get_euroloch_display/>
+      <products_per_ve1/>
+      <ve1_weight/>
+      <ve1_size_l/>
+      <ve1_size_b/>
+      <ve1_size_h/>
+      <no_export_package>True</no_export_package>
+      <export_package_ean>4005998013649</export_package_ean>
+      <export_package_ean_id>189</export_package_ean_id>
+      <export_package_weight>7500</export_package_weight>
+      <export_package_size_l>450</export_package_size_l>
+      <export_package_size_b>190</export_package_size_b>
+      <export_package_size_h>325</export_package_size_h>
+      <products_per_export_package>1</products_per_export_package>
+      <export_packages_per_layer/>
+      <export_packages_per_pallet/>
+      <pallet_height/>
+      <to_big_for_pallet>False</to_big_for_pallet>
+      <pallet_ean>4005998045275</pallet_ean>
+      <pallet_ean_id>1937</pallet_ean_id>
+      <logistik_info/>
+      <pallet_scheme/>
+      <pallet_photo/>
+      <entsorgungssystem>gruener punkt</entsorgungssystem>
+      <get_entsorgungssystem_display>Gruener Punkt</get_entsorgungssystem_display>
+      <gewicht_pappe>837</gewicht_pappe>
+      <gewicht_kunststoff>51</gewicht_kunststoff>
+      <battery>AA</battery>
+      <get_battery_display>AA</get_battery_display>
+      <battery_quantity>2</battery_quantity>
+      <battery_weight>13</battery_weight>
+      <has_barcode>False</has_barcode>
+      <fob_port>shanghai</fob_port>
+      <get_fob_port_display>Shanghai</get_fob_port_display>
+      <statistische_waren_nr>95069110000</statistische_waren_nr>
+      <country_of_origin>CN</country_of_origin>
+      <get_country_of_origin_display>China</get_country_of_origin_display>
+      <zollsatz/>
+      <zollsatz_praeferiert/>
+      <supplier>52 - 90109</supplier>
+      <supplier_id>131</supplier_id>
+      <supplier_artnr/>
+      <for_toddlers>False</for_toddlers>
+      <toy>False</toy>
+      <user_weight>10000</user_weight>
+      <mandantory_compliance/>
+      <einstufung>A</einstufung>
+      <get_einstufung_display>A - Katalogprodukt / ab Lager lieferbar</get_einstufung_display>
+      <category>Fitness</category>
+      <category_id>13</category_id>
+      <warenklassifikation>4435</warenklassifikation>
+      <get_warenklassifikation_display>4435</get_warenklassifikation_display>
+      <fedas/>
+      <fedas_id/>
+      <abis/>
+      <get_abis_display/>
+      <successor/>
+      <successor_id/>
+      <parent/>
+      <parent_id/>
+      <size_of/>
+      <size_of_id/>
+      <variant_of/>
+      <variant_of_id/>
+      <version_of/>
+      <version_of_id/>
+      <spare>False</spare>
+      <tentative>False</tentative>
+      <is_hidden>False</is_hidden>
+      <is_meta>False</is_meta>
+      <price_webshop/>
+      <annote/>
+      <handbook/>
+      <catalog_page/>
+      <sprengzeichnung/>
+      <products_in_20ft_container>1008</products_in_20ft_container>
+      <products_in_40ft_container>2000</products_in_40ft_container>
+      <products_in_40fthq_container>2200</products_in_40fthq_container>
+      <created_at>2006-06-03</created_at>
+      <updated_at>2007-01-29</updated_at>
+      <toddlers_reason/>
+      <features>Intertek/GS, CE</features>
+      <certifications/>
+      <catalog>Katalog 2007, Neuheiten 2007</catalog>
+      <languages/>
+      <set_consiting_of/>
+      <spare_for/>
+      <get_sidebar_image_url>http://www.hudora.de/media/,/-/product/image/c5cbe409421094e03c1327c689888378.jpg/sidebar.jpeg</get_sidebar_image_url>
+      <get_product_image_url>http://www.hudora.de/media/,/-/product/image/c5cbe409421094e03c1327c689888378.jpg/svga.jpeg</get_product_image_url>
+      <get_ean_image_url>http://www.hudora.de/media/,/barcodes/ean/4005998653159.png</get_ean_image_url>
+      <get_export_package_ean_image_url>http://www.hudora.de/media/,/barcodes/ean/4005998013649.png</get_export_package_ean_image_url>
+      <get_products_in_20ft_container>1008</get_products_in_20ft_container>
+      <get_products_in_40ft_container>2000</get_products_in_40ft_container>
+      <get_products_in_40fthq_container>2200</get_products_in_40fthq_container>
+      <est_products_in_20ft_container>1032</est_products_in_20ft_container>
+      <est_products_in_40ft_container>2078</est_products_in_40ft_container>
+      <est_products_in_40fthq_container>2322</est_products_in_40fthq_container>
+      <product_size>NonexNonexNone</product_size>
+      <package_size>190x450x325</package_size>
+      <ve1_size>NonexNonexNone</ve1_size>
+      <export_package_size>450x190x325</export_package_size>
+      <export_package_size_cm>45.0x19.0x32.5</export_package_size_cm>
+      <export_package_size_cm_l>45.0</export_package_size_cm_l>
+      <export_package_size_cm_b>19.0</export_package_size_cm_b>
+      <export_package_size_cm_h>32.5</export_package_size_cm_h>
+      <pallet_volume/>
+      <package_volume>0.0277875</package_volume>
+      <ve1_volume/>
+      <export_package_volume>0.0277875</export_package_volume>
+      <package_weight_kg>7.50</package_weight_kg>
+      <ve1_weight_kg/>
+      <export_package_weight_kg>7.5</export_package_weight_kg>
+      <pallet_weight_kg/>
+      <softm_bezeichnung>('Stepper UP SR 2.0', '', '')</softm_bezeichnung>
+      <amazon_name>HUDORA 65315 - Stepper UP SR 2.0</amazon_name>
+      <palettenfaktor/>
+      <mindestabnahmemenge>1</mindestabnahmemenge>
+      <sizes/>
+      <pallet_weight/>
+      <gruener_punkt>True</gruener_punkt>
+      <feature_set>
+        <feature>
+          <name>Intertek/GS</name>
+          <id>12</id>
+          <file>Intertek_GS</file>
+        </feature>
+        <feature>
+          <name>CE</name>
+          <id>13</id>
+          <file>CE</file>
+        </feature>
+      </feature_set>
+      <images>
+        <image>
+          <id>3091</id>
+          <url>http://www.hudora.de/media/-/product/image/02342c43a37ea8c8fa4396c14a8a1d49.jpg</url>
+          <title>65315_Stepper_UP_SR_2_0_DET.jpg</title>
+          <kind>Actionbild</kind>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <thumb>http://www.hudora.de/media/,/-/product/image/02342c43a37ea8c8fa4396c14a8a1d49.jpg/thumb.jpeg</thumb>
+          <svga>http://www.hudora.de/media/,/-/product/image/02342c43a37ea8c8fa4396c14a8a1d49.jpg/svga.jpeg</svga>
+        </image>
+        <image>
+          <id>3092</id>
+          <url>http://www.hudora.de/media/-/product/image/c5cbe409421094e03c1327c689888378.jpg</url>
+          <title>65315_Stepper_UP_SR_2_0_PRO.jpg</title>
+          <kind>Produktbild</kind>
+          <preference>1</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <thumb>http://www.hudora.de/media/,/-/product/image/c5cbe409421094e03c1327c689888378.jpg/thumb.jpeg</thumb>
+          <svga>http://www.hudora.de/media/,/-/product/image/c5cbe409421094e03c1327c689888378.jpg/svga.jpeg</svga>
+        </image>
+      </images>
+    </product>
+  </catalog>
+</hudora_katalog>

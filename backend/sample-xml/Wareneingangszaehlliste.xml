@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<stockreceipt_countinglists>
+  <stockreceipt_countinglist>
+    <listno>10000001</listno>
+    <buffer>A</buffer>
+    <lieferschein>
+      <nr></nr>
+      <auftragsnr></auftragsnr>
+    </lieferschein>
+  </stockreceipt_countinglist>
+  <stockreceipt_countinglist>
+    <listno>10000002</listno>
+    <buffer>B</buffer>
+    <lieferschein>
+      <nr>305789</nr>
+      <auftragsnr>301524</auftragsnr>
+    </lieferschein>
+  </stockreceipt_countinglist>
+</stockreceipt_countinglists>

@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<paketscheine>
+  <generator>huLOG $Revision: 1485 $</generator>
+    <absenderadresse>HUDORA GmbH
+J&#xE4;gerwald 13
+42897 Remscheid
+Germany
+Tel. 02191-609120</absenderadresse>
+  <sendung>
+    <name1>real,- SB Warenhaus GmbH</name1>
+    <name2>BLZ 11346</name2>
+    <name3>bitte über das Hinterhaus</name3>
+    <name4>anfahren!</name4>
+    <adresse>Emil-Kammer-Strasse 2</adresse>
+    <land>DE</land>
+    <plz>42897</plz>
+    <ort>Remscheid</ort>
+    <auftragsnummer>154356</auftragsnummer>
+    <kundennummer>10332</kundennummer>
+    <lieferscheinnummer>462588</lieferscheinnummer>
+    <auftragsnummer_kunde>555131011</auftragsnummer_kunde>
+    <fixtermin>2005-11-11 11:11</fixtermin>
+    <avisieren_unter>02191-609120, Code 123454</avisieren_unter>
+    <hebebuehne>True</hebebuehne>
+    <info />
+    <spedition>Maeuler</spedition>
+    <frankatur>frei Haus</frankatur>
+    <status>new</status>
+    <versandhinweis/>
+    <code>hHQq</code>
+    <sendungsnummer>11111</sendungsnummer>
+    <trackingurl>http://www.hudora.de/tt/00054/s6B4/</trackingurl>
+    <packstuecke_gesamt>1</packstuecke_gesamt>
+    <dpd_data>
+      <ziel_land_nummer>276</ziel_land_nummer>
+      <route_zieltext>DE - 0196</route_zieltext>
+      <route_osort>10</route_osort>
+      <route_dsort>12</route_dsort>
+      <route_service_land_empfaenger>101 - DE - 96103</route_service_land_empfaenger>
+      <route_servicetext>D-EXW</route_servicetext>
+      <route_servicefeld>Unfrei/Ex works</route_servicefeld>
+      <route_ursprung>20060720 0142 huLOG $Revision: 1485 $</route_ursprung>
+      <versandart>EXW</versandart>
+      <hoehere_versicherung/>
+      <expresstyp/>
+      <nachnahmebetrag/>
+    </dpd_data>
+    <paketschein>
+      <packstueck_gewicht>11111</packstueck_gewicht>
+      <packstueck_aktuell>1</packstueck_aktuell>
+      <dpd_data>
+        <trackingnummer>01425000600374</trackingnummer>
+        <trackingnummer_head>0142</trackingnummer_head>
+        <trackingnummer_tail>5000600374</trackingnummer_tail>
+        <pruefziffer>M</pruefziffer>
+        <barcode>009610301425000600374101276</barcode>
+        <barcode_pruefziffer>V</barcode_pruefziffer>
+      </dpd_data>
+    </paketschein>
+  </sendung>
+  <sendung>
+    <name1>Spiel GmbH</name1>
+    <adresse>Emil-Jäger-Strasse 2</adresse>
+    <land>DE</land>
+    <plz>42897</plz>
+    <ort>Remscheid</ort>
+    <auftragsnummer>650356</auftragsnummer>
+    <kundennummer>01310</kundennummer>
+    <lieferscheinnummer>362888</lieferscheinnummer>
+    <packstuecke_gesamt>2</packstuecke_gesamt>
+    <code>hHQQ</code>
+    <sendungsnummer>11112</sendungsnummer>
+    <trackingurl>http://www.hudora.de/tt/00054/s6B4/</trackingurl>
+    <dpd_data>
+      <ziel_land_nummer>276</ziel_land_nummer>
+      <route_zieltext>DE - 0196</route_zieltext>
+      <route_osort>10</route_osort>
+      <route_dsort>12</route_dsort>
+      <route_service_land_empfaenger>101 - DE - 96103</route_service_land_empfaenger>
+      <route_servicetext>D</route_servicetext>
+      <route_ursprung>20060720 0142 huLOG $Revision: 1485 $</route_ursprung>
+      <versandart>EXW</versandart>
+      <hoehere_versicherung/>
+      <expresstyp/>
+      <nachnahmebetrag/>
+    </dpd_data>
+    <paketschein>
+      <packstueck_gewicht>22222</packstueck_gewicht>
+      <packstueck_aktuell>1</packstueck_aktuell>
+      <dpd_data>
+        <trackingnummer>01425000600374</trackingnummer>
+        <trackingnummer_head>0142</trackingnummer_head>
+        <trackingnummer_tail>5000600374</trackingnummer_tail>
+        <pruefziffer>M</pruefziffer>
+        <barcode>009610301425000600374101276</barcode>
+        <barcode_pruefziffer>V</barcode_pruefziffer>
+      </dpd_data>
+    </paketschein>
+  </sendung>
+  <sendung>
+    <gewicht>17000</gewicht>
+    <packstuecke_gesamt>1</packstuecke_gesamt>
+    <sendungsnummer>1261</sendungsnummer>
+    <trackingurl>http://www.hudora.de/tt/01261/MnF3/</trackingurl>
+    <lieferscheinnummer>368433</lieferscheinnummer>
+    <auftragsnummer/>
+    <auftragsnummer/>
+    <auftragsnummer_kunde>C2137415</auftragsnummer_kunde>
+    <kundennummer/>
+    <kundennummer/>
+    <name1>Karl Gr&#xF6;ger</name1>
+    <name2/>
+    <name2/>
+    <name3/>
+    <name3/>
+    <name4/>
+    <name4/>
+    <adresse>Eichenallee 5</adresse>
+    <plz>22698</plz>
+    <ort>Dingsdorf</ort>
+    <land>DE</land>
+    <spedition>DPD</spedition>
+    <frankatur>frei Haus</frankatur>
+    <status>new</status>
+    <code>MnF3</code>
+    <info/>
+    <info/>
+    <avisieren_unter/>
+    <avisieren_unter/>
+    <hebebuehne/>
+    <hebebuehne/>
+    <fixtermin/>
+    <fixtermin/>
+    <dpd_data>
+      <route_servicefeld/>
+      <ziel_land_nummer>276</ziel_land_nummer>
+      <route_zieltext>DE - 0286</route_zieltext>
+      <route_osort>16</route_osort>
+      <route_dsort>36</route_dsort>
+      <route_service_land_empfaenger>101 - DE - 82269</route_service_land_empfaenger>
+      <route_servicetext>D</route_servicetext>
+      <route_ursprung>20060720 0142 huLOG $Revision: 1679 $</route_ursprung>
+      <versandart>frei</versandart>
+    </dpd_data>
+    <paketschein>
+      <trackingnummer>340059980000026336</trackingnummer>
+      <gewicht>17000</gewicht>
+      <packstueck_aktuell>1</packstueck_aktuell>
+      <dpd_data>
+        <trackingnummer>01425000676374</trackingnummer>
+        <trackingnummer_head>0142</trackingnummer_head>
+        <trackingnummer_tail>5000676374</trackingnummer_tail>
+        <pruefziffer>6</pruefziffer>
+        <barcode>008226901425000676374101276</barcode>
+        <barcode_pruefziffer>O</barcode_pruefziffer>
+      </dpd_data>
+    </paketschein>
+  </sendung>
+  <sendung>
+    <gewicht>17000</gewicht>
+    <packstuecke_gesamt>1</packstuecke_gesamt>
+    <sendungsnummer>1261</sendungsnummer>
+    <trackingurl>http://www.hudora.de/tt/01261/M2F3/</trackingurl>
+    <lieferscheinnummer>368433</lieferscheinnummer>
+    <auftragsnummer/>
+    <auftragsnummer_kunde>C2137415</auftragsnummer_kunde>
+    <kundennummer/>
+    <name1>Heinz Gr&#xF6;ger</name1>
+    <name2/>
+    <name3/>
+    <name4/>
+    <adresse>Birnbaumallee 5</adresse>
+    <plz>42424</plz>
+    <ort>Geltendorf</ort>
+    <land>DE</land>
+    <spedition>DPD</spedition>
+    <frankatur>frei Haus</frankatur>
+    <status>new</status>
+    <code>M2F3</code>
+    <info/>
+    <avisieren_unter/>
+    <hebebuehne/>
+    <fixtermin/>
+    <dpd_data>
+      <route_servicefeld/>
+      <ziel_land_nummer>276</ziel_land_nummer>
+      <route_zieltext>DE - 0286</route_zieltext>
+      <route_osort>16</route_osort>
+      <route_dsort>36</route_dsort>
+      <route_service_land_empfaenger>101 - DE - 82269</route_service_land_empfaenger>
+      <route_servicetext>D</route_servicetext>
+      <route_ursprung>20060720 0142 huLOG $Revision: 1679 $</route_ursprung>
+      <versandart>frei</versandart>
+    </dpd_data>
+    <paketschein>
+      <trackingnummer>340059980000026336</trackingnummer>
+      <gewicht>17000</gewicht>
+      <packstueck_aktuell>1</packstueck_aktuell>
+      <dpd_data>
+        <trackingnummer>01425000676374</trackingnummer>
+        <trackingnummer_head>0142</trackingnummer_head>
+        <trackingnummer_tail>5000676374</trackingnummer_tail>
+        <pruefziffer>6</pruefziffer>
+        <barcode>008226901425000676374101276</barcode>
+        <barcode_pruefziffer>O</barcode_pruefziffer>
+      </dpd_data>
+    </paketschein>
+  </sendung>
+</paketscheine>
