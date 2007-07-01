@@ -15,7 +15,7 @@ from JasperClient import JasperClient, OUTPUTDIRHIER
 try:
     import cElementTree as ET
 except ImportError:
-    import elementtree.ElementTree as ET
+    import xml.etree as ET
 
 class JasperError(RuntimeError):
     pass
