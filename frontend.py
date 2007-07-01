@@ -9,13 +9,10 @@ Consider it BSD licensed.
 
 import sys, os, os.path, re, copy, time, logging
 import unittest
+import xml.etree.ElementTree as ET
 from huTools import luids
 from JasperClient import JasperClient, OUTPUTDIRHIER
 
-try:
-    import cElementTree as ET
-except ImportError:
-    import xml.etree as ET
 
 class JasperError(RuntimeError):
     pass
