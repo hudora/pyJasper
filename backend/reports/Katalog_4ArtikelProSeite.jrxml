@@ -147,6 +147,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<field name="category_id" class="java.lang.Integer">
 		<fieldDescription><![CDATA[category_id]]></fieldDescription>
 	</field>
+	<field name="brand" class="java.lang.String">
+		<fieldDescription><![CDATA[brand]]></fieldDescription>
+	</field>
 
 	<variable name="package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
@@ -174,8 +177,8 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</rectangle>
 				<staticText>
 					<reportElement
-						x="12"
-						y="300"
+						x="2"
+						y="290"
 						width="13"
 						height="246"
 						key="staticText-3">
@@ -232,7 +235,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						y="550"
 						width="115"
 						height="152"
-						key="image-11"/>
+						key="image-11">
+							<printWhenExpression><![CDATA[new Boolean($F{brand}.toString() == "Joey")]]></printWhenExpression>
+						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<graphicElement stretchType="NoStretch"/>
 					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/hudora_logo_joey.gif"]]></imageExpression>
@@ -575,8 +580,8 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="252"
-						y="175"
+						x="242"
+						y="165"
 						width="59"
 						height="18"
 						key="textField-3"/>
@@ -624,6 +629,19 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						<font fontName="Arial" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{pallet_volume}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="264"
+						y="14"
+						width="205"
+						height="12"
+						key="Internet_Verlinkung"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["http://www.hudora.de/artnr/" + $F{artnr} + "/"]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>
