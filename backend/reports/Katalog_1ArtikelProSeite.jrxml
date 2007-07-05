@@ -144,6 +144,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<field name="language" class="java.lang.String">
 		<fieldDescription><![CDATA[../../language]]></fieldDescription>
 	</field>
+	<field name="category_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[category_id]]></fieldDescription>
+	</field>
 
 	<variable name="package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
@@ -208,28 +211,119 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						key="rectangle-2"/>
 					<graphicElement stretchType="NoStretch"/>
 				</rectangle>
-				<image  scaleImage="RetainShape" vAlign="Bottom" hAlign="Center" onErrorType="Blank" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<rectangle>
 					<reportElement
-						x="485"
-						y="760"
-						width="115"
-						height="67"
-						key="image-11"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#F0DA17"
+						backcolor="#F0DA17"
+						key="Multisport">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 8)]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
-					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/hudora_logo_weiss.gif"]]></imageExpression>
-				</image>
-				<image  scaleImage="RetainShape" vAlign="Middle" hAlign="Center" onErrorType="Blank" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				</rectangle>
+				<image  scaleImage="RetainShape" vAlign="Middle" hAlign="Center" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="485"
 						y="550"
 						width="115"
 						height="152"
-						key="image-12"/>
+						key="image-11"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<graphicElement stretchType="NoStretch"/>
 					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/hudora_logo_joey.gif"]]></imageExpression>
 				</image>
+				<image  scaleImage="RetainShape" vAlign="Bottom" hAlign="Center" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="485"
+						y="760"
+						width="115"
+						height="67"
+						key="image-12"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/hudora_logo_weiss.gif"]]></imageExpression>
+				</image>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#FF9900"
+						backcolor="#FF9900"
+						key="Skates/Skateboards/Sicherheit">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 3 || $F{category_id}.intValue() == 4 || $F{category_id}.intValue() == 7)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#621F34"
+						backcolor="#621F34"
+						key="Outdoor">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 9)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#238434"
+						backcolor="#238434"
+						key="Fussball">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 11)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#6EADDE"
+						backcolor="#6EADDE"
+						key="Wintersport">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 12)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#AE151B"
+						backcolor="#AE151B"
+						key="Fahrzeuge">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 6)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#A8CCCB"
+						backcolor="#A8CCCB"
+						key="Wintersport">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 13)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
 			</band>
 		</background>
 		<title>

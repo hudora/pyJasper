@@ -2,7 +2,7 @@
 <!-- Created with iReport - A designer for JasperReports -->
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
-		 name="Katalog_2ArtikelProSeite"
+		 name="Katalog_3ArtikelProSeite"
 		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
@@ -144,6 +144,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<field name="language" class="java.lang.String">
 		<fieldDescription><![CDATA[../../language]]></fieldDescription>
 	</field>
+	<field name="category_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[category_id]]></fieldDescription>
+	</field>
 
 	<variable name="package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
@@ -194,7 +197,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						height="858"
 						forecolor="#005FA0"
 						backcolor="#005FA0"
-						key="rectangle-4"/>
+						key="blauer Balken"/>
 					<graphicElement stretchType="NoStretch"/>
 				</rectangle>
 				<rectangle>
@@ -206,6 +209,19 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						forecolor="#F0DA17"
 						backcolor="#F0DA17"
 						key="rectangle-5"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#F0DA17"
+						backcolor="#F0DA17"
+						key="Multisport">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 8)]]></printWhenExpression>
+						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</rectangle>
 				<image  scaleImage="RetainShape" vAlign="Middle" hAlign="Center" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
@@ -230,6 +246,84 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<graphicElement stretchType="NoStretch"/>
 					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/hudora_logo_weiss.gif"]]></imageExpression>
 				</image>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#FF9900"
+						backcolor="#FF9900"
+						key="Skates/Skateboards/Sicherheit">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 3 || $F{category_id}.intValue() == 4 || $F{category_id}.intValue() == 7)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#621F34"
+						backcolor="#621F34"
+						key="Outdoor">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 9)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#238434"
+						backcolor="#238434"
+						key="Fussball">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 11)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#6EADDE"
+						backcolor="#6EADDE"
+						key="Wintersport">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 12)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#AE151B"
+						backcolor="#AE151B"
+						key="Fahrzeuge">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 6)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#A8CCCB"
+						backcolor="#A8CCCB"
+						key="Wintersport">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 13)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
 			</band>
 		</background>
 		<title>

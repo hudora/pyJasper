@@ -159,6 +159,19 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	</variable>
 		<background>
 			<band height="858"  isSplitAllowed="true" >
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#999999"
+						backcolor="#999999"
+						key="Wintersport-1">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 13)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
 				<staticText>
 					<reportElement
 						x="12"
