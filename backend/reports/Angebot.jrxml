@@ -69,7 +69,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<field name="products_per_export_package" class="java.lang.Integer">
 		<fieldDescription><![CDATA[products_per_export_package]]></fieldDescription>
 	</field>
-	<field name="export_package_weight" class="java.lang.String">
+	<field name="export_package_weight" class="java.lang.Double">
 		<fieldDescription><![CDATA[export_package_weight]]></fieldDescription>
 	</field>
 	<field name="export_package_size_l" class="java.lang.String">
@@ -179,7 +179,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
 	</variable>
 	<variable name="export_package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
-		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
+		<variableExpression><![CDATA[new Double($F{export_package_weight}.doubleValue() / 1000.0)]]></variableExpression>
 	</variable>
 	<variable name="language" class="java.lang.String" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[$F{language} == null ? "de" : $F{language}]]></variableExpression>
