@@ -55,7 +55,7 @@ class JasperGenerator(object):
     def generate(self, data, repid=None):
         if not repid:
             # TODO: use hutools.luids
-            repid = luids.unique_hostname()
+            repid = luids.luid()
         # filename based on class name
         filename = re.sub('[^0-9a-zA-Z_-]', '', str(self.__class__).split('.')[-1] + '-' + str(repid))
         return self.generate_pdf(filename, data)
