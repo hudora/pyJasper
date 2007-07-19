@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /usr/local/web/diamond/lib/public/pyJasper/backend
+cd /usr/local/web/diamond/lib/pyJasper/backend
 
 export CLASSPATH=/usr/local/jython21/jython.jar:$CLASSPATH
 export CLASSPATH=$CLASSPATH:lib/iReport.jar:lib/barbecue-1.1.jar

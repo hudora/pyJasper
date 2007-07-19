@@ -46,7 +46,7 @@ class JasperGenerator(object):
         server = JasperClient()
         ret = server.generate_pdf(self.reportname, self.xpath, xmlfilename)
         if ret != outfilename:
-           raise ProgrammingError, 'name difference: %r %r' % (ret, outfilename)
+           raise RuntimeError, 'name difference: %r %r' % (ret, outfilename)
         logging.info('generated %r in %.3fs' % (outfilename, time.time() - start))
         if not os.path.exists(outfilename) or os.path.getsize(outfilename) == 0:
             raise JasperError, "PDF generation failed for %r" % (outfilename, )
