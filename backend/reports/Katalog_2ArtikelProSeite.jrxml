@@ -150,6 +150,12 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<field name="brand" class="java.lang.String">
 		<fieldDescription><![CDATA[brand]]></fieldDescription>
 	</field>
+	<field name="export_package_volume" class="java.lang.Double">
+		<fieldDescription><![CDATA[export_package_volume]]></fieldDescription>
+	</field>
+	<field name="products_per_page" class="java.lang.Integer">
+		<fieldDescription><![CDATA[products_per_page]]></fieldDescription>
+	</field>
 
 	<variable name="package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
@@ -160,6 +166,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<variable name="language" class="java.lang.String" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[$F{language} == null ? "de" : $F{language}]]></variableExpression>
 	</variable>
+	<filterExpression><![CDATA[new Boolean($F{products_per_page}.intValue() == 2)]]></filterExpression>
 		<background>
 			<band height="858"  isSplitAllowed="true" >
 				<staticText>
@@ -175,7 +182,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<textElement textAlignment="Center" rotation="Left">
 						<font fontName="Arial" size="6"/>
 					</textElement>
-				<text><![CDATA[colour or technical changes possible (status 01/07)]]></text>
+				<text><![CDATA[colour or technical changes possible (status 08/2007)]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
@@ -190,7 +197,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<textElement textAlignment="Center" rotation="Left">
 						<font fontName="Arial" size="6"/>
 					</textElement>
-				<text><![CDATA[Farbliche und technische Änderungen vorbehalten. (Stand 01/07)]]></text>
+				<text><![CDATA[Farbliche und technische Änderungen vorbehalten. (Stand 08/2007)]]></text>
 				</staticText>
 				<rectangle>
 					<reportElement
@@ -212,7 +219,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						forecolor="#F0DA17"
 						backcolor="#F0DA17"
 						key="Multisport">
-							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 8)]]></printWhenExpression>
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 8 || $F{category_id}.intValue() == 2241 || $F{category_id}.intValue() == 2244 || $F{category_id}.intValue() == 2245 || $F{category_id}.intValue() == 2246 || $F{category_id}.intValue() == 2247 || $F{category_id}.intValue() == 2249 || $F{category_id}.intValue() == 2250 || $F{category_id}.intValue() == 2251 || $F{category_id}.intValue() == 2252 || $F{category_id}.intValue() == 2253 || $F{category_id}.intValue() == 2254 || $F{category_id}.intValue() == 2240 || $F{category_id}.intValue() == 2242 || $F{category_id}.intValue() == 2246)]]></printWhenExpression>
 						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</rectangle>
@@ -262,7 +269,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						forecolor="#621F34"
 						backcolor="#621F34"
 						key="Outdoor">
-							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 9)]]></printWhenExpression>
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 9 || $F{category_id}.intValue() == 2238 || $F{category_id}.intValue() == 2239)]]></printWhenExpression>
 						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</rectangle>
@@ -298,8 +305,8 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						y="100"
 						width="130"
 						height="120"
-						forecolor="#AE151B"
-						backcolor="#AE151B"
+						forecolor="#00B0BD"
+						backcolor="#00B0BD"
 						key="Fahrzeuge">
 							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 6)]]></printWhenExpression>
 						</reportElement>
@@ -315,6 +322,19 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						backcolor="#A8CCCB"
 						key="Wintersport">
 							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 13)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#005FA0"
+						backcolor="#005FA0"
+						key="sonstiges">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 14)]]></printWhenExpression>
 						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</rectangle>
@@ -615,7 +635,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<textElement textAlignment="Center">
 						<font fontName="Arial" size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{pallet_volume}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[new Double($F{export_package_volume}.doubleValue() /1000.00)]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
