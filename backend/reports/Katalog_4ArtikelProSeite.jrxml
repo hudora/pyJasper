@@ -153,6 +153,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<field name="products_per_page" class="java.lang.Integer">
 		<fieldDescription><![CDATA[products_per_page]]></fieldDescription>
 	</field>
+	<field name="export_package_volume_liter" class="java.lang.Double">
+		<fieldDescription><![CDATA[export_package_volume_liter]]></fieldDescription>
+	</field>
 
 	<variable name="package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
@@ -162,6 +165,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	</variable>
 	<variable name="language" class="java.lang.String" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[$F{language} == null ? "de" : $F{language}]]></variableExpression>
+	</variable>
+	<variable name="export_package_volume_liter_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[new Double($F{export_package_volume_liter}.doubleValue() / 100000.0)]]></variableExpression>
 	</variable>
 	<filterExpression><![CDATA[new Boolean($F{products_per_page}.intValue() == 4)]]></filterExpression>
 		<background>
@@ -389,7 +395,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				<image  scaleImage="RetainShape" vAlign="Bottom" onErrorType="Icon" isUsingCache="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="29"
-						y="151"
+						y="150"
 						width="439"
 						height="46"
 						key="image-1"/>
@@ -580,7 +586,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{get_package_info_display}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="#,##0.0000" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="341"
 						y="175"
@@ -591,7 +597,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<textElement textAlignment="Center">
 						<font fontName="Arial" size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{pallet_volume}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$V{export_package_volume_liter_normalized}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement

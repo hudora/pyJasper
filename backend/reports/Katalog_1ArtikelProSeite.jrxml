@@ -156,6 +156,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<field name="products_per_page" class="java.lang.Integer">
 		<fieldDescription><![CDATA[products_per_page]]></fieldDescription>
 	</field>
+	<field name="export_package_volume_liter" class="java.lang.Double">
+		<fieldDescription><![CDATA[export_package_volume_liter]]></fieldDescription>
+	</field>
 
 	<variable name="package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
@@ -165,6 +168,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	</variable>
 	<variable name="language" class="java.lang.String" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[$F{language} == null ? "de" : $F{language}]]></variableExpression>
+	</variable>
+	<variable name="export_package_volume_liter_mormalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[new Double($F{export_package_volume_liter}.doubleValue() / 100000.0)]]></variableExpression>
 	</variable>
 	<filterExpression><![CDATA[new Boolean($F{products_per_page}.intValue() == 1)]]></filterExpression>
 		<background>
@@ -646,7 +652,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<textElement textAlignment="Center">
 						<font fontName="Arial" size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.Double"><![CDATA[new Double($F{export_package_volume}.doubleValue() /1000.00)]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[$V{export_package_volume_liter_mormalized}]]></textFieldExpression>
 				</textField>
 				<image  vAlign="Middle" hAlign="Right" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
