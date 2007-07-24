@@ -368,7 +368,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 		</columnHeader>
 		<detail>
 			<band height="270"  isSplitAllowed="true" >
-				<image  vAlign="Middle" hAlign="Right" onErrorType="Blank" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<image  vAlign="Middle" hAlign="Center" onErrorType="Blank" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="242"
 						y="66"
@@ -384,7 +384,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						x="29"
 						y="66"
 						width="207"
-						height="115"
+						height="138"
 						key="textField"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
