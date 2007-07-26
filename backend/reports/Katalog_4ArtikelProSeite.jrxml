@@ -382,20 +382,20 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="29"
-						y="66"
+						y="59"
 						width="207"
-						height="82"
+						height="92"
 						key="textField"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font/>
+						<font size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$V{language}.compareTo("en") == 0 ? $F{angebotstext_en} : $F{angebotstext}]]></textFieldExpression>
 				</textField>
 				<image  scaleImage="RetainShape" vAlign="Bottom" onErrorType="Icon" isUsingCache="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="29"
-						y="150"
+						y="153"
 						width="439"
 						height="46"
 						key="image-1"/>
@@ -420,7 +420,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<reportElement
 						x="30"
 						y="38"
-						width="225"
+						width="303"
 						height="18"
 						key="textField"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
@@ -431,8 +431,8 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</textField>
 				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Icon" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="273"
-						y="30"
+						x="257"
+						y="73"
 						width="30"
 						height="30"
 						key="image-4">
@@ -444,8 +444,8 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</image>
 				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Icon" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="305"
-						y="30"
+						x="289"
+						y="73"
 						width="30"
 						height="30"
 						key="image-5">
@@ -485,7 +485,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="38"
-						y="175"
+						y="178"
 						width="72"
 						height="18"
 						key="textField"/>
@@ -498,7 +498,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="100"
-						y="175"
+						y="178"
 						width="35"
 						height="18"
 						key="textField"/>
@@ -511,7 +511,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="137"
-						y="175"
+						y="178"
 						width="28"
 						height="18"
 						key="textField"/>
@@ -524,7 +524,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="168"
-						y="175"
+						y="178"
 						width="53"
 						height="18"
 						key="textField-1"/>
@@ -537,7 +537,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="223"
-						y="175"
+						y="178"
 						width="30"
 						height="18"
 						key="textField-2"/>
@@ -550,7 +550,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="246"
-						y="175"
+						y="178"
 						width="77"
 						height="18"
 						key="textField-3"/>
@@ -563,7 +563,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="307"
-						y="175"
+						y="178"
 						width="35"
 						height="18"
 						key="textField-4"/>
@@ -576,20 +576,20 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="364"
-						y="175"
+						y="178"
 						width="98"
 						height="18"
 						key="textField"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center">
-						<font fontName="Arial" size="8"/>
+						<font fontName="Arial" size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{get_package_info_display} == null ? "-" : $F{get_package_info_display}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.0000" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="341"
-						y="175"
+						y="178"
 						width="35"
 						height="18"
 						key="textField-5"/>
