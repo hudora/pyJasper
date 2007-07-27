@@ -191,11 +191,13 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</rectangle>
 				<staticText>
 					<reportElement
+						mode="Transparent"
 						x="12"
 						y="300"
 						width="10"
 						height="246"
-						key="staticText-3">
+						key="staticText-3"
+						isPrintInFirstWholeBand="true">
 							<printWhenExpression><![CDATA[new Boolean($V{language}.compareTo("en") == 0)]]></printWhenExpression>
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
@@ -206,16 +208,16 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</staticText>
 				<staticText>
 					<reportElement
+						mode="Transparent"
 						x="12"
 						y="300"
 						width="10"
 						height="246"
-						key="staticText-5">
-							<printWhenExpression><![CDATA[new Boolean($V{language}.compareTo("de") == 0)]]></printWhenExpression>
-						</reportElement>
+						key="staticText-5"
+						isPrintInFirstWholeBand="true"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center" rotation="Left">
-						<font fontName="Arial" size="6"/>
+						<font fontName="Arial" pdfFontName="Helvetica" size="6" isBold="false"/>
 					</textElement>
 				<text><![CDATA[Farbliche und technische Änderungen vorbehalten. (Stand 08/2007)]]></text>
 				</staticText>

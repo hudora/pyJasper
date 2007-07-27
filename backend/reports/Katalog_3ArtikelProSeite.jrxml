@@ -178,7 +178,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<variable name="artnr_nonvariant" class="java.lang.String" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[$F{artnr}.split( "/" )[0]]]></variableExpression>
 	</variable>
-	<filterExpression><![CDATA[new Boolean($F{products_per_page}.intValue() == 3)]]></filterExpression>
+	<filterExpression><![CDATA[new Boolean($F{products_per_page}.intValue() == 2 && $F{category_id}.intValue() == 2241)]]></filterExpression>
 		<background>
 			<band height="858"  isSplitAllowed="true" >
 				<staticText>
@@ -202,9 +202,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						y="300"
 						width="13"
 						height="246"
-						key="staticText-5">
-							<printWhenExpression><![CDATA[new Boolean($V{language}.compareTo("de") == 0)]]></printWhenExpression>
-						</reportElement>
+						key="staticText-5"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center" rotation="Left">
 						<font fontName="Arial" size="6"/>
@@ -519,9 +517,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</image>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="38"
+						x="33"
 						y="244"
-						width="72"
+						width="70"
 						height="18"
 						key="textField"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
@@ -558,9 +556,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="168"
+						x="165"
 						y="244"
-						width="53"
+						width="63"
 						height="18"
 						key="textField-1"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
@@ -584,7 +582,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="250"
+						x="242"
 						y="244"
 						width="77"
 						height="18"
@@ -610,9 +608,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="364"
+						x="363"
 						y="244"
-						width="98"
+						width="103"
 						height="18"
 						key="textField"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
@@ -625,7 +623,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<reportElement
 						x="341"
 						y="244"
-						width="35"
+						width="38"
 						height="18"
 						key="textField-5"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
