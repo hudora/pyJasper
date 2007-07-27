@@ -169,6 +169,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<variable name="export_package_volume_liter_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{export_package_volume_liter}.doubleValue() / 100000.0)]]></variableExpression>
 	</variable>
+	<variable name="artnr_nonvariant" class="java.lang.String" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[$F{artnr}.split( "/" )[0]]]></variableExpression>
+	</variable>
 	<filterExpression><![CDATA[new Boolean($F{products_per_page}.intValue() == 4)]]></filterExpression>
 		<background>
 			<band height="858"  isSplitAllowed="true" >
@@ -414,7 +417,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<textElement>
 						<font fontName="Arial" size="12"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$V{language}.compareTo("en") == 0 ? "Article-No.: " + $F{artnr} : "Artikel-Nr.: " + $F{artnr}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{language}.compareTo("en") == 0 ? "Article-No.: " + $V{artnr_nonvariant} : "Artikel-Nr.: " + $V{artnr_nonvariant}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
