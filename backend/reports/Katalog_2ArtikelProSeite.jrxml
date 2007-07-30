@@ -160,6 +160,8 @@ Möglich sind momentan: de, en]]></parameterDescription>
 		<fieldDescription><![CDATA[export_package_volume_liter]]></fieldDescription>
 	</field>
 
+	<sortField name="category_id" />
+
 	<variable name="package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
 	</variable>
@@ -175,7 +177,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<variable name="artnr_nonvariant" class="java.lang.String" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[$F{artnr}.split( "/" )[0]]]></variableExpression>
 	</variable>
-	<filterExpression><![CDATA[new Boolean($F{products_per_page}.intValue() == 2) ]]></filterExpression>
+	<filterExpression><![CDATA[new Boolean($F{products_per_page}.intValue() == 2)]]></filterExpression>
 		<background>
 			<band height="858"  isSplitAllowed="true" >
 				<rectangle>
@@ -277,7 +279,8 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						height="120"
 						forecolor="#FF9900"
 						backcolor="#FF9900"
-						key="Skates/Skateboards/Sicherheit">
+						key="Skates/Skateboards/Sicherheit"
+						isPrintInFirstWholeBand="true">
 							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 3 || $F{category_id}.intValue() == 4 || $F{category_id}.intValue() == 7)]]></printWhenExpression>
 						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
@@ -390,7 +393,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				<image  scaleImage="RetainShape" vAlign="Bottom" onErrorType="Icon" isUsingCache="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="29"
-						y="368"
+						y="366"
 						width="439"
 						height="46"
 						key="image-1"/>
@@ -604,7 +607,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						height="18"
 						key="textField"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
+					<textElement textAlignment="Center" verticalAlignment="Top">
 						<font fontName="Arial" size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{get_package_info_display} == null ? "-" : $F{get_package_info_display}]]></textFieldExpression>

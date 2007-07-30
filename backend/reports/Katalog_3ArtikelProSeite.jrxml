@@ -160,6 +160,8 @@ Möglich sind momentan: de, en]]></parameterDescription>
 		<fieldDescription><![CDATA[export_package_volume_liter]]></fieldDescription>
 	</field>
 
+	<sortField name="category_id" />
+
 	<variable name="package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
 	</variable>
@@ -178,7 +180,239 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<variable name="artnr_nonvariant" class="java.lang.String" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[$F{artnr}.split( "/" )[0]]]></variableExpression>
 	</variable>
-	<filterExpression><![CDATA[new Boolean($F{products_per_page}.intValue() == 2 && $F{category_id}.intValue() == 2241)]]></filterExpression>
+	<filterExpression><![CDATA[new Boolean($F{products_per_page}.intValue() == 3)]]></filterExpression>
+
+		<group  name="Multisport / Basketball" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2244)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Rollspport / Skates" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 3)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Outdoor / Nordic Walking" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2238)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Fussball" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 11)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Wintersport" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 12)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Fahrzeuge" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 6)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Wintersport_" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 13)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Outdoor / Trekking" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2239)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Rollsport / Skateboards" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 4)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Rollsport / Sicherheit" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 7)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Beach" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2245) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Boxen" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2246) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Dart" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2246) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Hockey" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2249)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Kinderspass" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2250) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Mulrisport / Schaukeln" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2251) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Tennis" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2252) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Tischtennis" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2253) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Trampolin" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2254) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / American Sport" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2240) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Badminton" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2242) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
 		<background>
 			<band height="858"  isSplitAllowed="true" >
 				<staticText>
@@ -240,7 +474,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						forecolor="#F0DA17"
 						backcolor="#F0DA17"
 						key="Multisport">
-							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 8 || $F{category_id}.intValue() == 2241 || $F{category_id}.intValue() == 2244 || $F{category_id}.intValue() == 2245 || $F{category_id}.intValue() == 2246 || $F{category_id}.intValue() == 2247 || $F{category_id}.intValue() == 2249 || $F{category_id}.intValue() == 2250 || $F{category_id}.intValue() == 2251 || $F{category_id}.intValue() == 2252 || $F{category_id}.intValue() == 2253 || $F{category_id}.intValue() == 2254 || $F{category_id}.intValue() == 2240 || $F{category_id}.intValue() == 2242 || $F{category_id}.intValue() == 2246)]]></printWhenExpression>
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 8 || $F{category_id}.intValue() == 2241 || $F{category_id}.intValue() == 2244 || $F{category_id}.intValue() == 2245 || $F{category_id}.intValue() == 2246 || $F{category_id}.intValue() == 2247 || $F{category_id}.intValue() == 2249 || $F{category_id}.intValue() == 2250 || $F{category_id}.intValue() == 2251 || $F{category_id}.intValue() == 2252 || $F{category_id}.intValue() == 2253 || $F{category_id}.intValue() == 2254 || $F{category_id}.intValue() == 2240 || $F{category_id}.intValue() == 2242)]]></printWhenExpression>
 						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</rectangle>

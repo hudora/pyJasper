@@ -157,6 +157,8 @@ Möglich sind momentan: de, en]]></parameterDescription>
 		<fieldDescription><![CDATA[export_package_volume_liter]]></fieldDescription>
 	</field>
 
+	<sortField name="category_id" />
+
 	<variable name="package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
 	</variable>
@@ -172,7 +174,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<variable name="artnr_nonvariant" class="java.lang.String" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[$F{artnr}.split( "/" )[0]]]></variableExpression>
 	</variable>
-	<filterExpression><![CDATA[new Boolean($F{products_per_page}.intValue() == 2 && $F{category_id}.intValue() == 2241)]]></filterExpression>
+	<filterExpression><![CDATA[new Boolean($F{products_per_page}.intValue() == 4)]]></filterExpression>
 		<background>
 			<band height="858"  isSplitAllowed="true" >
 				<rectangle>
