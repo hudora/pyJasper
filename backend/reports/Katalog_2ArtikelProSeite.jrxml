@@ -254,7 +254,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						width="115"
 						height="152"
 						key="Joey_Logo">
-							<printWhenExpression><![CDATA[new Boolean($F{brand}.toString() == "Joey")]]></printWhenExpression>
+							<printWhenExpression><![CDATA[new Boolean($F{brand}.contains( "joey" ))]]></printWhenExpression>
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<graphicElement stretchType="NoStretch"/>
