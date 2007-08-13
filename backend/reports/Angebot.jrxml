@@ -174,6 +174,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<field name="updated_at" class="java.lang.String">
 		<fieldDescription><![CDATA[../../updated_at]]></fieldDescription>
 	</field>
+	<field name="export_package_volume_liter" class="java.lang.Double">
+		<fieldDescription><![CDATA[export_package_volume_liter]]></fieldDescription>
+	</field>
 
 	<variable name="package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
@@ -183,6 +186,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	</variable>
 	<variable name="language" class="java.lang.String" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[$F{language} == null ? "de" : $F{language}]]></variableExpression>
+	</variable>
+	<variable name="export_package_volume_liter_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[new Double($F{export_package_volume_liter}.doubleValue() / 100000.0)]]></variableExpression>
 	</variable>
 		<background>
 			<band height="250"  isSplitAllowed="true" >
@@ -510,13 +516,13 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						key="image-1"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<graphicElement stretchType="NoStretch"/>
-					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/Tabelle.gif"]]></imageExpression>
+					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/hudora_katalog_symbolleiste.gif"]]></imageExpression>
 				</image>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="46"
+						x="33"
 						y="32"
-						width="54"
+						width="70"
 						height="18"
 						key="textField"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
@@ -527,7 +533,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="108"
+						x="110"
 						y="32"
 						width="35"
 						height="18"
@@ -540,7 +546,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="148"
+						x="147"
 						y="32"
 						width="28"
 						height="18"
@@ -553,9 +559,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="183"
+						x="175"
 						y="32"
-						width="53"
+						width="63"
 						height="18"
 						key="textField-1"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
@@ -566,7 +572,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="242"
+						x="243"
 						y="32"
 						width="30"
 						height="18"
@@ -579,9 +585,9 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="277"
+						x="267"
 						y="32"
-						width="59"
+						width="77"
 						height="18"
 						key="textField-3"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
@@ -592,7 +598,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="335"
+						x="337"
 						y="32"
 						width="35"
 						height="18"
@@ -605,29 +611,29 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="406"
+						x="403"
 						y="32"
-						width="88"
+						width="105"
 						height="18"
 						key="textField"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center">
-						<font fontName="Arial" size="8"/>
+						<font fontName="Arial" size="7"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{get_package_info_display}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="372"
+						x="371"
 						y="32"
-						width="35"
+						width="38"
 						height="18"
 						key="textField-5"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center">
 						<font fontName="Arial" size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{pallet_volume}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{export_package_volume_liter_normalized} == null ? "-" : $V{export_package_volume_liter_normalized}.toString()]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
@@ -641,7 +647,20 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<textElement textAlignment="Center">
 						<font fontName="Arial" size="9"/>
 					</textElement>
-				<text><![CDATA[HUDORA GmbH     •     Jägerwald 13     •     42897 Remscheid     •     Telefon 02191 609120     •     Fax 02191 6091250]]></text>
+				<text><![CDATA[HUDORA GmbH   •   Jägerwald 13   •   42897 Remscheid   •   Telefon 02191 609120   •   Fax 02191 6091250]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="89"
+						width="534"
+						height="9"
+						key="staticText-7"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font size="7"/>
+					</textElement>
+				<text><![CDATA[Es gelten unsere allgemeinen Geschäftsbedingungen. Diese schicken wir auf Wunsch gerne zu.]]></text>
 				</staticText>
 			</band>
 		</pageFooter>

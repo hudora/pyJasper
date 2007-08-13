@@ -650,7 +650,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$V{export_package_volume_liter_normalized} == null ? "-" : $V{export_package_volume_liter_normalized}.toString()]]></textFieldExpression>
 				</textField>
-				<image  vAlign="Middle" hAlign="Right" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<image  vAlign="Middle" hAlign="Center" isUsingCache="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="29"
 						y="331"
