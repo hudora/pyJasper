@@ -593,6 +593,19 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						</reportElement>
 					<graphicElement stretchType="NoStretch"/>
 				</rectangle>
+				<image  scaleImage="RetainShape" vAlign="Middle" hAlign="Center" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="490"
+						y="550"
+						width="115"
+						height="152"
+						key="zumdick-logo">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 11)]]></printWhenExpression>
+						</reportElement>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["\\\\fileserver.local.hudora.biz\\home\\eigenedateien\\web\\media\\logos\\Zumdick_Logo.gif"]]></imageExpression>
+				</image>
 			</band>
 		</background>
 		<title>
@@ -681,7 +694,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<graphicElement stretchType="NoStretch"/>
-					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/feature_" + $F{feature1} + ".gif"]]></imageExpression>
+					<imageExpression class="java.lang.String"><![CDATA["\\\\fileserver.local.hudora.biz\\home\\eigenedateien\\web\\media\\logos\\feature_" + $F{feature1} + ".gif"]]></imageExpression>
 				</image>
 				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Icon" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -814,7 +827,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<textElement textAlignment="Center">
 						<font fontName="Arial" size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{products_per_export_package}.intValue() == 0 ? "-" : $F{products_per_export_package}.toString()]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{products_per_export_package} == null ? "-" : $F{products_per_export_package}.toString()]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
