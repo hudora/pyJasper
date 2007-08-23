@@ -177,6 +177,24 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	<field name="fob_port" class="java.lang.String">
 		<fieldDescription><![CDATA[get_fob_port_display]]></fieldDescription>
 	</field>
+	<field name="est_products_in_20ft_container" class="java.lang.String">
+		<fieldDescription><![CDATA[est_products_in_20ft_container]]></fieldDescription>
+	</field>
+	<field name="est_products_in_40ft_container" class="java.lang.String">
+		<fieldDescription><![CDATA[est_products_in_40ft_container]]></fieldDescription>
+	</field>
+	<field name="est_products_in_40fthq_container" class="java.lang.String">
+		<fieldDescription><![CDATA[est_products_in_40fthq_container]]></fieldDescription>
+	</field>
+	<field name="statistische_waren_nr" class="java.lang.String">
+		<fieldDescription><![CDATA[statistische_waren_nr]]></fieldDescription>
+	</field>
+	<field name="export_package_volume_liter" class="java.lang.Double">
+		<fieldDescription><![CDATA[export_package_volume_liter]]></fieldDescription>
+	</field>
+	<field name="ve1_weight" class="java.lang.Double">
+		<fieldDescription><![CDATA[ve1_weight]]></fieldDescription>
+	</field>
 
 	<variable name="package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
@@ -186,6 +204,12 @@ Möglich sind momentan: de, en]]></parameterDescription>
 	</variable>
 	<variable name="language" class="java.lang.String" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[$F{language} == null ? "de" : $F{language}]]></variableExpression>
+	</variable>
+	<variable name="export_package_volume_liter_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[new Double($F{export_package_volume_liter}.doubleValue() / 100000.0)]]></variableExpression>
+	</variable>
+	<variable name="ve1_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[new Double($F{ve1_weight}.doubleValue() / 1000.0)]]></variableExpression>
 	</variable>
 		<background>
 			<band height="250"  isSplitAllowed="true" >
@@ -233,7 +257,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<textElement>
 						<font fontName="Arial" size="12"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$V{language}.compareTo("en") == 0 ? "Article-No.: " + $F{artnr} : "Artikel-Nr.: " + $F{artnr}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Item-No.: " + $F{artnr}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -278,14 +302,12 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						y="247"
 						width="13"
 						height="246"
-						key="staticText-3">
-							<printWhenExpression><![CDATA[new Boolean($V{language}.compareTo("en") == 0)]]></printWhenExpression>
-						</reportElement>
+						key="staticText-3"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center" rotation="Left">
 						<font fontName="Arial" size="6"/>
 					</textElement>
-				<text><![CDATA[colour or technical changes possible (status 01/07)]]></text>
+				<text><![CDATA[technical and colour details are subject to change]]></text>
 				</staticText>
 				<image  scaleImage="RetainShape" isLazy="true" isUsingCache="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -300,7 +322,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 				</image>
 				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Icon" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="237"
+						x="235"
 						y="623"
 						width="70"
 						height="70"
@@ -377,21 +399,6 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<graphicElement stretchType="NoStretch" pen="None" fill="Solid" />
 					<imageExpression class="java.awt.Image"><![CDATA[it.businesslogic.ireport.barcode.BcImage.getBarcodeImage(5,$F{ean},false,false,null,0,0)]]></imageExpression>
 				</image>
-				<staticText>
-					<reportElement
-						x="2"
-						y="247"
-						width="13"
-						height="246"
-						key="staticText-5">
-							<printWhenExpression><![CDATA[new Boolean($V{language}.compareTo("de") == 0)]]></printWhenExpression>
-						</reportElement>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Center" rotation="Left">
-						<font fontName="Arial" size="6"/>
-					</textElement>
-				<text><![CDATA[Farbliche und technische Änderungen vorbehalten. (Stand 01/07)]]></text>
-				</staticText>
 				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="25"
@@ -457,85 +464,214 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{anmerkung} == null ? "" : $F{anmerkung}]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="116"
-						y="630"
-						width="64"
-						height="11"
-						key="package size"/>
-					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Left">
-						<font fontName="Arial" size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[($F{package_size_l} == null || $F{package_size_b} == null || $F{package_size_l} == null) ? "-" : $F{package_size_l} + "x" + $F{package_size_b} + "x" + $F{package_size_h}]]></textFieldExpression>
-				</textField>
 				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="182"
-						y="630"
-						width="42"
-						height="10"
+						x="178"
+						y="639"
+						width="46"
+						height="11"
 						key="package weight"/>
-					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Left">
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right">
 						<font fontName="Arial" size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$V{package_weight_normalized} + "kg"]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($V{ve1_weight_normalized} == null || $F{products_per_ve1}.intValue() == 0) ? "-" : $V{ve1_weight_normalized}.toString() + " kg"]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="25"
-						y="566"
-						width="156"
+						y="598"
+						width="199"
 						height="22"
 						key="FOB port"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font/>
+						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["Incoterms 2000 FOB " + $F{fob_port}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
-						x="81"
-						y="598"
-						width="143"
-						height="27"
+						x="84"
+						y="624"
+						width="140"
+						height="14"
 						key="staticText-7"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font size="8"/>
+						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
 					</textElement>
-				<text><![CDATA[items/
-package  size                           weight]]></text>
+				<text><![CDATA[  qty        measurement           weight]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						x="29"
-						y="629"
+						y="639"
 						width="55"
-						height="13"
+						height="11"
 						key="staticText-8"/>
-					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<text><![CDATA[package]]></text>
+				<text><![CDATA[inner packing unit]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
 						x="29"
-						y="647"
+						y="649"
 						width="55"
-						height="13"
+						height="11"
 						key="staticText-9"/>
 					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
 					<textElement>
 						<font size="8"/>
 					</textElement>
-				<text><![CDATA[export package]]></text>
+				<text><![CDATA[outer packing unit]]></text>
 				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="84"
+						y="639"
+						width="23"
+						height="11"
+						key="textField"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{products_per_ve1} == null || $F{products_per_ve1}.intValue() == 0) ? "-" : $F{products_per_ve1}.toString()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="84"
+						y="649"
+						width="23"
+						height="11"
+						key="textField-2"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{products_per_export_package}.intValue() == 0 ? "-" : $F{products_per_export_package}.toString()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="107"
+						y="649"
+						width="73"
+						height="11"
+						key="textField-3"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{export_package_size_l} == null || $F{export_package_size_h} == null || $F{export_package_size_b} == null) ? "-" : $F{export_package_size_l} + "x" + $F{export_package_size_b} + "x" + $F{export_package_size_h}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="178"
+						y="649"
+						width="46"
+						height="11"
+						key="textField-4"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{export_package_weight_normalized} + " kg"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="134"
+						y="659"
+						width="90"
+						height="11"
+						key="textField-5"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{export_package_volume_liter_normalized} == null ? "-" : $V{export_package_volume_liter_normalized}.toString() + " m³"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="29"
+						y="659"
+						width="111"
+						height="11"
+						key="staticText-11"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[volume outer package]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="29"
+						y="670"
+						width="111"
+						height="11"
+						key="staticText-13"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[customs tariff no.]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="134"
+						y="670"
+						width="90"
+						height="11"
+						key="textField-9"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{statistische_waren_nr}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="29"
+						y="681"
+						width="105"
+						height="11"
+						key="staticText-14"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[products in 20ft/40ft/40fthq]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="134"
+						y="681"
+						width="90"
+						height="11"
+						key="textField-10"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{est_products_in_20ft_container} + " / " + $F{est_products_in_40ft_container} + " / " + $F{est_products_in_40fthq_container}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="107"
+						y="639"
+						width="73"
+						height="11"
+						key="textField-1"/>
+					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{ve1_size_l} == null || $F{ve1_size_b} == null || $F{ve1_size_l} == null) ? "-" : $F{ve1_size_l} + "x" + $F{ve1_size_b} + "x" + $F{ve1_size_h}]]></textFieldExpression>
+				</textField>
 			</band>
 		</detail>
 		<columnFooter>
@@ -555,98 +691,7 @@ package  size                           weight]]></text>
 					<textElement textAlignment="Center">
 						<font fontName="Arial" size="8"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA["Angebot " + $F{angebotsnummer} + " an " + $F{firma}+ " (" + $F{kundennummer} + ") vom " + $F{updated_at} + ", gültig bis " + $F{valid_until} + "."]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="29"
-						y="0"
-						width="172"
-						height="12"
-						key="textField"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Center">
-						<font fontName="Arial" size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[($F{products_per_ve1} == null || $F{products_per_ve1}.intValue() == 0) ? "-" : $F{products_per_ve1}.toString()]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="183"
-						y="32"
-						width="53"
-						height="18"
-						key="textField-1"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Center">
-						<font fontName="Arial" size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[($F{ve1_size_l} == null || $F{ve1_size_b} == null || $F{ve1_size_l} == null) ? "-" : $F{ve1_size_l} + "x" + $F{ve1_size_b} + "x" + $F{ve1_size_h}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="242"
-						y="32"
-						width="30"
-						height="18"
-						key="textField-2"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Center">
-						<font fontName="Arial" size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{products_per_export_package}.intValue() == 0 ? "-" : $F{products_per_export_package}.toString()]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="277"
-						y="32"
-						width="59"
-						height="18"
-						key="textField-3"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Center">
-						<font fontName="Arial" size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[($F{export_package_size_l} == null || $F{export_package_size_h} == null || $F{export_package_size_b} == null) ? "-" : $F{export_package_size_l} + "x" + $F{export_package_size_b} + "x" + $F{export_package_size_h}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="335"
-						y="32"
-						width="35"
-						height="18"
-						key="textField-4"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Center">
-						<font fontName="Arial" size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.Double"><![CDATA[$V{export_package_weight_normalized}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="406"
-						y="32"
-						width="88"
-						height="18"
-						key="textField"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Center">
-						<font fontName="Arial" size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{get_package_info_display}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="372"
-						y="32"
-						width="35"
-						height="18"
-						key="textField-5"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Center">
-						<font fontName="Arial" size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{pallet_volume}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Offer " + $F{angebotsnummer} + " to " + $F{firma}+ " (" + $F{kundennummer} + ") dated " + $F{updated_at} + ", valid until " + $F{valid_until} + "."]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
@@ -661,6 +706,19 @@ package  size                           weight]]></text>
 						<font fontName="Arial" size="9"/>
 					</textElement>
 				<text><![CDATA[HUDORA GmbH     •     Jägerwald 13     •     42897 Remscheid     •     Telefon 02191 609120     •     Fax 02191 6091250]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="91"
+						width="534"
+						height="9"
+						key="staticText-10"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font size="7"/>
+					</textElement>
+				<text><![CDATA[Our general conditions of business apply. These will be sent to you on request.]]></text>
 				</staticText>
 			</band>
 		</pageFooter>
