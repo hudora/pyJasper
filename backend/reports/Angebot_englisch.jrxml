@@ -270,7 +270,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<textElement>
 						<font fontName="Arial" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$V{language}.compareTo("en") == 0 ? $F{name_en} : $F{name}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{name_en}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -283,7 +283,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<textElement>
 						<font/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$V{language}.compareTo("en") == 0 ? $F{angebotstext_en} : $F{angebotstext}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{angebotstext_en}]]></textFieldExpression>
 				</textField>
 				<image  vAlign="Middle" hAlign="Right" onErrorType="Blank" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
