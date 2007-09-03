@@ -26,7 +26,7 @@ rcvar=`set_rcvar`
 load_rc_config $name
 
 command="/bin/sh"
-command_args="/usr/local/web/diamond/lib/public/pyJasper/backend/JasperServer.sh"
+command_args="/usr/local/web/MoftS/lib/public/pyJasper/backend/JasperServer.sh"
 
 pyJasperServer_enable=${pyJasperServer_enable:-"NO"}
 
