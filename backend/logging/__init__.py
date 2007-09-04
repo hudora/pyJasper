@@ -58,7 +58,8 @@ elif string.lower(__file__[-4:]) in ['.pyc', '.pyo']:
     _srcfile = __file__[:-4] + '.py'
 else:
     _srcfile = __file__
-_srcfile = os.path.normcase(_srcfile)
+if hasattr(os, 'path') and hasattr(os.path, 'normcase'):
+    _srcfile = os.path.normcase(_srcfile)
 
 # next bit filched from 1.5.2's inspect.py
 def currentframe():

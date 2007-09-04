@@ -22,6 +22,7 @@ class JasperGenerator(object):
     def __init__(self):
         super(JasperGenerator, self).__init__()
         self.absender = u"HUDORA GmbH\nJägerwald 13\n42897 Remscheid\nGermany\nTel. 02191-609120"
+        self.root = None
     
     def generate_xml(self, data):
         raise NotImplementedError

@@ -378,7 +378,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						y="598"
 						width="114"
 						height="16"
-						key="EAN Text"/>
+						key="EANText" />
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center">
 						<font fontName="Arial"/>
@@ -418,7 +418,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						y="321"
 						width="204"
 						height="29"
-						key="Beschreibung Preis1"/>
+						key="BeschreibungPreis1"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center" verticalAlignment="Bottom">
 						<font size="14"/>
@@ -431,7 +431,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						y="411"
 						width="204"
 						height="29"
-						key="Beschreibung Preis2"/>
+						key="BeschreibungPreis2"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center" verticalAlignment="Bottom">
 						<font size="14"/>
@@ -470,7 +470,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						y="639"
 						width="46"
 						height="11"
-						key="package weight"/>
+						key="package_weight"/>
 					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
 						<font fontName="Arial" size="8"/>
@@ -483,7 +483,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						y="598"
 						width="199"
 						height="22"
-						key="FOB port"/>
+						key="FOBport"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
 						<font pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
