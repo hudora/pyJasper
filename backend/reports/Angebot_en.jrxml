@@ -378,7 +378,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						y="598"
 						width="114"
 						height="16"
-						key="EANText" />
+						key="EANText"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center">
 						<font fontName="Arial"/>
@@ -705,7 +705,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<textElement textAlignment="Center">
 						<font fontName="Arial" size="9"/>
 					</textElement>
-				<text><![CDATA[HUDORA GmbH     •     Jägerwald 13     •     42897 Remscheid     •     Telefon 02191 609120     •     Fax 02191 6091250]]></text>
+				<text><![CDATA[HUDORA GmbH  •  Jägerwald 13  •  D-42897 Remscheid  •  Telefon +49 2191 609120  •  Fax +49 2191 6091250]]></text>
 				</staticText>
 				<staticText>
 					<reportElement
