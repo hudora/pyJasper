@@ -642,7 +642,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						key="staticText-14"/>
 					<box topBorder="1Point" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="1Point" bottomBorderColor="#000000"/>
 					<textElement>
-						<font size="8"/>
+						<font size="7"/>
 					</textElement>
 				<text><![CDATA[products in 20ft/40ft/40fthq]]></text>
 				</staticText>
@@ -703,7 +703,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 						key="staticText-4"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center">
-						<font fontName="Arial" size="9"/>
+						<font fontName="Arial" size="8"/>
 					</textElement>
 				<text><![CDATA[HUDORA GmbH  •  Jägerwald 13  •  D-42897 Remscheid  •  Telefon +49 2191 609120  •  Fax +49 2191 6091250]]></text>
 				</staticText>
