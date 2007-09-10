@@ -2,7 +2,7 @@
 <!-- Created with iReport - A designer for JasperReports -->
 <!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
 <jasperReport
-		 name="Angebot_englisch"
+		 name="Angebot_en"
 		 columnCount="1"
 		 printOrder="Vertical"
 		 orientation="Portrait"
@@ -206,7 +206,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 		<variableExpression><![CDATA[$F{language} == null ? "de" : $F{language}]]></variableExpression>
 	</variable>
 	<variable name="export_package_volume_liter_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
-		<variableExpression><![CDATA[new Double($F{export_package_volume_liter}.doubleValue() / 100000.0)]]></variableExpression>
+		<variableExpression><![CDATA[new Double(java.lang.Math.round($F{export_package_volume_liter}.doubleValue() / 100000.0 * 1000.0) / 1000.0)]]></variableExpression>
 	</variable>
 	<variable name="ve1_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{ve1_weight}.doubleValue() / 1000.0)]]></variableExpression>
@@ -581,7 +581,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$V{export_package_weight_normalized} + " kg"]]></textFieldExpression>
 				</textField>
-				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<textField isStretchWithOverflow="false" pattern="###0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="134"
 						y="659"
