@@ -206,7 +206,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 		<variableExpression><![CDATA[$F{language} == null ? "de" : $F{language}]]></variableExpression>
 	</variable>
 	<variable name="export_package_volume_liter_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
-		<variableExpression><![CDATA[new Double(java.lang.Math.round($F{export_package_volume_liter}.doubleValue() / 100000.0 * 1000.0) / 1000.0)]]></variableExpression>
+		<variableExpression><![CDATA[new Double(java.lang.Math.round($F{export_package_volume_liter}.doubleValue()/ 10000.0 * 1000.0) / 1000.0)]]></variableExpression>
 	</variable>
 	<variable name="ve1_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
 		<variableExpression><![CDATA[new Double($F{ve1_weight}.doubleValue() / 1000.0)]]></variableExpression>
