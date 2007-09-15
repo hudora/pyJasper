@@ -124,8 +124,8 @@ class JasperInterface:
             raise RuntimeError, "Unknown output type %r" % (output_type)
         output_file.close()
         delta = time.time() - start
-        print 'report %r generated in %.3f seconds' % (output_filename, delta)
-        return open(output_filename, 'r').read()
+        # print 'report %r generated in %.3f seconds' % (output_filename, delta)
+        return open(output_filename, 'rb').read()
 
     def generate_rtf(self, jasper_print, output_file):
         rtf_exporter = JRRtfExporter()

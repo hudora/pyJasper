@@ -320,7 +320,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<graphicElement stretchType="NoStretch"/>
 					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/hudora_logo_klassisch_blau.gif"]]></imageExpression>
 				</image>
-				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Icon" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Error" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="235"
 						y="623"
@@ -333,7 +333,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<graphicElement stretchType="NoStretch"/>
 					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/feature_" + $F{feature1} + ".gif"]]></imageExpression>
 				</image>
-				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Icon" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Error" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="311"
 						y="623"
@@ -346,7 +346,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<graphicElement stretchType="NoStretch"/>
 					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/feature_" + $F{feature2} + ".gif"]]></imageExpression>
 				</image>
-				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Icon" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Error" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="386"
 						y="623"
@@ -359,7 +359,7 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<graphicElement stretchType="NoStretch"/>
 					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/feature_" + $F{feature3} + ".gif"]]></imageExpression>
 				</image>
-				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Icon" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Error" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
 						x="460"
 						y="623"
