@@ -1,55 +1,75 @@
 <?xml version="1.0"?>
 <provisionings>
-    <generator>$Revision: 2361 $</generator>
-    <generated_at>2007-11-07 14:51:02</generated_at>
-    <provisioning>
-        <kommissionierbelegnr>267265</kommissionierbelegnr>
-        <liefer_date>2006-11-20</liefer_date>
-        <sachbearbeiter>38</sachbearbeiter>
-        <provisioningposition>
-            <provisioning_type />
-            <quantity_to_pick>None</quantity_to_pick>
-            <location>None</location>
-            <article>
-                <artnr>76105</artnr>
-                <name>4 Pylone</name>
-                <kurztext>Pylone</kurztext>
-                <einheit>stueck</einheit>
-                <ean>4005998761052</ean>
-                <product_weight>None</product_weight>
-                <products_per_ve1>6</products_per_ve1>
-                <products_per_export_package>24</products_per_export_package>
-            </article>
-        </provisioningposition>
-        <provisioningposition>
-            <provisioning_type />
-            <quantity_to_pick>None</quantity_to_pick>
-            <location>None</location>
-            <article>
-                <artnr>72000</artnr>
-                <name>Boule Set</name>
-                <kurztext>Boule-Set</kurztext>
-                <einheit>stueck</einheit>
-                <ean>4005998720004</ean>
-                <product_weight>4300</product_weight>
-                <products_per_ve1>None</products_per_ve1>
-                <products_per_export_package>4</products_per_export_package>
-            </article>
-        </provisioningposition>
-        <provisioningposition>
-            <provisioning_type />
-            <quantity_to_pick>None</quantity_to_pick>
-            <location>None</location>
-            <article>
-                <artnr>76105</artnr>
-                <name>4 Pylone</name>
-                <kurztext>Pylone</kurztext>
-                <einheit>stueck</einheit>
-                <ean>4005998761052</ean>
-                <product_weight>None</product_weight>
-                <products_per_ve1>6</products_per_ve1>
-                <products_per_export_package>24</products_per_export_package>
-                </article>
-        </provisioningposition>
-    </provisioning>
+  <generator>$Revision: 2361 $</generator>
+  <generated_at>2007-11-07 14:51:02</generated_at>
+  <provisioning>
+    <kommissionierbelegnr>267265</kommissionierbelegnr>
+    <liefer_date>2006-11-20</liefer_date>
+    <sachbearbeiter>38</sachbearbeiter>
+    <warenempfaenger>19115</warenempfaenger>
+    <versandart>001</versandart>
+    <auftragsnr>157481</auftragsnr>
+    <kep>False</kep>
+    <volume>345</volume>
+    <weight>135423</weight>
+    <export_packages>13.2</export_packages>
+    <palettes>1.6</palettes>
+    <provisioningposition>
+      <provisioning_type>pick</provisioning_type>
+      <quantity_to_pick>8</quantity_to_pick>
+      <location>10-13-01</location>
+      <volume>12</volume>
+      <weight>35423</weight>
+      <export_packages>3.5</export_packages>
+      <palettes>0.2</palettes>
+      <article>
+        <artnr>76105</artnr>
+        <name>4 Pylone</name>
+        <kurztext>Pylone</kurztext>
+        <einheit>stueck</einheit>
+        <ean>4005998761052</ean>
+        <product_weight>None</product_weight>
+        <products_per_ve1>6</products_per_ve1>
+        <products_per_export_package>24</products_per_export_package>
+      </article>
+    </provisioningposition>
+    <provisioningposition>
+      <provisioning_type>pick</provisioning_type>
+      <quantity_to_pick>4</quantity_to_pick>
+      <location>19-23-01</location>
+      <volume>12</volume>
+      <weight>35423</weight>
+      <export_packages>3.5</export_packages>
+      <palettes>0.2</palettes>
+      <article>
+        <artnr>72000</artnr>
+        <name>Boule Set</name>
+        <kurztext>Boule-Set</kurztext>
+        <einheit>stueck</einheit>
+        <ean>4005998720004</ean>
+        <product_weight>4300</product_weight>
+        <products_per_ve1>None</products_per_ve1>
+        <products_per_export_package>4</products_per_export_package>
+      </article>
+    </provisioningposition>
+    <provisioningposition>
+      <provisioning_type>pick</provisioning_type>
+      <quantity_to_pick>4</quantity_to_pick>
+      <location>02-03-01</location>
+      <volume>12</volume>
+      <weight>35423</weight>
+      <export_packages>3.5</export_packages>
+      <palettes>0.2</palettes>
+      <article>
+        <artnr>76105</artnr>
+        <name>4 Pylone</name>
+        <kurztext>Pylone</kurztext>
+        <einheit>stueck</einheit>
+        <ean>4005998761052</ean>
+        <product_weight>None</product_weight>
+        <products_per_ve1>6</products_per_ve1>
+        <products_per_export_package>24</products_per_export_package>
+      </article>
+    </provisioningposition>
+  </provisioning>
 </provisionings>
