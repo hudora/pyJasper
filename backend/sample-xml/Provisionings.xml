@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<provisionings>
+    <generator>$Revision: 2361 $</generator>
+    <generated_at>2007-11-07 14:51:02</generated_at>
+    <provisioning>
+        <kommissionierbelegnr>267265</kommissionierbelegnr>
+        <liefer_date>2006-11-20</liefer_date>
+        <sachbearbeiter>38</sachbearbeiter>
+        <provisioningposition>
+            <provisioning_type />
+            <quantity_to_pick>None</quantity_to_pick>
+            <location>None</location>
+            <article>
+                <artnr>76105</artnr>
+                <name>4 Pylone</name>
+                <kurztext>Pylone</kurztext>
+                <einheit>stueck</einheit>
+                <ean>4005998761052</ean>
+                <product_weight>None</product_weight>
+                <products_per_ve1>6</products_per_ve1>
+                <products_per_export_package>24</products_per_export_package>
+            </article>
+        </provisioningposition>
+        <provisioningposition>
+            <provisioning_type />
+            <quantity_to_pick>None</quantity_to_pick>
+            <location>None</location>
+            <article>
+                <artnr>72000</artnr>
+                <name>Boule Set</name>
+                <kurztext>Boule-Set</kurztext>
+                <einheit>stueck</einheit>
+                <ean>4005998720004</ean>
+                <product_weight>4300</product_weight>
+                <products_per_ve1>None</products_per_ve1>
+                <products_per_export_package>4</products_per_export_package>
+            </article>
+        </provisioningposition>
+        <provisioningposition>
+            <provisioning_type />
+            <quantity_to_pick>None</quantity_to_pick>
+            <location>None</location>
+            <article>
+                <artnr>76105</artnr>
+                <name>4 Pylone</name>
+                <kurztext>Pylone</kurztext>
+                <einheit>stueck</einheit>
+                <ean>4005998761052</ean>
+                <product_weight>None</product_weight>
+                <products_per_ve1>6</products_per_ve1>
+                <products_per_export_package>24</products_per_export_package>
+                </article>
+        </provisioningposition>
+    </provisioning>
+</provisionings>
