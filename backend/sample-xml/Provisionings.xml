@@ -54,12 +54,12 @@
     </provisioningposition>
     <provisioningposition>
       <provisioning_type>pick</provisioning_type>
-      <quantity_to_pick>4</quantity_to_pick>
+      <quantity_to_pick>4000</quantity_to_pick>
       <location>02-03-01</location>
       <volume>12</volume>
       <weight>35423</weight>
-      <export_packages>3.5</export_packages>
-      <palettes>0.2</palettes>
+      <export_packages>3500</export_packages>
+      <palettes>200</palettes>
       <article>
         <artnr>76105</artnr>
         <name>4 Pylone</name>
