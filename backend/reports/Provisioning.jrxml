@@ -378,58 +378,6 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="475"
-						y="1"
-						width="20"
-						height="10"
-						key="staticText-19"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement>
-						<font size="8"/>
-					</textElement>
-				<text><![CDATA[Seite]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="494"
-						y="1"
-						width="8"
-						height="10"
-						key="textField-4"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Right">
-						<font size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
-						x="504"
-						y="1"
-						width="15"
-						height="10"
-						key="staticText-20"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement>
-						<font size="8"/>
-					</textElement>
-				<text><![CDATA[von]]></text>
-				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="520"
-						y="1"
-						width="10"
-						height="10"
-						key="textField-5"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement>
-						<font size="8"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{PAGE_COUNT}]]></textFieldExpression>
-				</textField>
-				<staticText>
-					<reportElement
 						x="213"
 						y="79"
 						width="67"
@@ -453,6 +401,32 @@
 						<font/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{sachbearbeiter}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="461"
+						y="1"
+						width="56"
+						height="13"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["Seite " + $V{PAGE_NUMBER} + " von "]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Report" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="517"
+						y="1"
+						width="16"
+						height="13"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER} + ""]]></textFieldExpression>
 				</textField>
 			</band>
 		</pageHeader>
@@ -554,6 +528,7 @@
 			<band height="31"  isSplitAllowed="true" >
 				<rectangle>
 					<reportElement
+						mode="Opaque"
 						x="2"
 						y="0"
 						width="532"
@@ -562,7 +537,7 @@
 						key="rectangle-2">
 							<printWhenExpression><![CDATA[new Boolean( $V{PAGE_COUNT}.intValue() % 2 ==0 )]]></printWhenExpression>
 						</reportElement>
-					<graphicElement stretchType="NoStretch"/>
+					<graphicElement stretchType="NoStretch" pen="None"/>
 				</rectangle>
 				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
@@ -659,6 +634,19 @@
 		</columnFooter>
 		<pageFooter>
 			<band height="50"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="324"
+						y="3"
+						width="207"
+						height="22"
+						key="staticText-22"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[Qualitätsprüfer: _____________________]]></text>
+				</staticText>
 			</band>
 		</pageFooter>
 		<lastPageFooter>
@@ -666,7 +654,7 @@
 			</band>
 		</lastPageFooter>
 		<summary>
-			<band height="50"  isSplitAllowed="true" >
+			<band height="49"  isSplitAllowed="true" >
 			</band>
 		</summary>
 </jasperReport>
