@@ -43,8 +43,8 @@
 	<field name="movement_updated_at" class="java.lang.String">
 		<fieldDescription><![CDATA[updated_at]]></fieldDescription>
 	</field>
-	<field name="from_location_name" class="java.lang.String">
-		<fieldDescription><![CDATA[from_location/name]]></fieldDescription>
+	<field name="location_from" class="java.lang.String">
+		<fieldDescription><![CDATA[location_from]]></fieldDescription>
 	</field>
 	<field name="mui" class="java.lang.String">
 		<fieldDescription><![CDATA[mui]]></fieldDescription>
@@ -257,7 +257,7 @@
 					<textElement>
 						<font fontName="Arial" size="14"/>
 					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{to_location_name}]]></textFieldExpression>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{location_from}.substring( 0, 2 ) + "-" + $F{location_from}.substring( 2, 4 ) + "-" + $F{location_from}.substring( 4, 6 )]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement
@@ -369,9 +369,9 @@
 				</staticText>
 				<staticText>
 					<reportElement
-						x="0"
+						x="19"
 						y="530"
-						width="535"
+						width="406"
 						height="25"
 						key="staticText-11"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
@@ -380,19 +380,6 @@
 					</textElement>
 				<text><![CDATA[verfahren durch: ______________________________________________________]]></text>
 				</staticText>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="0"
-						y="306"
-						width="533"
-						height="93"
-						key="textField-7"/>
-					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Center">
-						<font fontName="Arial" pdfFontName="Helvetica-Bold" size="55" isBold="true"/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{to_location_name}.substring( 0, 2 ) + "-" + $F{to_location_name}.substring( 2, 4 ) + "-" + $F{to_location_name}.substring( 4, 6 )]]></textFieldExpression>
-				</textField>
 				<staticText>
 					<reportElement
 						x="6"
@@ -460,9 +447,9 @@
 				</textField>
 				<staticText>
 					<reportElement
-						x="0"
+						x="19"
 						y="560"
-						width="535"
+						width="406"
 						height="25"
 						key="staticText-15"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
@@ -640,6 +627,19 @@
 						<font fontName="Arial" size="14"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{mui}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="287"
+						width="533"
+						height="137"
+						key="textField-16"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" pdfFontName="Helvetica-Bold" size="115" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{to_location_name}.substring( 0, 2 ) + "-" + $F{to_location_name}.substring( 2, 4 ) + "-" + $F{to_location_name}.substring( 4, 6 )]]></textFieldExpression>
 				</textField>
 			</band>
 		</detail>
