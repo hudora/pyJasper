@@ -2,7 +2,7 @@
 __revision__ = 1.0
 
 import os, sys, SocketServer
-import logging # logging is not part of jython 2.1 so you have to put it 
+#import logging # logging is not part of jython 2.1 so you have to put it 
                # yourself somewhere where Python can find it
 
 from XmlJasperInterface import XmlJasperInterface
@@ -24,13 +24,15 @@ class JasperHandler(SocketServer.BaseRequestHandler):
         try:
             try:
                 design = client.readline().strip()
+                foo = client.readline()
                 select = client.readline().strip()
+                foo = client.readline()
                 input_file = client.readline().strip()
-                logging.info("Request for %r/%r/%r" % (design, select, input_file))
+                print("XXXXXXXXXX Request for %r / %r / %r" % (design, select, input_file))
                 output_filename = self.generate_pdf(design, select, input_file)
                 self.request.send("200 OK\r\n%s\r\n" % (output_filename,))
             except:
-                logging.error("server error: %s" % sys.exc_info()[1])
+                #logging.error("server error: %s" % sys.exc_info()[1])
                 self.request.send("500 Error: %r\r\n\r\n" % (sys.exc_info(),))
                 if DEBUG:
                     raise
@@ -39,6 +41,7 @@ class JasperHandler(SocketServer.BaseRequestHandler):
     
     def generate_pdf(self, design, select, input_file):
         """Actually generate pdf."""
+        print "ZZZZZZZZZZZZZ", design, select, input_file
         outdir, name = os.path.split(input_file)
         output_file = os.path.splitext(name)[0] + '.pdf'
         

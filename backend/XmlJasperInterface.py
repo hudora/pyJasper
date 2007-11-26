@@ -169,6 +169,8 @@ def main(args):
     #if not jasper.report(input_file):
     #    sys.exit(1)
     
+    design = design + '.jasper'
+    sys.stderr.write("ZZZ %s" % design)
     jasper = JasperInterface(open(design).read(), select)
     fd = open('output.pdf', 'w')
     fd.write(jasper.generate(open(input_file, 'r').read(), 'pdf'))

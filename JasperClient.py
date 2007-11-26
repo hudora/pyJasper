@@ -35,12 +35,14 @@ class JasperClient(object):
         return outfilename
 
     def generate_pdf_server(self, design_name, xpath, data_name):
-        """Generate report via pyJasperServer."""
+        print """Generate report via pyJasperServer."""
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         server.settimeout(TIMEOUT)
         
         logging.debug("Connecting to %s:%s" % (HOST, PORT))
         server.connect((HOST, PORT))
+        logging.debug("AAAAAAAAAAAAAAAA " + ("%s\r\n%s\r\n%s\r\n" \
+                    % (design_name, xpath, data_name)))
         server.send("%s\r\n%s\r\n%s\r\n" \
                     % (design_name, xpath, data_name))
         logging.debug("Request sent")
