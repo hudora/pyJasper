@@ -8,11 +8,9 @@ Created by Maximillian Dornseif on 2007-10-12.
 Consider it BSD licensed.
 """
 
-import sys, os, os.path, re, copy, time, logging, uuid, httplib
-import unittest
+import os.path, uuid
 import xml.etree.ElementTree as ET
 from cStringIO import StringIO
-from urllib import urlencode
 from httplib2 import Http
 
 class JasperException(RuntimeError):
@@ -22,73 +20,57 @@ class JasperException(RuntimeError):
 
 # Based on
 # From http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/146306
-def encode_multipart_formdata(fields=[], files=[]):
+def encode_multipart_formdata(fields={}):
     """
     fields is a sequence of (name, value) elements for regular form fields.
     files is a sequence of (name, filename, value) elements for data to be uploaded as files
     Return (content_type, body) ready for httplib.HTTP instance
     """
-    BOUNDARY = '----------ThIs_Is_tHe_bouNdaRY_$%s' % (uuid.uuid4())
-    CRLF = '\r\n'
-    L = []
+    boundary = '----------ThIs_Is_tHe_bouNdaRY_$%s' % (uuid.uuid4())
+    out = []
     # if it's dict like then use the items method to get the fields
     if hasattr(fields, "items"):
         fields = fields.items()
     for (key, value) in fields:
-        L.append('--' + BOUNDARY)
-        L.append('Content-Disposition: form-data; name="%s"' % key)
-        L.append('')
-        L.append(value)
-    for (key, filename, value) in files:
-        L.append('--' + BOUNDARY)
-        L.append('Content-Disposition: form-data; name="%s"; filename="%s"' % (key, filename))
-        L.append('Content-Type: %s' % get_content_type(filename))
-        L.append('')
-        L.append(value)
-    L.append('--' + BOUNDARY + '--')
-    L.append('')
-    body = CRLF.join(map(str,L))
-    content_type = 'multipart/form-data; boundary=%s' % BOUNDARY
+        out.append('--' + boundary)
+        out.append('Content-Disposition: form-data; name="%s"' % key)
+        out.append('')
+        out.append(value)
+    out.append('--' + boundary + '--')
+    out.append('')
+    body = '\r\n'.join(map(str, out))
+    content_type = 'multipart/form-data; boundary=%s' % boundary
     return content_type, body
-
+    
 
 class JasperClient(object):
     """Generation of JasperReport documents either using the server or a local client."""
     
-    
-    # def generate_pdf_locally(self, design_name, xpath, data_name):
-    #     """Generates a PDF document by using Jasper-Reports."""
-    #     # TODO: this is dublicated code
-    #     outfilename = os.path.join(OUTPUTDIRHIER, 'pdf', 
-    #                                os.path.splitext(os.path.split(data_name)[-1])[0]) + '.pdf'
-    #     os.system('(cd %r; sh XmlJasperInterface.sh %r %r %r )' % (OUTPUTDIRHIER,
-    #                 design_name, xpath, data_name))
-    #     return outfilename
-    
-    
-    def findServerUrl(self):
+    def find_server_url(self):
+        """Return the URL of the page where the server lives.
+        
+        This is at the moment a static string."""
+        
         return 'http://jasper.local.hudora.biz:8080/pyJasper/jasper.py'
-    
+        
     
     def generate_pdf_server(self, design, xpath, xmldata):
         """Generate report via pyJasperServer."""
         open('/tmp/pyjasperxml.xml', 'w').write(xmldata)
-        url = self.findServerUrl()
+        url = self.find_server_url()
         content_type, content = encode_multipart_formdata(fields=dict(design=design, xpath=xpath, 
                                                                       xmldata=xmldata))
         resp, content = Http().request(url, 'POST', body=content, headers={"Content-Type": content_type})
         if not resp.get('status') == '200':
             raise JasperException, "%s -- %r" % (content, resp)
         return content
-    
+        
     
     def generate_pdf(self, design, xpath, xmldata):
-        try:
-            return self.generate_pdf_server(design, xpath, xmldata)
-        except JasperException, msg:
-            logging.error('Problem with server: %s' % (msg,))
-            return self.generate_pdf_locally(design, xpath, xmldata)
-
+        """Generate report via pyJasperServer."""
+        return self.generate_pdf_server(design, xpath, xmldata)
+        
+    
 
 class JasperGenerator(object):
     """Abstract class for generating Documents out with Jasperreports.
@@ -100,9 +82,21 @@ class JasperGenerator(object):
     
     def __init__(self):
         super(JasperGenerator, self).__init__()
+        self.reportname = None
+        self.xpath = None
         self.absender = u"HUDORA GmbH\nJägerwald 13\n42897 Remscheid\nGermany\nTel. 02191-609120"
     
     def generate_xml(self, data=None):
+        """To be overwritten by subclasses.
+        
+        E.g.
+        def generate_xml(self, movement):
+            ET.SubElement(self.root, 'generator').text = __revision__
+            ET.SubElement(self.root, 'generated_at').text = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+            xml_movement  =  ET.SubElement(xmlroot, 'movement')
+            ET.SubElement(xml_movement, "location_from").text = unicode(movement.location_from)
+            return xmlroot  
+        """
         raise NotImplementedError
     
     def get_xml(self, data=None):
@@ -123,12 +117,7 @@ class JasperGenerator(object):
         return server.generate_pdf(design, self.xpath, xmldata)
     
     def generate(self, data=None):
+        """Generates a report, returns the PDF."""
         return self.generate_pdf(data)
 
 
-class myjasperTests(unittest.TestCase):
-    def setUp(self):
-        pass
-
-if __name__ == '__main__':
-    unittest.main()
