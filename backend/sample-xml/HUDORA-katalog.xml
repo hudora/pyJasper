@@ -43,11 +43,6 @@ size 30-33: S
 size 34-37: M
 size 38-41: L
 </angebotstext_en>
-      <highlight1/>
-      <highlight2/>
-      <highlight3/>
-      <highlight4/>
-      <highlight5/>
       <einheit>stueck</einheit>
       <get_einheit_display>St&#xFC;ck</get_einheit_display>
       <ean>4005998011041</ean>
@@ -88,7 +83,6 @@ size 38-41: L
       <gruener_punkt>True</gruener_punkt>
       <gewicht_pappe>5</gewicht_pappe>
       <gewicht_kunststoff/>
-      <has_barcode>True</has_barcode>
       <statistische_waren_nr>95067030</statistische_waren_nr>
       <for_toddlers>False</for_toddlers>
       <toy>False</toy>
@@ -98,10 +92,6 @@ size 38-41: L
       <category_id>3</category_id>
       <warenklassifikation>4495</warenklassifikation>
       <get_warenklassifikation_display>4495</get_warenklassifikation_display>
-      <fedas/>
-      <fedas_id/>
-      <abis/>
-      <get_abis_display/>
       <successor/>
       <successor_id/>
       <parent/>
@@ -129,7 +119,6 @@ size 38-41: L
       <features>ABEC 3 Lager, Intertek/GS, CE, Stiftung Warentest, &#xD6;kotest, Gr&#xF6;&#xDF;enverstellbar</features>
       <certifications/>
       <catalog>Katalog 2007, Neuheiten 2007</catalog>
-      <languages/>
       <set_consiting_of/>
       <spare_for/>
       <get_sidebar_image_url>http://www.hudora.de/media/,/-/product/image/81ab3498810817202b90dc5ecaae97ca.jpg/sidebar.jpeg</get_sidebar_image_url>
@@ -153,7 +142,6 @@ size 38-41: L
       <export_package_weight_kg>11.8</export_package_weight_kg>
       <pallet_weight_kg>282.2</pallet_weight_kg>
       <softm_bezeichnung>("joey's Skate Set, Gr\xc3", '\xb6\xc3\x9fe 30-33', '')</softm_bezeichnung>
-      <amazon_name>HUDORA 01104 - joey's Skate Set, Gr&#xF6;&#xDF;e 30-33 mit Rucksack und Protektoren</amazon_name>
       <palettenfaktor>96</palettenfaktor>
       <mindestabnahmemenge>4</mindestabnahmemenge>
       <sizes/>
@@ -294,11 +282,6 @@ target shot made of Nylon, incl. 6 pegs
 rebound set with dynamic spring-back bungee loops
 Easy-Click-System
 </angebotstext_en>
-      <highlight1/>
-      <highlight2/>
-      <highlight3/>
-      <highlight4/>
-      <highlight5/>
       <webtext/>
       <aka/>
       <einheit/>
@@ -344,7 +327,6 @@ Easy-Click-System
       <gewicht_kunststoff>126</gewicht_kunststoff>
       <battery/>
       <get_battery_display/>
-      <has_barcode>True</has_barcode>
       <for_toddlers>False</for_toddlers>
       <toy>True</toy>
       <mandantory_compliance>EN71</mandantory_compliance>
@@ -352,10 +334,6 @@ Easy-Click-System
       <category_id>11</category_id>
       <warenklassifikation>4422</warenklassifikation>
       <get_warenklassifikation_display>4422</get_warenklassifikation_display>
-      <fedas/>
-      <fedas_id/>
-      <abis/>
-      <get_abis_display/>
       <successor/>
       <successor_id/>
       <parent/>
@@ -383,7 +361,6 @@ Easy-Click-System
       <features>CE</features>
       <certifications/>
       <catalog>Katalog 2004, Katalog 2005, Katalog 2006, Katalog 2007</catalog>
-      <languages/>
       <set_consiting_of/>
       <spare_for>Ersatznetz f&#xFC;r Tore mit 213 cm (ArtNr 76109), Torwand mit Heringen, 213 cm  (ArtNr 76093), Ersatznetz f&#xFC;r die Tore mit 213 cm Breite ohne Heringe (ArtNr 99701), Ersatztorwand f&#xFC;r Tor 76102 (ArtNr 7610224), Ersatz Rebound Set f&#xFC;r Tor 76102 (ArtNr 7610223), Ersatznetz f&#xFC;r Tor 76102 (ArtNr 7610222)</spare_for>
       <get_sidebar_image_url>http://www.hudora.de/media/,/-/product/image/079f58cd88ec89be643a3d703a21f6c7.jpg/sidebar.jpeg</get_sidebar_image_url>
@@ -407,7 +384,6 @@ Easy-Click-System
       <export_package_weight_kg>12.1</export_package_weight_kg>
       <pallet_weight_kg>363.0</pallet_weight_kg>
       <softm_bezeichnung>('Tor Komplett-Set Trip', 'le Kick ', '')</softm_bezeichnung>
-      <amazon_name>HUDORA 76102 - Tor Komplett-Set Triple Kick, 213x152 cm, 32 mm Rohrdurchmesser </amazon_name>
       <palettenfaktor>30</palettenfaktor>
       <mindestabnahmemenge>1</mindestabnahmemenge>
       <sizes/>
