@@ -393,19 +393,6 @@ Möglich sind momentan: de, en]]></parameterDescription>
 					<graphicElement stretchType="NoStretch"/>
 					<imageExpression class="java.lang.String"><![CDATA["\\\\fileserver.local.hudora.biz\\home\\eigenedateien\\web\\media\\logos\\Zumdick_Logo.gif"]]></imageExpression>
 				</image>
-				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
-					<reportElement
-						x="482"
-						y="100"
-						width="130"
-						height="120"
-						key="textField-8"/>
-					<box></box>
-					<textElement>
-						<font/>
-					</textElement>
-				<textFieldExpression   class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
-				</textField>
 			</band>
 		</background>
 		<title>
