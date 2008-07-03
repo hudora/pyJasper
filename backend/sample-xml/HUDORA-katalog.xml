@@ -1,0 +1,708 @@
+<?xml version="1.0"?>
+<hudora_katalog>
+  <catalog>
+    <product>
+      <artnr>01104</artnr>
+      <brand>hudora</brand>
+      <get_brand_display>HUDORA</get_brand_display>
+      <name>joey's Skate Set, Gr&#xF6;&#xDF;e 30-33 mit Rucksack und Protektoren</name>
+      <langtext>joey's Skate Set, Gr&#xF6;&#xDF;e 30-33</langtext>
+      <name_en>joey's Skate Set, size 30-33, backpack+protectors</name_en>
+      <kurztext>joey's Skate Set</kurztext>
+      <bontext>Skate Set</bontext>
+      <preislistentext>joey's Skate Set, Gr&#xF6;&#xDF;e 30-33 mit Rucksack und Protektoren</preislistentext>
+      <angebotstext>Kinderinliner
+Schlagsicheres PP Chassis
+Schlagsichere PP Manschette
+Klettverschluss und Push-Lock Schnalle
+Gegossene PU Rollen, 82A
+ABEC 3 Kugellager, Carbon
+
+Rollengr&#xF6;&#xDF;e:
+Gr&#xF6;&#xDF;e 30 - 33: 64 x 24 mm
+Gr&#xF6;&#xDF;e 34-37 und 38-41: 72 x 24 mm
+
+Biomechanisches Protektoren Set:
+Gr&#xF6;&#xDF;e 30-33: S
+Gr&#xF6;&#xDF;e 34-37: M
+Gr&#xF6;&#xDF;e 38-41: L
+</angebotstext>
+      <angebotstext_en>Inline skate for children
+shockproof PP chassis 
+shockproof PP cuff
+Velcro fasteners and push lock buckels
+casted PU Wheels, 82A
+bearings ABEC 3, carcon
+
+size of wheels:
+size 30-33: 64 x 24 mm
+size 34-37 and 38-41: 72 x 24 mm
+
+biomechanical protectors set
+size 30-33: S
+size 34-37: M
+size 38-41: L
+</angebotstext_en>
+      <einheit>stueck</einheit>
+      <get_einheit_display>St&#xFC;ck</get_einheit_display>
+      <ean>4005998011041</ean>
+      <product_weight/>
+      <product_size_l/>
+      <product_size_b/>
+      <product_size_h/>
+      <package_weight>2440</package_weight>
+      <package_size_l>200</package_size_l>
+      <package_size_b>270</package_size_b>
+      <package_size_h>300</package_size_h>
+      <package_info>Rucksack/Hang-Tag</package_info>
+      <get_package_info_display>Rucksack/Hang-Tag</get_package_info_display>
+      <euroloch>type1</euroloch>
+      <get_euroloch_display>Typ 1 - Rundloch</get_euroloch_display>
+      <products_per_ve1/>
+      <ve1_weight/>
+      <ve1_size_l/>
+      <ve1_size_b/>
+      <ve1_size_h/>
+      <no_export_package>False</no_export_package>
+      <export_package_ean>4005998000854</export_package_ean>
+      <export_package_ean_id>50097</export_package_ean_id>
+      <export_package_weight>11760</export_package_weight>
+      <export_package_size_l>527</export_package_size_l>
+      <export_package_size_b>267</export_package_size_b>
+      <export_package_size_h>432</export_package_size_h>
+      <products_per_export_package>4</products_per_export_package>
+      <export_packages_per_layer/>
+      <export_packages_per_pallet>24</export_packages_per_pallet>
+      <pallet_height/>
+      <to_big_for_pallet>False</to_big_for_pallet>
+      <pallet_ean>4005998041468</pallet_ean>
+      <pallet_ean_id>1541</pallet_ean_id>
+      <logistik_info/>
+      <pallet_scheme/>
+      <pallet_photo/>
+      <gruener_punkt>True</gruener_punkt>
+      <gewicht_pappe>5</gewicht_pappe>
+      <gewicht_kunststoff/>
+      <statistische_waren_nr>95067030</statistische_waren_nr>
+      <for_toddlers>False</for_toddlers>
+      <toy>False</toy>
+      <user_weight/>
+      <mandantory_compliance/>
+      <category>Rollsport / Skates</category>
+      <category_id>3</category_id>
+      <warenklassifikation>4495</warenklassifikation>
+      <get_warenklassifikation_display>4495</get_warenklassifikation_display>
+      <successor/>
+      <successor_id/>
+      <parent/>
+      <parent_id/>
+      <size_of/>
+      <size_of_id/>
+      <variant_of/>
+      <variant_of_id/>
+      <version_of/>
+      <version_of_id/>
+      <spare>False</spare>
+      <tentative>False</tentative>
+      <is_hidden>False</is_hidden>
+      <is_meta>False</is_meta>
+      <annote/>
+      <handbook/>
+      <catalog_page/>
+      <sprengzeichnung/>
+      <products_in_20ft_container>1960</products_in_20ft_container>
+      <products_in_40ft_container>4000</products_in_40ft_container>
+      <products_in_40fthq_container>4400</products_in_40fthq_container>
+      <created_at>2006-06-28</created_at>
+      <updated_at>2007-01-01</updated_at>
+      <toddlers_reason/>
+      <features>ABEC 3 Lager, Intertek/GS, CE, Stiftung Warentest, &#xD6;kotest, Gr&#xF6;&#xDF;enverstellbar</features>
+      <certifications/>
+      <catalog>Katalog 2007, Neuheiten 2007</catalog>
+      <set_consiting_of/>
+      <spare_for/>
+      <get_sidebar_image_url>http://www.hudora.de/media/,/-/product/image/81ab3498810817202b90dc5ecaae97ca.jpg/sidebar.jpeg</get_sidebar_image_url>
+      <get_product_image_url>http://www.hudora.de/media/,/-/product/image/188c2b81cefa798fd5e6702700604d0a.jpg/svga.jpeg</get_product_image_url>
+      <get_ean_image_url>http://www.hudora.de/media/,/barcodes/ean/4005998011041.png</get_ean_image_url>
+      <get_export_package_ean_image_url>http://www.hudora.de/media/,/barcodes/ean/4005998000854.png</get_export_package_ean_image_url>
+      <product_size>NonexNonexNone</product_size>
+      <package_size>200x270x300</package_size>
+      <ve1_size>NonexNonexNone</ve1_size>
+      <export_package_size>527x267x432</export_package_size>
+      <export_package_size_cm>52.7x26.7x43.2</export_package_size_cm>
+      <export_package_size_cm_l>52.7</export_package_size_cm_l>
+      <export_package_size_cm_b>26.7</export_package_size_cm_b>
+      <export_package_size_cm_h>43.2</export_package_size_cm_h>
+      <pallet_volume>1.458870912</pallet_volume>
+      <package_volume>0.0162</package_volume>
+      <ve1_volume/>
+      <export_package_volume>0.060786288</export_package_volume>
+      <package_weight_kg>2.44</package_weight_kg>
+      <ve1_weight_kg/>
+      <export_package_weight_kg>11.8</export_package_weight_kg>
+      <pallet_weight_kg>282.2</pallet_weight_kg>
+      <softm_bezeichnung>("joey's Skate Set, Gr\xc3", '\xb6\xc3\x9fe 30-33', '')</softm_bezeichnung>
+      <palettenfaktor>96</palettenfaktor>
+      <mindestabnahmemenge>4</mindestabnahmemenge>
+      <sizes/>
+      <pallet_weight>282240</pallet_weight>
+      <feature_set>
+        <feature>
+          <name>Intertek/GS</name>
+          <id>12</id>
+          <file>Intertek_GS</file>
+        </feature>
+        <feature>
+          <name>CE</name>
+          <id>13</id>
+          <file>CE</file>
+        </feature>
+        <feature>
+          <name>Stiftung Warentest</name>
+          <id>14</id>
+          <file>Stiftung_Warentest</file>
+        </feature>
+        <feature>
+          <name>&#xC3;&#x96;kotest</name>
+          <id>15</id>
+          <file>__kotest</file>
+        </feature>
+      </feature_set>
+      <images>
+        <image>
+          <id>3145</id>
+          <url>http://www.hudora.de/media/-/product/image/b6b2e4c7c165b5c3a2aeab20a91a83e7.jpg</url>
+          <title>01104-06_joey_Skate-Set_PRO_c.jpg</title>
+          <kind>Produktbild</kind>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/b6b2e4c7c165b5c3a2aeab20a91a83e7.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/b6b2e4c7c165b5c3a2aeab20a91a83e7.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/b6b2e4c7c165b5c3a2aeab20a91a83e7.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/b6b2e4c7c165b5c3a2aeab20a91a83e7.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/b6b2e4c7c165b5c3a2aeab20a91a83e7.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/b6b2e4c7c165b5c3a2aeab20a91a83e7.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/b6b2e4c7c165b5c3a2aeab20a91a83e7.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/b6b2e4c7c165b5c3a2aeab20a91a83e7.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/b6b2e4c7c165b5c3a2aeab20a91a83e7.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>3146</id>
+          <url>http://www.hudora.de/media/-/product/image/5baf584c5300b241041e2f0089f92788.jpg</url>
+          <title>01104-06_joey_Skate-Set_TEST.jpg</title>
+          <kind>Actionbild</kind>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/5baf584c5300b241041e2f0089f92788.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/5baf584c5300b241041e2f0089f92788.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/5baf584c5300b241041e2f0089f92788.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/5baf584c5300b241041e2f0089f92788.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/5baf584c5300b241041e2f0089f92788.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/5baf584c5300b241041e2f0089f92788.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/5baf584c5300b241041e2f0089f92788.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/5baf584c5300b241041e2f0089f92788.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/5baf584c5300b241041e2f0089f92788.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>3147</id>
+          <url>http://www.hudora.de/media/-/product/image/188c2b81cefa798fd5e6702700604d0a.jpg</url>
+          <title>01104-06_joey_Skate-Set_PRO_a.jpg</title>
+          <kind>Produktbild</kind>
+          <preference>1</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/188c2b81cefa798fd5e6702700604d0a.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/188c2b81cefa798fd5e6702700604d0a.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/188c2b81cefa798fd5e6702700604d0a.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/188c2b81cefa798fd5e6702700604d0a.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/188c2b81cefa798fd5e6702700604d0a.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/188c2b81cefa798fd5e6702700604d0a.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/188c2b81cefa798fd5e6702700604d0a.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/188c2b81cefa798fd5e6702700604d0a.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/188c2b81cefa798fd5e6702700604d0a.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>3148</id>
+          <url>http://www.hudora.de/media/-/product/image/81ab3498810817202b90dc5ecaae97ca.jpg</url>
+          <title>01104-06_joey_Skate-Set_PRO_b.jpg</title>
+          <kind>Produktbild</kind>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/81ab3498810817202b90dc5ecaae97ca.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/81ab3498810817202b90dc5ecaae97ca.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/81ab3498810817202b90dc5ecaae97ca.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/81ab3498810817202b90dc5ecaae97ca.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/81ab3498810817202b90dc5ecaae97ca.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/81ab3498810817202b90dc5ecaae97ca.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/81ab3498810817202b90dc5ecaae97ca.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/81ab3498810817202b90dc5ecaae97ca.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/81ab3498810817202b90dc5ecaae97ca.jpg/sidebar.jpeg</sidebar>
+        </image>
+      </images>
+    </product>
+
+
+
+
+
+
+
+
+    <product>
+      <artnr>76102</artnr>
+      <brand>hudora</brand>
+      <get_brand_display>HUDORA</get_brand_display>
+      <name>Tor Komplett-Set Triple Kick, 213x152 cm, 32 mm Rohrdurchmesser </name>
+      <langtext>Tor Komplett-Set Triple Kick </langtext>
+      <name_en>Soccergoal set Triple Kick</name_en>
+      <kurztext>Fu&#xDF;balltor-Set</kurztext>
+      <bontext>Fu&#xDF;balltor</bontext>
+      <preislistentext>Tor Komplett-Set Triple Kick, 213x152 cm, 32 mm Rohrdurchmesser </preislistentext>
+      <angebotstext>Verzinktes Tor,Rohrrahmen32mm&#xD8;
+Ma&#xDF;e213x152x76cm
+Clickmontage m.Sicherheitsarretierung d.beschrifteten Stangen
+Wetterfestes5-faseriges Polyester-Netz,gekn&#xFC;pft
+Fixierung m.Klettb&#xE4;ndern, Durchzugsleinen
+5Heringe
+Torwand aus Nylongewebe
+Easy-Click Schnellspannsyst,6Heringe
+Rebound-Set aus Polyester-Mesh-Gewebe
+Easy-Click Schnellspannsyst
+</angebotstext>
+      <angebotstext_en>galvanised tubular frame 32 cm &#xD8;
+measurements 213 x 152 x 76 cm
+click assembly with safety locking, labelled parts
+5-strand polyester, weatherproof net
+fixing with fasteners and attachment cords
+incl. 5 pegs for added stability
+target shot made of Nylon, incl. 6 pegs
+rebound set with dynamic spring-back bungee loops
+Easy-Click-System
+</angebotstext_en>
+      <webtext/>
+      <aka/>
+      <einheit/>
+      <get_einheit_display/>
+      <ean>4005998761021</ean>
+      <ean_id>47487</ean_id>
+      <product_weight>11400</product_weight>
+      <product_size_l>2130</product_size_l>
+      <product_size_b>760</product_size_b>
+      <product_size_h>1520</product_size_h>
+      <package_weight>12100</package_weight>
+      <package_size_l>115</package_size_l>
+      <package_size_b>1000</package_size_b>
+      <package_size_h>330</package_size_h>
+      <package_info>Karton mit Farbposter</package_info>
+      <get_package_info_display>Karton mit Farbposter</get_package_info_display>
+      <euroloch/>
+      <get_euroloch_display/>
+      <products_per_ve1/>
+      <ve1_weight/>
+      <ve1_size_l/>
+      <ve1_size_b/>
+      <ve1_size_h/>
+      <no_export_package>True</no_export_package>
+      <export_package_ean>4005998016503</export_package_ean>
+      <export_package_ean_id>13987</export_package_ean_id>
+      <export_package_weight>12100</export_package_weight>
+      <export_package_size_l>1000</export_package_size_l>
+      <export_package_size_b>110</export_package_size_b>
+      <export_package_size_h>330</export_package_size_h>
+      <products_per_export_package>1</products_per_export_package>
+      <export_packages_per_layer/>
+      <export_packages_per_pallet>30</export_packages_per_pallet>
+      <pallet_height/>
+      <to_big_for_pallet>False</to_big_for_pallet>
+      <pallet_ean>4005998047903</pallet_ean>
+      <pallet_ean_id>2204</pallet_ean_id>
+      <logistik_info/>
+      <pallet_scheme/>
+      <pallet_photo/>
+      <gruener_punkt>True</gruener_punkt>
+      <gewicht_pappe>954</gewicht_pappe>
+      <gewicht_kunststoff>126</gewicht_kunststoff>
+      <battery/>
+      <get_battery_display/>
+      <for_toddlers>False</for_toddlers>
+      <toy>True</toy>
+      <mandantory_compliance>EN71</mandantory_compliance>
+      <category>Multisport / Fu&#xDF;ball</category>
+      <category_id>11</category_id>
+      <warenklassifikation>4422</warenklassifikation>
+      <get_warenklassifikation_display>4422</get_warenklassifikation_display>
+      <successor/>
+      <successor_id/>
+      <parent/>
+      <parent_id/>
+      <size_of/>
+      <size_of_id/>
+      <variant_of/>
+      <variant_of_id/>
+      <version_of/>
+      <version_of_id/>
+      <spare>False</spare>
+      <tentative>False</tentative>
+      <is_hidden>False</is_hidden>
+      <is_meta>False</is_meta>
+      <annote/>
+      <handbook/>
+      <catalog_page>http://www.hudora.de/media/-/product/catalog_page/fbc5897561cc9b7bec2cf5f2f1cb83ae.pdf</catalog_page>
+      <sprengzeichnung/>
+      <products_in_20ft_container>722</products_in_20ft_container>
+      <products_in_40ft_container>1450</products_in_40ft_container>
+      <products_in_40fthq_container>1669</products_in_40fthq_container>
+      <created_at>2006-03-25</created_at>
+      <updated_at>2007-01-03</updated_at>
+      <toddlers_reason/>
+      <features>CE</features>
+      <certifications/>
+      <catalog>Katalog 2004, Katalog 2005, Katalog 2006, Katalog 2007</catalog>
+      <set_consiting_of/>
+      <spare_for>Ersatznetz f&#xFC;r Tore mit 213 cm (ArtNr 76109), Torwand mit Heringen, 213 cm  (ArtNr 76093), Ersatznetz f&#xFC;r die Tore mit 213 cm Breite ohne Heringe (ArtNr 99701), Ersatztorwand f&#xFC;r Tor 76102 (ArtNr 7610224), Ersatz Rebound Set f&#xFC;r Tor 76102 (ArtNr 7610223), Ersatznetz f&#xFC;r Tor 76102 (ArtNr 7610222)</spare_for>
+      <get_sidebar_image_url>http://www.hudora.de/media/,/-/product/image/079f58cd88ec89be643a3d703a21f6c7.jpg/sidebar.jpeg</get_sidebar_image_url>
+      <get_product_image_url>http://www.hudora.de/media/,/-/product/image/e3bd4cef15f76b0272998775d73963b8.jpg/svga.jpeg</get_product_image_url>
+      <get_ean_image_url>http://www.hudora.de/media/,/barcodes/ean/4005998761021.png</get_ean_image_url>
+      <get_export_package_ean_image_url>http://www.hudora.de/media/,/barcodes/ean/4005998016503.png</get_export_package_ean_image_url>
+      <product_size>2130x760x1520</product_size>
+      <package_size>115x1000x330</package_size>
+      <ve1_size>NonexNonexNone</ve1_size>
+      <export_package_size>1000x110x330</export_package_size>
+      <export_package_size_cm>100.0x11.0x33.0</export_package_size_cm>
+      <export_package_size_cm_l>100.0</export_package_size_cm_l>
+      <export_package_size_cm_b>11.0</export_package_size_cm_b>
+      <export_package_size_cm_h>33.0</export_package_size_cm_h>
+      <pallet_volume>1.089</pallet_volume>
+      <package_volume>0.03795</package_volume>
+      <ve1_volume/>
+      <export_package_volume>0.0363</export_package_volume>
+      <package_weight_kg>12.10</package_weight_kg>
+      <ve1_weight_kg/>
+      <export_package_weight_kg>12.1</export_package_weight_kg>
+      <pallet_weight_kg>363.0</pallet_weight_kg>
+      <softm_bezeichnung>('Tor Komplett-Set Trip', 'le Kick ', '')</softm_bezeichnung>
+      <palettenfaktor>30</palettenfaktor>
+      <mindestabnahmemenge>1</mindestabnahmemenge>
+      <sizes/>
+      <pallet_weight>363000</pallet_weight>
+      <feature_set>
+        <feature>
+          <name>CE</name>
+          <id>13</id>
+          <file>CE</file>
+        </feature>
+      </feature_set>
+      <images>
+        <image>
+          <id>704</id>
+          <url>http://www.hudora.de/media/-/product/image/079f58cd88ec89be643a3d703a21f6c7.jpg</url>
+          <title>76102_Rebound_illu_ACT.jpg</title>
+          <kind>Actionbild</kind>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/079f58cd88ec89be643a3d703a21f6c7.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/079f58cd88ec89be643a3d703a21f6c7.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/079f58cd88ec89be643a3d703a21f6c7.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/079f58cd88ec89be643a3d703a21f6c7.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/079f58cd88ec89be643a3d703a21f6c7.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/079f58cd88ec89be643a3d703a21f6c7.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/079f58cd88ec89be643a3d703a21f6c7.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/079f58cd88ec89be643a3d703a21f6c7.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/079f58cd88ec89be643a3d703a21f6c7.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>705</id>
+          <url>http://www.hudora.de/media/-/product/image/e648d1a0f8f40215b12aaf03337ca4f8.jpg</url>
+          <title>76102_Triple_Kick_Tor_Komplett-Set_ACT.jpg</title>
+          <kind>Actionbild</kind>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/e648d1a0f8f40215b12aaf03337ca4f8.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/e648d1a0f8f40215b12aaf03337ca4f8.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/e648d1a0f8f40215b12aaf03337ca4f8.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/e648d1a0f8f40215b12aaf03337ca4f8.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/e648d1a0f8f40215b12aaf03337ca4f8.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/e648d1a0f8f40215b12aaf03337ca4f8.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/e648d1a0f8f40215b12aaf03337ca4f8.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/e648d1a0f8f40215b12aaf03337ca4f8.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/e648d1a0f8f40215b12aaf03337ca4f8.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>706</id>
+          <url>http://www.hudora.de/media/-/product/image/e3bd4cef15f76b0272998775d73963b8.jpg</url>
+          <title>76102_Triple_Kick_Tor_Komplett-Set_PRO.jpg</title>
+          <kind>Produktbild</kind>
+          <preference>1</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/e3bd4cef15f76b0272998775d73963b8.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/e3bd4cef15f76b0272998775d73963b8.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/e3bd4cef15f76b0272998775d73963b8.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/e3bd4cef15f76b0272998775d73963b8.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/e3bd4cef15f76b0272998775d73963b8.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/e3bd4cef15f76b0272998775d73963b8.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/e3bd4cef15f76b0272998775d73963b8.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/e3bd4cef15f76b0272998775d73963b8.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/e3bd4cef15f76b0272998775d73963b8.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1707</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-89b1204b2bd3076afd13cea3a06ce92a.jpg</url>
+          <title>76102_1.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-89b1204b2bd3076afd13cea3a06ce92a.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-89b1204b2bd3076afd13cea3a06ce92a.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-89b1204b2bd3076afd13cea3a06ce92a.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-89b1204b2bd3076afd13cea3a06ce92a.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-89b1204b2bd3076afd13cea3a06ce92a.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-89b1204b2bd3076afd13cea3a06ce92a.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-89b1204b2bd3076afd13cea3a06ce92a.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-89b1204b2bd3076afd13cea3a06ce92a.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-89b1204b2bd3076afd13cea3a06ce92a.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1708</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-6218a5f823e13ed8569c94d659f226ee.jpg</url>
+          <title>76102_2.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-6218a5f823e13ed8569c94d659f226ee.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-6218a5f823e13ed8569c94d659f226ee.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-6218a5f823e13ed8569c94d659f226ee.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-6218a5f823e13ed8569c94d659f226ee.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-6218a5f823e13ed8569c94d659f226ee.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-6218a5f823e13ed8569c94d659f226ee.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-6218a5f823e13ed8569c94d659f226ee.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-6218a5f823e13ed8569c94d659f226ee.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-6218a5f823e13ed8569c94d659f226ee.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1709</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-6e457e13b2e97b1f511ddbb37081c49f.jpg</url>
+          <title>76102_3.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-6e457e13b2e97b1f511ddbb37081c49f.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-6e457e13b2e97b1f511ddbb37081c49f.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-6e457e13b2e97b1f511ddbb37081c49f.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-6e457e13b2e97b1f511ddbb37081c49f.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-6e457e13b2e97b1f511ddbb37081c49f.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-6e457e13b2e97b1f511ddbb37081c49f.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-6e457e13b2e97b1f511ddbb37081c49f.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-6e457e13b2e97b1f511ddbb37081c49f.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-6e457e13b2e97b1f511ddbb37081c49f.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1710</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-22e625901ff32c3487c35dbaafaa66d8.jpg</url>
+          <title>76102_4.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-22e625901ff32c3487c35dbaafaa66d8.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-22e625901ff32c3487c35dbaafaa66d8.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-22e625901ff32c3487c35dbaafaa66d8.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-22e625901ff32c3487c35dbaafaa66d8.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-22e625901ff32c3487c35dbaafaa66d8.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-22e625901ff32c3487c35dbaafaa66d8.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-22e625901ff32c3487c35dbaafaa66d8.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-22e625901ff32c3487c35dbaafaa66d8.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-22e625901ff32c3487c35dbaafaa66d8.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1711</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-d0b24a36c3cb1e1ac3fb6780d8758fb4.jpg</url>
+          <title>76102_Rebound1.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-d0b24a36c3cb1e1ac3fb6780d8758fb4.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-d0b24a36c3cb1e1ac3fb6780d8758fb4.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-d0b24a36c3cb1e1ac3fb6780d8758fb4.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-d0b24a36c3cb1e1ac3fb6780d8758fb4.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-d0b24a36c3cb1e1ac3fb6780d8758fb4.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-d0b24a36c3cb1e1ac3fb6780d8758fb4.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-d0b24a36c3cb1e1ac3fb6780d8758fb4.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-d0b24a36c3cb1e1ac3fb6780d8758fb4.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-d0b24a36c3cb1e1ac3fb6780d8758fb4.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1712</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-d2219c1a5bbe87e2afb69e4744a3863f.jpg</url>
+          <title>76102_Rebound2.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-d2219c1a5bbe87e2afb69e4744a3863f.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-d2219c1a5bbe87e2afb69e4744a3863f.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-d2219c1a5bbe87e2afb69e4744a3863f.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-d2219c1a5bbe87e2afb69e4744a3863f.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-d2219c1a5bbe87e2afb69e4744a3863f.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-d2219c1a5bbe87e2afb69e4744a3863f.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-d2219c1a5bbe87e2afb69e4744a3863f.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-d2219c1a5bbe87e2afb69e4744a3863f.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-d2219c1a5bbe87e2afb69e4744a3863f.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1713</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-6f0a2a31707ab8c0a273c6b82314ac3a.jpg</url>
+          <title>76102_Rebound_PROFI.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-6f0a2a31707ab8c0a273c6b82314ac3a.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-6f0a2a31707ab8c0a273c6b82314ac3a.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-6f0a2a31707ab8c0a273c6b82314ac3a.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-6f0a2a31707ab8c0a273c6b82314ac3a.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-6f0a2a31707ab8c0a273c6b82314ac3a.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-6f0a2a31707ab8c0a273c6b82314ac3a.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-6f0a2a31707ab8c0a273c6b82314ac3a.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-6f0a2a31707ab8c0a273c6b82314ac3a.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-6f0a2a31707ab8c0a273c6b82314ac3a.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1714</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-d4c8b0f4f562fe3ec8c10bd1d04185a7.jpg</url>
+          <title>76102_Tor_PROFI.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-d4c8b0f4f562fe3ec8c10bd1d04185a7.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-d4c8b0f4f562fe3ec8c10bd1d04185a7.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-d4c8b0f4f562fe3ec8c10bd1d04185a7.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-d4c8b0f4f562fe3ec8c10bd1d04185a7.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-d4c8b0f4f562fe3ec8c10bd1d04185a7.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-d4c8b0f4f562fe3ec8c10bd1d04185a7.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-d4c8b0f4f562fe3ec8c10bd1d04185a7.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-d4c8b0f4f562fe3ec8c10bd1d04185a7.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-d4c8b0f4f562fe3ec8c10bd1d04185a7.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1715</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-19c386d8d2b7e2b754d35a1cc2656d4b.jpg</url>
+          <title>76102_Torwand.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-19c386d8d2b7e2b754d35a1cc2656d4b.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-19c386d8d2b7e2b754d35a1cc2656d4b.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-19c386d8d2b7e2b754d35a1cc2656d4b.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-19c386d8d2b7e2b754d35a1cc2656d4b.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-19c386d8d2b7e2b754d35a1cc2656d4b.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-19c386d8d2b7e2b754d35a1cc2656d4b.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-19c386d8d2b7e2b754d35a1cc2656d4b.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-19c386d8d2b7e2b754d35a1cc2656d4b.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-19c386d8d2b7e2b754d35a1cc2656d4b.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1716</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-cd7459d1013d7b1dfe5016bbca29d4a3.jpg</url>
+          <title>76102_Torwand_PROFI.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-cd7459d1013d7b1dfe5016bbca29d4a3.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-cd7459d1013d7b1dfe5016bbca29d4a3.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-cd7459d1013d7b1dfe5016bbca29d4a3.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-cd7459d1013d7b1dfe5016bbca29d4a3.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-cd7459d1013d7b1dfe5016bbca29d4a3.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-cd7459d1013d7b1dfe5016bbca29d4a3.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-cd7459d1013d7b1dfe5016bbca29d4a3.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-cd7459d1013d7b1dfe5016bbca29d4a3.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-cd7459d1013d7b1dfe5016bbca29d4a3.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1717</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-4580cfb978b446089b9fc62ce3635df1.jpg</url>
+          <title>76102_action_2.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-4580cfb978b446089b9fc62ce3635df1.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-4580cfb978b446089b9fc62ce3635df1.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-4580cfb978b446089b9fc62ce3635df1.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-4580cfb978b446089b9fc62ce3635df1.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-4580cfb978b446089b9fc62ce3635df1.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-4580cfb978b446089b9fc62ce3635df1.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-4580cfb978b446089b9fc62ce3635df1.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-4580cfb978b446089b9fc62ce3635df1.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-4580cfb978b446089b9fc62ce3635df1.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1718</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-6475d29ccf4a2af4b179cd3e8c7e1af0.jpg</url>
+          <title>76102_ohne.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-6475d29ccf4a2af4b179cd3e8c7e1af0.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-6475d29ccf4a2af4b179cd3e8c7e1af0.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-6475d29ccf4a2af4b179cd3e8c7e1af0.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-6475d29ccf4a2af4b179cd3e8c7e1af0.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-6475d29ccf4a2af4b179cd3e8c7e1af0.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-6475d29ccf4a2af4b179cd3e8c7e1af0.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-6475d29ccf4a2af4b179cd3e8c7e1af0.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-6475d29ccf4a2af4b179cd3e8c7e1af0.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-6475d29ccf4a2af4b179cd3e8c7e1af0.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1719</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-4e5dbca9de20e7db9c911d7d6f0b1dcb.jpg</url>
+          <title>76102_silber.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-4e5dbca9de20e7db9c911d7d6f0b1dcb.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-4e5dbca9de20e7db9c911d7d6f0b1dcb.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-4e5dbca9de20e7db9c911d7d6f0b1dcb.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-4e5dbca9de20e7db9c911d7d6f0b1dcb.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-4e5dbca9de20e7db9c911d7d6f0b1dcb.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-4e5dbca9de20e7db9c911d7d6f0b1dcb.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-4e5dbca9de20e7db9c911d7d6f0b1dcb.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-4e5dbca9de20e7db9c911d7d6f0b1dcb.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-4e5dbca9de20e7db9c911d7d6f0b1dcb.jpg/sidebar.jpeg</sidebar>
+        </image>
+        <image>
+          <id>1720</id>
+          <url>http://www.hudora.de/media/-/product/image/RoR-690b348d0cc11cf828f0339fb106ad17.jpg</url>
+          <title>76102.jpg</title>
+          <kind/>
+          <preference>0</preference>
+          <logo>nein</logo>
+          <clipped>nein</clipped>
+          <mini>http://www.hudora.de/media/,/-/product/image/RoR-690b348d0cc11cf828f0339fb106ad17.jpg/mini.jpeg</mini>
+          <svga>http://www.hudora.de/media/,/-/product/image/RoR-690b348d0cc11cf828f0339fb106ad17.jpg/svga.jpeg</svga>
+          <medium>http://www.hudora.de/media/,/-/product/image/RoR-690b348d0cc11cf828f0339fb106ad17.jpg/medium.jpeg</medium>
+          <thumb>http://www.hudora.de/media/,/-/product/image/RoR-690b348d0cc11cf828f0339fb106ad17.jpg/thumb.jpeg</thumb>
+          <xvga>http://www.hudora.de/media/,/-/product/image/RoR-690b348d0cc11cf828f0339fb106ad17.jpg/xvga.jpeg</xvga>
+          <full>http://www.hudora.de/media/,/-/product/image/RoR-690b348d0cc11cf828f0339fb106ad17.jpg/full.jpeg</full>
+          <square>http://www.hudora.de/media/,/-/product/image/RoR-690b348d0cc11cf828f0339fb106ad17.jpg/square.jpeg</square>
+          <small>http://www.hudora.de/media/,/-/product/image/RoR-690b348d0cc11cf828f0339fb106ad17.jpg/small.jpeg</small>
+          <sidebar>http://www.hudora.de/media/,/-/product/image/RoR-690b348d0cc11cf828f0339fb106ad17.jpg/sidebar.jpeg</sidebar>
+        </image>
+      </images>
+    </product>
+  </catalog>
+</hudora_katalog>

@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="Katalog_3ArtikelProSeite"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="612"
+		 pageHeight="858"
+		 columnWidth="612"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="language" isForPrompting="false" class="java.lang.String">
+		<parameterDescription><![CDATA[Bezeichnet die Sprache, in der das Angebotsblatt ausgegeben werden soll.
+Möglich sind momentan: de, en]]></parameterDescription>
+		<defaultValueExpression ><![CDATA[$F{language} == "en" ? "en" : "de"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath"><![CDATA[/hudora_katalog/catalog/product]]></queryString>
+
+	<field name="artnr" class="java.lang.String">
+		<fieldDescription><![CDATA[artnr]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[name]]></fieldDescription>
+	</field>
+	<field name="angebotstext" class="java.lang.String">
+		<fieldDescription><![CDATA[angebotstext]]></fieldDescription>
+	</field>
+	<field name="reklame" class="java.lang.String">
+		<fieldDescription><![CDATA[reklame]]></fieldDescription>
+	</field>
+	<field name="package_weight" class="java.lang.Double">
+		<fieldDescription><![CDATA[package_weight]]></fieldDescription>
+	</field>
+	<field name="package_size_l" class="java.lang.String">
+		<fieldDescription><![CDATA[package_size_l]]></fieldDescription>
+	</field>
+	<field name="package_size_b" class="java.lang.String">
+		<fieldDescription><![CDATA[package_size_b]]></fieldDescription>
+	</field>
+	<field name="package_size_h" class="java.lang.String">
+		<fieldDescription><![CDATA[package_size_h]]></fieldDescription>
+	</field>
+	<field name="products_per_ve1" class="java.lang.Integer">
+		<fieldDescription><![CDATA[products_per_ve1]]></fieldDescription>
+	</field>
+	<field name="ve1_size_l" class="java.lang.String">
+		<fieldDescription><![CDATA[ve1_size_l]]></fieldDescription>
+	</field>
+	<field name="ve1_size_h" class="java.lang.String">
+		<fieldDescription><![CDATA[ve1_size_h]]></fieldDescription>
+	</field>
+	<field name="ve1_size_b" class="java.lang.String">
+		<fieldDescription><![CDATA[ve1_size_b]]></fieldDescription>
+	</field>
+	<field name="products_per_export_package" class="java.lang.Integer">
+		<fieldDescription><![CDATA[products_per_export_package]]></fieldDescription>
+	</field>
+	<field name="export_package_weight" class="java.lang.Double">
+		<fieldDescription><![CDATA[export_package_weight]]></fieldDescription>
+	</field>
+	<field name="export_package_size_l" class="java.lang.String">
+		<fieldDescription><![CDATA[export_package_size_l]]></fieldDescription>
+	</field>
+	<field name="export_package_size_h" class="java.lang.String">
+		<fieldDescription><![CDATA[export_package_size_h]]></fieldDescription>
+	</field>
+	<field name="export_package_size_b" class="java.lang.String">
+		<fieldDescription><![CDATA[export_package_size_b]]></fieldDescription>
+	</field>
+	<field name="get_package_info_display" class="java.lang.String">
+		<fieldDescription><![CDATA[get_package_info_display]]></fieldDescription>
+	</field>
+	<field name="image" class="java.lang.String">
+		<fieldDescription><![CDATA[get_product_image_url]]></fieldDescription>
+	</field>
+	<field name="palettenfaktor" class="java.lang.String">
+		<fieldDescription><![CDATA[palettenfaktor]]></fieldDescription>
+	</field>
+	<field name="ean" class="java.lang.String">
+		<fieldDescription><![CDATA[ean]]></fieldDescription>
+	</field>
+	<field name="preis1" class="java.lang.String">
+		<fieldDescription><![CDATA[pricing/preis[1]]]></fieldDescription>
+	</field>
+	<field name="preis2" class="java.lang.String">
+		<fieldDescription><![CDATA[preis2	]]></fieldDescription>
+	</field>
+	<field name="preis3" class="java.lang.String">
+		<fieldDescription><![CDATA[preis3]]></fieldDescription>
+	</field>
+	<field name="preis4" class="java.lang.String">
+		<fieldDescription><![CDATA[preis4]]></fieldDescription>
+	</field>
+	<field name="preis5" class="java.lang.String">
+		<fieldDescription><![CDATA[preis5]]></fieldDescription>
+	</field>
+	<field name="preis6" class="java.lang.String">
+		<fieldDescription><![CDATA[preis6]]></fieldDescription>
+	</field>
+	<field name="name_en" class="java.lang.String">
+		<fieldDescription><![CDATA[name_en]]></fieldDescription>
+	</field>
+	<field name="pallet_volume" class="java.lang.Double">
+		<fieldDescription><![CDATA[pallet_volume]]></fieldDescription>
+	</field>
+	<field name="angebotstext_en" class="java.lang.String">
+		<fieldDescription><![CDATA[angebotstext_en]]></fieldDescription>
+	</field>
+	<field name="feature1" class="java.lang.String">
+		<fieldDescription><![CDATA[feature_set/feature[1]/file]]></fieldDescription>
+	</field>
+	<field name="feature2" class="java.lang.String">
+		<fieldDescription><![CDATA[feature_set/feature[2]/file]]></fieldDescription>
+	</field>
+	<field name="feature3" class="java.lang.String">
+		<fieldDescription><![CDATA[feature_set/feature[3]/file]]></fieldDescription>
+	</field>
+	<field name="feature4" class="java.lang.String">
+		<fieldDescription><![CDATA[feature_set/feature[4]/file]]></fieldDescription>
+	</field>
+	<field name="feature5" class="java.lang.String">
+		<fieldDescription><![CDATA[feature_set/feature[5]/file]]></fieldDescription>
+	</field>
+	<field name="feature6" class="java.lang.String">
+		<fieldDescription><![CDATA[feature_set/feature[6]/file]]></fieldDescription>
+	</field>
+	<field name="feature7" class="java.lang.String">
+		<fieldDescription><![CDATA[feature_set/feature[7]/file]]></fieldDescription>
+	</field>
+	<field name="language" class="java.lang.String">
+		<fieldDescription><![CDATA[../../language]]></fieldDescription>
+	</field>
+	<field name="category_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[category_id]]></fieldDescription>
+	</field>
+	<field name="brand" class="java.lang.String">
+		<fieldDescription><![CDATA[brand]]></fieldDescription>
+	</field>
+	<field name="export_package_volume" class="java.lang.Float">
+		<fieldDescription><![CDATA[export_package_volume]]></fieldDescription>
+	</field>
+	<field name="products_per_page" class="java.lang.Integer">
+		<fieldDescription><![CDATA[products_per_page]]></fieldDescription>
+	</field>
+	<field name="export_package_volume_liter" class="java.lang.Double">
+		<fieldDescription><![CDATA[export_package_volume_liter]]></fieldDescription>
+	</field>
+
+	<sortField name="category_id" />
+
+	<variable name="package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[new Double($F{package_weight}.doubleValue() / 1000.0)]]></variableExpression>
+	</variable>
+	<variable name="export_package_weight_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[new Double($F{export_package_weight}.doubleValue() / 1000.0)]]></variableExpression>
+	</variable>
+	<variable name="language" class="java.lang.String" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[$F{language} == null ? "de" : $F{language}]]></variableExpression>
+	</variable>
+	<variable name="export_package_volume_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[new Double($F{export_package_volume}.doubleValue() /1000.0)]]></variableExpression>
+	</variable>
+	<variable name="export_package_volume_liter_normalized" class="java.lang.Double" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[new Double($F{export_package_volume_liter}.doubleValue() / 100000.0)]]></variableExpression>
+	</variable>
+	<variable name="artnr_nonvariant" class="java.lang.String" resetType="Report" calculation="Nothing">
+		<variableExpression><![CDATA[$F{artnr}.split( "/" )[0]]]></variableExpression>
+	</variable>
+	<filterExpression><![CDATA[new Boolean($F{products_per_page}.intValue() == 3)]]></filterExpression>
+
+		<group  name="Multisport / Basketball" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2244)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Rollspport / Skates" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 3)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Outdoor / Nordic Walking" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2238)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Fussball" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 11)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Wintersport" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 12)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Fahrzeuge" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 6)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Wintersport_" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 13)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Outdoor / Trekking" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2239)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Rollsport / Skateboards" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 4)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Rollsport / Sicherheit" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 7)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Beach" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2245) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Boxen" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2246) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Dart" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2246) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Hockey" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2249)]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Kinderspass" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2250) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Mulrisport / Schaukeln" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2251) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Tennis" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2252) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Tischtennis" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2253) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Trampolin" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2254) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / American Sport" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2240) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<group  name="Multisport / Badminton" isStartNewPage="true" >
+			<groupExpression><![CDATA[new Boolean($F{category_id}.intValue() == 2242) ]]></groupExpression>
+			<groupHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupHeader>
+			<groupFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+			</groupFooter>
+		</group>
+		<background>
+			<band height="858"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="12"
+						y="300"
+						width="13"
+						height="246"
+						key="staticText-3">
+							<printWhenExpression><![CDATA[new Boolean($V{language}.compareTo("en") == 0)]]></printWhenExpression>
+						</reportElement>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center" rotation="Left">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+				<text><![CDATA[colour or technical changes possible (status 08/2008)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="12"
+						y="300"
+						width="13"
+						height="246"
+						key="staticText-5"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center" rotation="Left">
+						<font fontName="Arial" size="6"/>
+					</textElement>
+				<text><![CDATA[Farbliche und technische Änderungen vorbehalten. (Stand 08/2008)]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="0"
+						width="130"
+						height="858"
+						forecolor="#005FA0"
+						backcolor="#005FA0"
+						key="blauer Balken"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#F0DA17"
+						backcolor="#F0DA17"
+						key="rectangle-5"/>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#F0DA17"
+						backcolor="#F0DA17"
+						key="Multisport">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 8 || $F{category_id}.intValue() == 2241 || $F{category_id}.intValue() == 2244 || $F{category_id}.intValue() == 2245 || $F{category_id}.intValue() == 2246 || $F{category_id}.intValue() == 2247 || $F{category_id}.intValue() == 2249 || $F{category_id}.intValue() == 2250 || $F{category_id}.intValue() == 2251 || $F{category_id}.intValue() == 2252 || $F{category_id}.intValue() == 2253 || $F{category_id}.intValue() == 2254 || $F{category_id}.intValue() == 2240 || $F{category_id}.intValue() == 2242)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<image  scaleImage="RetainShape" vAlign="Middle" hAlign="Center" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="485"
+						y="550"
+						width="115"
+						height="152"
+						key="image-11">
+							<printWhenExpression><![CDATA[new Boolean($F{brand}.contains( "joey" ))]]></printWhenExpression>
+						</reportElement>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/hudora_logo_joey.gif"]]></imageExpression>
+				</image>
+				<image  scaleImage="RetainShape" vAlign="Bottom" hAlign="Center" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="485"
+						y="760"
+						width="115"
+						height="67"
+						key="image-12"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/hudora_logo_weiss.gif"]]></imageExpression>
+				</image>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#FF9900"
+						backcolor="#FF9900"
+						key="Skates/Skateboards/Sicherheit">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 3 || $F{category_id}.intValue() == 4 || $F{category_id}.intValue() == 7)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#621F34"
+						backcolor="#621F34"
+						key="Outdoor">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 9 || $F{category_id}.intValue() == 2238 || $F{category_id}.intValue() == 2239)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#238434"
+						backcolor="#238434"
+						key="Fussball">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 11)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#6EADDE"
+						backcolor="#6EADDE"
+						key="Wintersport">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 12)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#00B0BD"
+						backcolor="#00B0BD"
+						key="Fahrzeuge">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 6)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#A8CCCB"
+						backcolor="#A8CCCB"
+						key="Wintersport">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 13)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<rectangle>
+					<reportElement
+						x="482"
+						y="100"
+						width="130"
+						height="120"
+						forecolor="#005FA0"
+						backcolor="#005FA0"
+						key="sonstiges">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 14)]]></printWhenExpression>
+						</reportElement>
+					<graphicElement stretchType="NoStretch"/>
+				</rectangle>
+				<image  scaleImage="RetainShape" vAlign="Middle" hAlign="Center" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="490"
+						y="550"
+						width="115"
+						height="152"
+						key="zumdick-logo">
+							<printWhenExpression><![CDATA[new Boolean($F{category_id}.intValue() == 11)]]></printWhenExpression>
+						</reportElement>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["\\\\fileserver.local.hudora.biz\\home\\eigenedateien\\web\\media\\logos\\Zumdick_Logo.gif"]]></imageExpression>
+				</image>
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="270"  isSplitAllowed="true" >
+				<image  vAlign="Middle" hAlign="Center" onErrorType="Blank" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="282"
+						y="66"
+						width="193"
+						height="115"
+						key="image-2"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA[$F{image}]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="45"
+						y="59"
+						width="235"
+						height="155"
+						key="textField"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{language}.compareTo("en") == 0 ? $F{angebotstext_en} : $F{angebotstext}]]></textFieldExpression>
+				</textField>
+				<image  scaleImage="RetainShape" vAlign="Bottom" onErrorType="Icon" isUsingCache="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="43"
+						y="220"
+						width="439"
+						height="46"
+						key="image-1"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/hudora_katalog_symbolleiste.gif"]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="45"
+						y="14"
+						width="176"
+						height="18"
+						key="textField"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{language}.compareTo("en") == 0 ? "Article-No.: " + $V{artnr_nonvariant} : "Artikel-Nr.: " + $V{artnr_nonvariant}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="45"
+						y="38"
+						width="304"
+						height="18"
+						key="textField"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement>
+						<font fontName="Arial" pdfFontName="Helvetica-Bold" size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{language}.compareTo("en") == 0 ? $F{name_en} : $F{name}]]></textFieldExpression>
+				</textField>
+				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Icon" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="348"
+						y="31"
+						width="30"
+						height="30"
+						key="image-4">
+							<printWhenExpression><![CDATA[new Boolean($F{feature1} != null)]]></printWhenExpression>
+						</reportElement>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/feature_" + $F{feature1} + ".gif"]]></imageExpression>
+				</image>
+				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Icon" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="380"
+						y="31"
+						width="30"
+						height="30"
+						key="image-5">
+							<printWhenExpression><![CDATA[new Boolean($F{feature2} != null)]]></printWhenExpression>
+						</reportElement>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/feature_" + $F{feature2} + ".gif"]]></imageExpression>
+				</image>
+				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Icon" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="413"
+						y="31"
+						width="30"
+						height="30"
+						key="image-6">
+							<printWhenExpression><![CDATA[new Boolean($F{feature3} != null)]]></printWhenExpression>
+						</reportElement>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/feature_" + $F{feature3} + ".gif"]]></imageExpression>
+				</image>
+				<image  scaleImage="RetainShape" vAlign="Bottom" isLazy="true" onErrorType="Icon" isUsingCache="true" evaluationTime="Auto" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="446"
+						y="31"
+						width="30"
+						height="30"
+						key="image-7">
+							<printWhenExpression><![CDATA[new Boolean($F{feature4} != null)]]></printWhenExpression>
+						</reportElement>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/feature_" + $F{feature4} + ".gif"]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="340"
+						y="204"
+						width="136"
+						height="16"
+						key="textField-6"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{ean}]]></textFieldExpression>
+				</textField>
+				<image  scaleImage="FillFrame" vAlign="Top" hAlign="Left" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="340"
+						y="183"
+						width="136"
+						height="21"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="barcode-1">
+							<printWhenExpression><![CDATA[new Boolean($F{ean} != null)]]></printWhenExpression>
+						</reportElement>
+					<box></box>
+					<graphicElement stretchType="NoStretch" fill="Solid" />
+					<imageExpression class="java.awt.Image"><![CDATA[it.businesslogic.ireport.barcode.BcImage.getBarcodeImage(5,$F{ean}== null ? " " : $F{ean},false,false,null,0,0)]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="47"
+						y="244"
+						width="70"
+						height="18"
+						key="textField"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{package_size_l} == null || $F{package_size_b} == null || $F{package_size_l} == null) ? "-" : $F{package_size_l} + "x" + $F{package_size_b} + "x" + $F{package_size_h}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="114"
+						y="244"
+						width="35"
+						height="18"
+						key="textField"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{package_weight_normalized} == null ? "-" : $V{package_weight_normalized}.toString()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="151"
+						y="244"
+						width="28"
+						height="18"
+						key="textField"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{products_per_ve1} == null || $F{products_per_ve1}.intValue() == 0) ? "-" : $F{products_per_ve1}.toString()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="179"
+						y="244"
+						width="63"
+						height="18"
+						key="textField-1"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{ve1_size_l} == null || $F{ve1_size_b} == null || $F{ve1_size_l} == null) ? "-" : $F{ve1_size_l} + "x" + $F{ve1_size_b} + "x" + $F{ve1_size_h}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="237"
+						y="244"
+						width="30"
+						height="18"
+						key="textField-2"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{products_per_export_package} == null ? "-" : $F{products_per_export_package}.toString()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="256"
+						y="244"
+						width="77"
+						height="18"
+						key="textField-3"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{export_package_size_l} == null || $F{export_package_size_h} == null || $F{export_package_size_b} == null) ? "-" : $F{export_package_size_l} + "x" + $F{export_package_size_b} + "x" + $F{export_package_size_h}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="321"
+						y="244"
+						width="35"
+						height="18"
+						key="textField-4"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{export_package_weight_normalized} == null ? "-" : $V{export_package_weight_normalized}.toString()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="377"
+						y="244"
+						width="103"
+						height="18"
+						key="textField"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="7"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{get_package_info_display} == null ? "-" : $F{get_package_info_display}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="###0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="355"
+						y="244"
+						width="38"
+						height="18"
+						key="textField-5"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$V{export_package_volume_liter_normalized} == null ? "-" : $V{export_package_volume_liter_normalized}.toString()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="273"
+						y="14"
+						width="205"
+						height="12"
+						key="Internet_Verlinkung"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Right">
+						<font size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["http://www.hudora.de/artnr/" + $F{artnr} + "/"]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="30"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						x="43"
+						y="0"
+						width="439"
+						height="16"
+						forecolor="#005FA0"
+						key="staticText-4"/>
+					<box>					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+</box>
+					<textElement textAlignment="Center">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+				<text><![CDATA[HUDORA GmbH  •  Jägerwald 13  •  42897 Remscheid  •  Telefon 02191 609120  •  Fax 02191 6091250]]></text>
+				</staticText>
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

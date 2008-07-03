@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="Adressaufkleber"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="297"
+		 pageHeight="421"
+		 columnWidth="269"
+		 columnSpacing="0"
+		 leftMargin="14"
+		 rightMargin="14"
+		 topMargin="14"
+		 bottomMargin="14"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<queryString language="xPath"><![CDATA[/paketscheine/sendung/paketschein]]></queryString>
+
+	<field name="gewicht" class="java.lang.Double">
+		<fieldDescription><![CDATA[gewicht]]></fieldDescription>
+	</field>
+	<field name="absenderadresse" class="java.lang.String">
+		<fieldDescription><![CDATA[../../absenderadresse]]></fieldDescription>
+	</field>
+	<field name="versandhinweis" class="java.lang.String">
+		<fieldDescription><![CDATA[../versandhinweis]]></fieldDescription>
+	</field>
+	<field name="fixtermin" class="java.lang.String">
+		<fieldDescription><![CDATA[../fixtermin]]></fieldDescription>
+	</field>
+	<field name="hebebuehne" class="java.lang.String">
+		<fieldDescription><![CDATA[../hebebuehne]]></fieldDescription>
+	</field>
+	<field name="avisieren_unter" class="java.lang.String">
+		<fieldDescription><![CDATA[../avisieren_unter]]></fieldDescription>
+	</field>
+	<field name="spedition" class="java.lang.String">
+		<fieldDescription><![CDATA[../spedition]]></fieldDescription>
+	</field>
+	<field name="trackingurl" class="java.lang.String">
+		<fieldDescription><![CDATA[../trackingurl]]></fieldDescription>
+	</field>
+	<field name="name1" class="java.lang.String">
+		<fieldDescription><![CDATA[../name1]]></fieldDescription>
+	</field>
+	<field name="name2" class="java.lang.String">
+		<fieldDescription><![CDATA[../name2]]></fieldDescription>
+	</field>
+	<field name="name3" class="java.lang.String">
+		<fieldDescription><![CDATA[../name3]]></fieldDescription>
+	</field>
+	<field name="name4" class="java.lang.String">
+		<fieldDescription><![CDATA[../name4]]></fieldDescription>
+	</field>
+	<field name="adresse" class="java.lang.String">
+		<fieldDescription><![CDATA[../adresse]]></fieldDescription>
+	</field>
+	<field name="land" class="java.lang.String">
+		<fieldDescription><![CDATA[../land]]></fieldDescription>
+	</field>
+	<field name="plz" class="java.lang.String">
+		<fieldDescription><![CDATA[../plz]]></fieldDescription>
+	</field>
+	<field name="ort" class="java.lang.String">
+		<fieldDescription><![CDATA[../ort]]></fieldDescription>
+	</field>
+	<field name="sendungsnummer" class="java.lang.String">
+		<fieldDescription><![CDATA[../sendungsnummer]]></fieldDescription>
+	</field>
+	<field name="nve" class="java.lang.String">
+		<fieldDescription><![CDATA[nve]]></fieldDescription>
+	</field>
+	<field name="nve_nice" class="java.lang.String">
+		<fieldDescription><![CDATA[nve_nice]]></fieldDescription>
+	</field>
+	<field name="auftragsnummer" class="java.lang.String">
+		<fieldDescription><![CDATA[../auftragsnummer]]></fieldDescription>
+	</field>
+	<field name="kundennummer" class="java.lang.String">
+		<fieldDescription><![CDATA[../kundennummer]]></fieldDescription>
+	</field>
+	<field name="lieferscheinnummer" class="java.lang.String">
+		<fieldDescription><![CDATA[../lieferscheinnummer]]></fieldDescription>
+	</field>
+	<field name="auftragsnummer_kunde" class="java.lang.String">
+		<fieldDescription><![CDATA[../auftragsnummer_kunde]]></fieldDescription>
+	</field>
+	<field name="code" class="java.lang.String">
+		<fieldDescription><![CDATA[../code]]></fieldDescription>
+	</field>
+	<field name="packstueck_aktuell" class="java.lang.String">
+		<fieldDescription><![CDATA[packstueck_aktuell]]></fieldDescription>
+	</field>
+	<field name="packstuecke_gesamt" class="java.lang.String">
+		<fieldDescription><![CDATA[../packstuecke_gesamt]]></fieldDescription>
+	</field>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="381"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="125"
+						y="164"
+						width="27"
+						height="200"
+						key="textField-7"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle" rotation="Right">
+						<font fontName="Arial" size="16" isBold="true" isPdfEmbedded ="true" pdfEncoding ="Cp1250"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{name1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="81"
+						y="164"
+						width="24"
+						height="200"
+						key="textField-11"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle" rotation="Right">
+						<font fontName="Arial" size="14" isPdfEmbedded ="true" pdfEncoding ="Cp1250"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{adresse}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="52"
+						y="164"
+						width="27"
+						height="201"
+						key="textField-12"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle" rotation="Right" isStyledText="true">
+						<font fontName="Arial" size="14" isPdfEmbedded ="true" pdfEncoding ="Cp1250"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA["<style isBold=\"true\" size=\"16\">" + ($F{land}.equals("DE") ? "" : ($F{land} + " ") ) + $F{plz} + "</style> " + $F{ort}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="29"
+						y="2"
+						width="7"
+						height="120"
+						key="textField-15"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" rotation="Right">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[($F{trackingurl} != null ? $F{trackingurl} : "")]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="yyyy-MM-dd HH:mm:ss" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="36"
+						y="1"
+						width="7"
+						height="70"
+						key="textField-16"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement rotation="Right">
+						<font size="6"/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="196"
+						y="3"
+						width="71"
+						height="104"
+						key="staticText-9"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement rotation="Right">
+						<font size="8"/>
+					</textElement>
+				<text><![CDATA[Absender:
+HUDORA GmbH
+An der Hasenjagd
+DE-42897 Remscheid
+ILN 4005998000007
+Tel. +49 2191 60912-0
+Fax +49 2191 60912-50]]></text>
+				</staticText>
+				<image  scaleImage="RetainShape" vAlign="Middle" hAlign="Center" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="248"
+						y="69"
+						width="20"
+						height="40"
+						key="image-4"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA["http://www.hudora.de/media/logos/hudora_logo_rotated.gif"]]></imageExpression>
+				</image>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="105"
+						y="164"
+						width="24"
+						height="200"
+						key="textField-18"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle" rotation="Right">
+						<font fontName="Arial" size="14" isPdfEmbedded ="true" pdfEncoding ="Cp1250"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{name2}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="0"
+						y="53"
+						width="7"
+						height="70"
+						key="staticText-10"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement rotation="Right">
+						<font size="6"/>
+					</textElement>
+				<text><![CDATA[$F{kundennummer}]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="53"
+						width="7"
+						height="70"
+						key="staticText-11"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement rotation="Right">
+						<font size="6"/>
+					</textElement>
+				<text><![CDATA[$F{auftragsnummer}]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="14"
+						y="53"
+						width="7"
+						height="70"
+						key="staticText-12"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement rotation="Right">
+						<font size="6"/>
+					</textElement>
+				<text><![CDATA[$F{lieferscheinnummer}]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="21"
+						y="53"
+						width="7"
+						height="70"
+						key="staticText-13"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement rotation="Right">
+						<font size="6"/>
+					</textElement>
+				<text><![CDATA[$F{code}]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="44"
+						y="53"
+						width="7"
+						height="70"
+						key="staticText-14"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement rotation="Right">
+						<font size="6"/>
+					</textElement>
+				<text><![CDATA[$F{auftragsnummer_kunden}]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="0"
+						y="2"
+						width="7"
+						height="50"
+						key="staticText-15"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement rotation="Right">
+						<font size="6"/>
+					</textElement>
+				<text><![CDATA[Kundennr:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="7"
+						y="2"
+						width="7"
+						height="50"
+						key="staticText-16"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement rotation="Right">
+						<font size="6"/>
+					</textElement>
+				<text><![CDATA[Auftragsnr:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="14"
+						y="2"
+						width="7"
+						height="50"
+						key="staticText-17"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement rotation="Right">
+						<font size="6"/>
+					</textElement>
+				<text><![CDATA[Lieferscheinnr:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="21"
+						y="2"
+						width="7"
+						height="50"
+						key="staticText-18"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement rotation="Right">
+						<font size="6"/>
+					</textElement>
+				<text><![CDATA[Code:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="44"
+						y="2"
+						width="7"
+						height="50"
+						key="staticText-19"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement rotation="Right">
+						<font size="6"/>
+					</textElement>
+				<text><![CDATA[($F{auftragsnummer_kunde} != null ? "Kundenauftrag:" : "")
+]]></text>
+				</staticText>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

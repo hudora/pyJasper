@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<paketscheine>
+  <generator>huLOG $Revision: 1561 $</generator>
+  <packstuecke_gesamt>3</packstuecke_gesamt>
+  <fixtermin />
+  <hebebuehne />
+  <avisieren_unter />
+  <info />
+  <sendung>
+    <absenderadresse>HUDORA GmbH
+J&#xE4;gerwald 13
+42897 Remscheid
+Germany
+Tel. 02191-609120</absenderadresse>
+    <paketschein>
+      <absenderadresse>HUDORA GmbH
+J&#xE4;gerwald 13
+42897 Remscheid
+Germany
+Tel. 02191-609120</absenderadresse>
+      <lieferscheinnummer>065220</lieferscheinnummer>
+      <auftragsnummer>057930</auftragsnummer>
+      <auftragsnummer_kunde>Fax</auftragsnummer_kunde>
+      <kundennummer>04650</kundennummer>
+      <name1>Sport Gongoll</name1>
+      <name2/>
+      <name3/>
+      <name4/>
+      <adresse>Landstr.13</adresse>
+      <plz>42690</plz>
+      <ort>Solingen</ort>
+      <land>DE</land>
+      <spedition>Maeuler</spedition>
+      <frankatur>frei Haus</frankatur>
+      <status>new</status>
+      <code>Dj00</code>
+      <versandhinweis/>
+      <gewicht>102000</gewicht>
+      <nve>00340059980000003115</nve>
+      <barcodesubtext>(00)340059980000003115</barcodesubtext>
+      <barcodetext>00340059980000003115</barcodetext>
+      <packstuecke_gesamt>3</packstuecke_gesamt>
+      <packstueck_aktuell>1</packstueck_aktuell>
+      <fixtermin />
+      <hebebuehne />
+      <avisieren_unter />
+      <info />
+      <ladehilfsmittel />
+    </paketschein>
+    <paketschein>
+      <absenderadresse>HUDORA GmbH
+J&#xE4;gerwald 13
+42897 Remscheid
+Germany
+Tel. 02191-609120</absenderadresse>
+      <lieferscheinnummer>065220</lieferscheinnummer>
+      <auftragsnummer>057930</auftragsnummer>
+      <auftragsnummer_kunde>Fax</auftragsnummer_kunde>
+      <kundennummer>04650</kundennummer>
+      <name1>Sport Gongoll</name1>
+      <name2/>
+      <name3/>
+      <name4/>
+      <adresse>Landstr.13</adresse>
+      <plz>42690</plz>
+      <ort>Solingen</ort>
+      <land>DE</land>
+      <spedition>Maeuler</spedition>
+      <frankatur>frei Haus</frankatur>
+      <status>new</status>
+      <code>Dj00</code>
+      <versandhinweis/>
+      <gewicht>227000</gewicht>
+      <nve>00340059980000003122</nve>
+      <barcodesubtext>(00)340059980000003122</barcodesubtext>
+      <barcodetext>00340059980000003122</barcodetext>
+      <packstuecke_gesamt>3</packstuecke_gesamt>
+      <packstueck_aktuell>2</packstueck_aktuell>
+    </paketschein>
+    <paketschein>
+      <absenderadresse>HUDORA GmbH
+J&#xE4;gerwald 13
+42897 Remscheid
+Germany
+Tel. 02191-609120</absenderadresse>
+      <lieferscheinnummer>065220</lieferscheinnummer>
+      <auftragsnummer>057930</auftragsnummer>
+      <auftragsnummer_kunde>Fax</auftragsnummer_kunde>
+      <kundennummer>04650</kundennummer>
+      <name1>Sport Gongoll</name1>
+      <name2/>
+      <name3/>
+      <name4/>
+      <adresse>Landstr.13</adresse>
+      <plz>42690</plz>
+      <ort>Solingen</ort>
+      <land>DE</land>
+      <spedition>Maeuler</spedition>
+      <frankatur>frei Haus</frankatur>
+      <status>new</status>
+      <code>Dj00</code>
+      <versandhinweis/>
+      <gewicht>166000</gewicht>
+      <nve>00340059980000003139</nve>
+      <barcodesubtext>(00)340059980000003139</barcodesubtext>
+      <barcodetext>00340059980000003139</barcodetext>
+      <packstuecke_gesamt>3</packstuecke_gesamt>
+      <packstueck_aktuell>3</packstueck_aktuell>
+    </paketschein>
+  </sendung>
+  <sendung>
+    <packstuecke_gesamt>99</packstuecke_gesamt>
+    <absenderadresse>HUDORA GmbH
+J&#xE4;gerwald 13
+42897 Remscheid
+Germany
+Tel. 02191-609120</absenderadresse>
+    <fixtermin>2005-01-01 13:00</fixtermin>
+    <hebebuehne />
+    <avisieren_unter>02191-609120, AV-Nummer: 12345678</avisieren_unter>
+    <info>Auch für Lieferschein 4711</info>
+    <ladehilfsmittel>FP</ladehilfsmittel>
+    <paketschein>
+      <absenderadresse>HUDORA GmbH
+J&#xE4;gerwald 13
+42897 Remscheid
+Germany
+Tel. 02191-609120</absenderadresse>
+      <lieferscheinnummer>165381</lieferscheinnummer>
+      <auftragsnummer>158091</auftragsnummer>
+      <auftragsnummer_kunde/>
+      <kundennummer>11061</kundennummer>
+      <name1>Testdorff</name1>
+      <name2>Im und Export GmbH</name2>
+      <name3>Die beste Firma der Welt!</name3>
+      <name4>Und einen langen Namen hat sie auch</name4>
+      <adresse>Hans-Boeckler-Ring 15</adresse>
+      <plz>22000</plz>
+      <ort>Hamburg</ort>
+      <land>DE</land>
+      <spedition>Maeuler</spedition>
+      <frankatur>frei Haus</frankatur>
+      <status>new</status>
+      <code>2wfa</code>
+      <versandhinweis/>
+      <gewicht>88000</gewicht>
+      <nve>00340059980000003146</nve>
+      <barcodesubtext>(00)340059980000003146</barcodesubtext>
+      <barcodetext>00340059980000003146</barcodetext>
+      <packstuecke_gesamt>99</packstuecke_gesamt>
+      <packstueck_aktuell>1</packstueck_aktuell>
+      <fixtermin>2005-01-01 13:00</fixtermin>
+      <hebebuehne />
+      <avisieren_unter>02191-609120, AV-Nummer: 12345678</avisieren_unter>
+      <info>Auch für Lieferschein 4711</info>
+      <ladehilfsmittel>FP</ladehilfsmittel>
+    </paketschein>
+  </sendung>
+</paketscheine>
