@@ -5,8 +5,8 @@ from setuptools import setup, find_packages
 setup(name='pyJasper',
       maintainer='Maximillian Dornseif',
       maintainer_email='md@hudora.de',
-      url='http://www.hosted-projects.com/trac/hudora/public/wiki', # /pyJAsper',
-      version='0.1',
+      url='https://cybernetics.hudora.biz/projects/wiki/pyJasper',
+      version='0.2',
       description='toolkit to access JasperReports from Python',
       license='BSD',
       classifiers=['Intended Audience :: Developers',
@@ -18,5 +18,5 @@ setup(name='pyJasper',
             '': ['*.txt', '*.rst'],
         },
       
-      zip_safe = True,      
+      zip_safe = False,
 )

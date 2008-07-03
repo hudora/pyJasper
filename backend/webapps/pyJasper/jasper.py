@@ -9,7 +9,6 @@ Copyright (c) 2007 HUDORA GmbH. All rights reserved.
 
 import sys
 sys.path.extend(['.'])
-import cgi
 
 import java.lang
 from javax.servlet.http import HttpServlet
