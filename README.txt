@@ -1,19 +1,14 @@
 pyJasper - a set of python based tools to handle JasperReports.
-Since jasper reports is a Java application you need Java installed. You also need Jython to access 
-the JasperReports library.
+Since jasper reports is a Java application you need Java installed.
+Jython (bundled with pyJasper) is used to access  the JasperReports library.
 
-frontend.py                    - contains high-level Python functions for report generation. Should 
+client.py                      - contains high-level Python functions for report generation. Should 
                                  theoretically be able to work with report generators other than
                                  JasperReports. So far builds on JasperClient.py.
-JasperClient.py                - Renders a Report with JasperReports either via starting a shell script
-                                 or via connecting to a server.
-JasperClientTest.py            - guess what! Needs pmock from http://pmock.sourceforge.net/
-                               
 backend/                       - contains tools to drive JasperReports and actually build reports 
-                                 (PDF only at the Moment) The backend was once based on XmlJasperInterface 
-                                 by Jonas Schwertfeger but hase benn moving away from it for some time.
-backend/JasperServer.py        - 
-backend/JasperServer.sh
+                                 The backend was once based on XmlJasperInterface 
+                                 by Jonas Schwertfeger but hase benn moving away from
+                                 it for some time.
 backend/XmlJasperInterface.py  - driving jasper reports to generate PDFs. Also a command line application
                                  to generate reports.
 backend/XmlJasperInterface.sh  - shell script to start XmlJasperInterface.py

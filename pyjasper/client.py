@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-pyJasper client.py - Way  to access JasperReports from Python. This should be able to run under CPython,
-IronPython, PyPy, Jython or whatever.
+pyJasper client.py - Way to access JasperReports from Python using http.
+This should be able to run under CPython, IronPython, PyPy, Jython or whatever.
 
 Created by Maximillian Dornseif on 2007-10-12.
 Consider it BSD licensed.
@@ -13,8 +13,10 @@ import xml.etree.ElementTree as ET
 from cStringIO import StringIO
 from httplib2 import Http
 
+__revision__ = '$Revision$'
+
 class JasperException(RuntimeError):
-    """This exception indicates Jasper server problem."""
+    """This exception indicates Jasper Server problem."""
     pass
 
 
@@ -44,7 +46,7 @@ def encode_multipart_formdata(fields={}):
     
 
 class JasperClient(object):
-    """Generation of JasperReport documents either using the server or a local client."""
+    """Generation of JasperReport documents either using the server."""
     
     def find_server_url(self):
         """Return the URL of the page where the server lives.
@@ -62,7 +64,7 @@ class JasperClient(object):
                                                                       xmldata=xmldata))
         resp, content = Http().request(url, 'POST', body=content, headers={"Content-Type": content_type})
         if not resp.get('status') == '200':
-            raise JasperException, "%s -- %r" % (content, resp)
+            raise JasperException("%s -- %r" % (content, resp))
         return content
         
     

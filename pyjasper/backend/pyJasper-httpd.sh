@@ -17,4 +17,5 @@ cd `dirname $0`
 
 # generate classpath of all all JARs in lib and the fonts dir
 MYCLASSPATH=`echo lib/*.jar|perl -npe 's/ /:/g;'`:fonts
+PATH=$PATH:/usr/local/bin
 java -cp $MYCLASSPATH  -Dpython.home=./lib -jar start.jar
