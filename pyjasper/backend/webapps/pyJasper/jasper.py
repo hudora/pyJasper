@@ -18,6 +18,7 @@ import XmlJasperInterface
 
 __revision__ = '$Revision$'
 
+
 class jasper(HttpServlet):
     """Servlet for rendering JasperReport reports.
     
@@ -43,7 +44,6 @@ class jasper(HttpServlet):
         # but POST can handle more data
         self.doPost(request, response)
     
-    
     def doPost(self, request, response):
         """Generates a PDF with JasperReports. To be called with:
            
@@ -57,29 +57,25 @@ class jasper(HttpServlet):
                 'xmldata': request.getParameter('xmldata')}
         
         if ServletFileUpload.isMultipartContent(request):
-            servletFileUpload = ServletFileUpload(DiskFileItemFactory())
-            files = servletFileUpload.parseRequest(request)
-            it = files.iterator()
-            while it.hasNext():
-                fileItem = it.next()
-                data[fileItem.getFieldName()] = str(java.lang.String(fileItem.get()))
+            servlet_file_upload = ServletFileUpload(DiskFileItemFactory())
+            files = servlet_file_upload.parseRequest(request)
+            fiterator = files.iterator()
+            while fiterator.hasNext():
+                file_item = fiterator.next()
+                data[file_item.getFieldName()] = str(java.lang.String(file_item.get()))
         
-        w = response.getWriter()
+        out = response.getWriter()
         if not data['xpath']:
-            w.println('No valid xpath: %r\nDocumentation:' % data['xpath'])
-            w.println(self.__doc__)
-            w.close()
+            out.println('No valid xpath: %r\nDocumentation:' % data['xpath'])
+            out.println(self.__doc__)
         elif not data['design']:
-            w.println('No valid design: %r\nDocumentation:' % data['design'])
-            w.println(self.__doc__)
-            w.close()
+            out.println('No valid design: %r\nDocumentation:' % data['design'])
+            out.println(self.__doc__)
         elif not data['xmldata']:
-            w.println('No valid xmldata: %r\nDocumentation:' % data['xmldata'])
-            w.println(self.__doc__)
-            w.close()
+            out.println('No valid xmldata: %r\nDocumentation:' % data['xmldata'])
+            out.println(self.__doc__)
         else:
-            response.setContentType ("application/pdf");
-            jasper = XmlJasperInterface.JasperInterface(data['design'], data['xpath'])
-            w.write(jasper.generate(data['xmldata'], 'pdf'))
-            w.close()
-        
+            response.setContentType("application/pdf")
+            jaspergenerator = XmlJasperInterface.JasperInterface(data['design'], data['xpath'])
+            out.write(jaspergenerator.generate(data['xmldata'], 'pdf'))
+        out.close()

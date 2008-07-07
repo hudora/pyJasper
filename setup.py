@@ -16,7 +16,7 @@ setup(name='pyJasper',
       packages = find_packages(),
       package_data = {
           # If any package contains *.txt or *.rst files, include them:
-          '': ['*.xml', '*.jrxml', '*.jar', '*.py'],
+          '': ['*.xml', '*.jrxml', '*.jar', '*.py', '*.sh'],
           #backend/lib/
           #backend/webapps/
       },

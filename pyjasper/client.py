@@ -3,31 +3,34 @@
 """
 pyJasper client.py - Way to access JasperReports from Python using http.
 This should be able to run under CPython, IronPython, PyPy, Jython or whatever.
+See https://cybernetics.hudora.biz/projects/wiki/pyJasper for further enligthenment.
 
 Created by Maximillian Dornseif on 2007-10-12.
 Consider it BSD licensed.
 """
 
-import os.path, uuid
+import os
+import os.path
+import uuid
 import xml.etree.ElementTree as ET
 from cStringIO import StringIO
 from httplib2 import Http
 
 __revision__ = '$Revision$'
 
+
 class JasperException(RuntimeError):
     """This exception indicates Jasper Server problem."""
     pass
 
 
-# Based on
-# From http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/146306
-def encode_multipart_formdata(fields={}):
+def encode_multipart_formdata(fields):
     """
     fields is a sequence of (name, value) elements for regular form fields.
     files is a sequence of (name, filename, value) elements for data to be uploaded as files
     Return (content_type, body) ready for httplib.HTTP instance
     """
+    # Based on From http://aspn.activestate.com/ASPN/Cookbook/Python/Recipe/146306
     boundary = '----------ThIs_Is_tHe_bouNdaRY_$%s' % (uuid.uuid4())
     out = []
     # if it's dict like then use the items method to get the fields
@@ -40,21 +43,20 @@ def encode_multipart_formdata(fields={}):
         out.append(value)
     out.append('--' + boundary + '--')
     out.append('')
-    body = '\r\n'.join(map(str, out))
+    body = '\r\n'.join([str(x) for x in out])
     content_type = 'multipart/form-data; boundary=%s' % boundary
     return content_type, body
     
 
 class JasperClient(object):
-    """Generation of JasperReport documents either using the server."""
+    """Generation of JasperReport documents using the Jetty/Jython Servelet."""
     
     def find_server_url(self):
         """Return the URL of the page where the server lives.
         
-        This is at the moment a static string."""
+        Checks the PYJASPER_SERVLET_URL default variable."""
         
-        return 'http://jasper.local.hudora.biz:8080/pyJasper/jasper.py'
-        
+        return os.getenv('PYJASPER_SERVLET_URL', default='http://localhost:8080/pyJasper/jasper.py')
     
     def generate_pdf_server(self, design, xpath, xmldata):
         """Generate report via pyJasperServer."""
@@ -66,12 +68,10 @@ class JasperClient(object):
         if not resp.get('status') == '200':
             raise JasperException("%s -- %r" % (content, resp))
         return content
-        
     
     def generate_pdf(self, design, xpath, xmldata):
         """Generate report via pyJasperServer."""
         return self.generate_pdf_server(design, xpath, xmldata)
-        
     
 
 class JasperGenerator(object):
@@ -86,7 +86,6 @@ class JasperGenerator(object):
         super(JasperGenerator, self).__init__()
         self.reportname = None
         self.xpath = None
-        self.absender = u"HUDORA GmbH\nJägerwald 13\n42897 Remscheid\nGermany\nTel. 02191-609120"
     
     def generate_xml(self, data=None):
         """To be overwritten by subclasses.
@@ -121,5 +120,3 @@ class JasperGenerator(object):
     def generate(self, data=None):
         """Generates a report, returns the PDF."""
         return self.generate_pdf(data)
-
-

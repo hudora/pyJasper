@@ -2,6 +2,7 @@
 
 # based on a slew of java and ruby code, originally coded by jmv,
 # tampered with and webserviced by md
+# see https://cybernetics.hudora.biz/projects/wiki/pyJasper
 # this needs JYTHON to run, CPython will not work!
 
 import os
@@ -26,6 +27,7 @@ from net.sf.jasperreports.engine import JasperCompileManager
 TMPDIR = '/tmp/pyJasper'
 
 __revision__ = '$Revision$'
+
 
 def ensure_dirs(dirlist):
     """Ensure that a dir and all it's parents exist."""
