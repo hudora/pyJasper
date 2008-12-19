@@ -16,6 +16,7 @@ import xml.etree.ElementTree as ET
 from cStringIO import StringIO
 from httplib2 import Http
 
+
 __revision__ = '$Revision$'
 
 
@@ -60,7 +61,7 @@ class JasperClient(object):
     
     def generate_pdf_server(self, design, xpath, xmldata):
         """Generate report via pyJasperServer."""
-        open('/tmp/pyjasperxml.xml', 'w').write(xmldata)
+
         url = self.find_server_url()
         content_type, content = encode_multipart_formdata(fields=dict(design=design, xpath=xpath, 
                                                                       xmldata=xmldata))
