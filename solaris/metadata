@@ -8,7 +8,7 @@
 case "$1" in
 'start')
         cd /opt/jasper/pyjasper/backend/
-        /opt/jasper/pyjasper/backend/pyJasper-httpd.sh
+        /opt/jasper/pyjasper/backend/pyJasper-httpd.sh &
         sleep 2
         ;;
 'stop')
