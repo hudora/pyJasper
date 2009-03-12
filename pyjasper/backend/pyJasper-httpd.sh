@@ -15,6 +15,10 @@
 # go to script dir
 cd `dirname $0`
 
+# This is needed to work properly with unicode on Solaris 10
+LC_CTYPE=en_US.UTF-8
+export LC_CTYPE
+
 # generate classpath of all all JARs in lib and the fonts dir
 MYCLASSPATH=`echo lib/*.jar|perl -npe 's/ /:/g;'`:fonts
 PATH=$PATH:/usr/local/bin
