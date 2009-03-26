@@ -23,4 +23,4 @@ export LC_CTYPE
 MYCLASSPATH=`echo lib/*.jar|perl -npe 's/ /:/g;'`:fonts
 PATH=$PATH:/usr/local/bin
 mkdir -pv log
-java -cp $MYCLASSPATH  -Dpython.home=./lib -jar start.jar
+java -cp $MYCLASSPATH -Dfile.encoding=utf-8 -Dpython.home=./lib -jar start.jar
