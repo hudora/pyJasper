@@ -4,16 +4,12 @@ build:
 upload:
 	python setup.py build sdist bdist_egg
 	rsync -r dist/ root@cybernetics.hudora.biz:/usr/local/www/apache22/data/dist/pyJasper
-
+	rsync dist/* root@cybernetics.hudora.biz:/usr/local/www/apache22/data/nonpublic/eggs/
+	
 publish:
-	# remove development tag
-	perl -npe 's/^tag_build = .dev/# tag_build = .dev/' -i setup.cfg
-	svn commit
-	#python setup.py build sdist bdist_egg upload
-	# add development tag
-	perl -npe 's/^\# tag_build = .dev/tag_build = .dev/' -i setup.cfg
+	python setup.py build sdist bdist_egg upload
 	rsync -r dist/ root@cybernetics.hudora.biz:/usr/local/www/apache22/data/dist/pyJasper
-	echo "now bump version number in setup.py and commit"
+	rsync dist/* root@cybernetics.hudora.biz:/usr/local/www/apache22/data/nonpublic/eggs/
 
 install: build
 	sudo python setup.py install
