@@ -1,4 +1,5 @@
 """Jasper Reports Python interface"""
+# encoding: utf-8
 
 # based on a slew of java and ruby code, originally coded by jmv,
 # tampered with and webserviced by md
@@ -11,6 +12,10 @@ import sys
 import time
 import md5
 import random
+#import warnings
+
+from java.util import HashMap as JMap
+
 
 from net.sf.jasperreports.engine import JRExporterParameter
 from net.sf.jasperreports.engine import JasperExportManager
@@ -44,14 +49,27 @@ def gen_uuid():
 class JasperInterface:
     """This is the new style pyJasper Interface"""
     
-    def __init__(self, designdata, xpath):
+    def __init__(self, designdatalist, xpath):
+        """Constructor
+        designdatalist: a dict {"template_var_name": "JRXML data"}.
+        xpath:      The xpath expression passed to the report.
+        """
+        # depreciation check
+        if isinstance(designdatalist, basestring):
+            #warnings.warn("Passing the JRXML data as a string is deprecated. Use a dict of JRXML strings with template_var_name as key.", DeprecationWarning)
+            # fix it anyway
+            designdatalist = {'main': designdatalist}
+
         # Compile design if compiled version doesn't exist
-        self.compiled_design = self._update_design(designdata)
+        self.compiled_design = {}
+        for design_name in designdatalist:
+            self.compiled_design[design_name] = self._update_design(designdatalist[design_name])
+
         self.xpath = xpath
     
     def _update_design(self, designdata):
         """Compile the report design if needed."""
-        designdata_hash = md5.new(designdata).hexdigest()
+        designdata_hash = md5.new(designdata.encode('utf-8')).hexdigest()
         sourcepath = os.path.join(TMPDIR, 'reports')
         destinationpath = os.path.join(TMPDIR, 'compiled-reports')
         ensure_dirs([sourcepath, destinationpath])
@@ -62,11 +80,11 @@ class JasperInterface:
             sys.stderr.write("generating report %s\n" % compiled_design)
             uuid = gen_uuid()
             fdesc = open(source_design, 'w')
-            fdesc.write(designdata) #.encode('utf-8'))
+            fdesc.write(designdata.encode('utf-8'))
             fdesc.close()
             JasperCompileManager.compileReportToFile(source_design, compiled_design + uuid)
             os.rename(compiled_design + uuid, compiled_design)
-        
+
         return compiled_design
     
     def generate(self, xmldata, output_type='pdf'):
@@ -83,7 +101,17 @@ class JasperInterface:
         
         output_filename = os.path.abspath(os.path.join(outputpath, oid + '.' + output_type))
         datasource = JRXmlDataSource(xmlfile, self.xpath)
-        jasper_print = JasperFillManager.fillReport(self.compiled_design, None, datasource)
+
+        # convert to a java.util.Map so it can be passed as parameters
+        map = JMap()
+        for i in self.compiled_design:
+            map[i] = self.compiled_design[i]
+
+        # add the original xml document source so subreports can make a new datasource.
+        map['XML_DATA_DOCUMENT'] = xmlfile
+
+        jasper_print = JasperFillManager.fillReport(self.compiled_design['main'], map, datasource)
+
         if output_type == 'pdf':
             output_file = open(output_filename, 'wb')
             JasperExportManager.exportReportToPdfStream(jasper_print, output_file)

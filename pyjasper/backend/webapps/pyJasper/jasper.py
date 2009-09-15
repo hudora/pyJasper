@@ -16,6 +16,8 @@ from org.apache.commons.fileupload.servlet import ServletFileUpload
 from org.apache.commons.fileupload.disk import DiskFileItemFactory
 import XmlJasperInterface
 
+import simplejson
+
 __revision__ = '$Revision$'
 
 
@@ -50,10 +52,12 @@ class jasper(HttpServlet):
            xmldata: XML data Source for JasperReports
            xpath:   XPATH Expression for selecting rows from the datasource
            design:  JasperReports JRXML Report Design
+           designs: JasperReports JRXML Report Design when using subreports.
         """
         
         data = {'xpath': request.getParameter('xpath'),
                 'design': request.getParameter('design'),
+                'designs':request.getParameter('designs'),
                 'xmldata': request.getParameter('xmldata')}
         
         if ServletFileUpload.isMultipartContent(request):
@@ -63,19 +67,26 @@ class jasper(HttpServlet):
             while fiterator.hasNext():
                 file_item = fiterator.next()
                 data[file_item.getFieldName()] = str(java.lang.String(file_item.get()))
-        
+
+        if data['designs']:
+            data['designs'] = simplejson.loads(data['designs'])
+
+        if not data['designs']:
+            data['design'] = data['design']
+            data['designs'] = {'main': data['design']}
+
         out = response.getWriter()
         if not data['xpath']:
             out.println('No valid xpath: %r\nDocumentation:' % data['xpath'])
             out.println(self.__doc__)
-        elif not data['design']:
-            out.println('No valid design: %r\nDocumentation:' % data['design'])
+        elif not data['designs']:
+            out.println('No valid design: %r\nDocumentation:' % data['designs'])
             out.println(self.__doc__)
         elif not data['xmldata']:
             out.println('No valid xmldata: %r\nDocumentation:' % data['xmldata'])
             out.println(self.__doc__)
         else:
             response.setContentType("application/pdf")
-            jaspergenerator = XmlJasperInterface.JasperInterface(data['design'], data['xpath'])
+            jaspergenerator = XmlJasperInterface.JasperInterface(data['designs'], data['xpath'])
             out.write(jaspergenerator.generate(data['xmldata'], 'pdf'))
         out.close()
