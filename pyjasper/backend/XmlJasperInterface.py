@@ -96,7 +96,7 @@ class JasperInterface:
         ensure_dirs([xmlpath, outputpath])
         xmlfile = os.path.join(xmlpath, oid + '.xml')
         fdesc = open(xmlfile, 'w')
-        fdesc.write(xmldata)
+        fdesc.write(xmldata.encode('utf-8'))
         fdesc.close()
         
         output_filename = os.path.abspath(os.path.join(outputpath, oid + '.' + output_type))
@@ -108,7 +108,7 @@ class JasperInterface:
             map[i] = self.compiled_design[i]
 
         # add the original xml document source so subreports can make a new datasource.
-        map['XML_DATA_DOCUMENT'] = xmlfile
+        map['XML_FILE'] = xmlfile
 
         jasper_print = JasperFillManager.fillReport(self.compiled_design['main'], map, datasource)
 
