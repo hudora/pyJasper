@@ -1,0 +1,2 @@
+pyJasper==0.2a.dev-r6313
+simplejson==2.0.9
