@@ -59,27 +59,32 @@ class JasperClient(object):
         
         return os.getenv('PYJASPER_SERVLET_URL', default='http://localhost:8080/pyJasper/jasper.py')
     
-    def generate_pdf_server(self, design, xpath, xmldata):
+    def generate_pdf_server(self, design, xpath, xmldata, multi=False):
         """Generate report via pyJasperServer."""
 
         url = self.find_server_url()
-        content_type, content = encode_multipart_formdata(fields=dict(design=design, xpath=xpath, 
+        if multi:
+            content_type, content = encode_multipart_formdata(fields=dict(designs=design, xpath=xpath, 
                                                                       xmldata=xmldata))
+        else:
+            content_type, content = encode_multipart_formdata(fields=dict(design=design, xpath=xpath, 
+                                                                      xmldata=xmldata))
+
         resp, content = Http().request(url, 'POST', body=content, headers={"Content-Type": content_type})
         if not resp.get('status') == '200':
             raise JasperException("%s -- %r" % (content, resp))
         return content
     
-    def generate_pdf(self, design, xpath, xmldata):
+    def generate_pdf(self, design, xpath, xmldata, multi=False):
         """Generate report via pyJasperServer."""
-        return self.generate_pdf_server(design, xpath, xmldata)
+        return self.generate_pdf_server(design, xpath, xmldata, multi)
     
 
 class JasperGenerator(object):
     """Abstract class for generating Documents out with Jasperreports.
     
     You have to overwrite generate_xml to make meaningfull use of this class. Then call
-    YourClass.generate(yourdata). Yourdata is passes to generate_xml() and hopfully you will get
+    YourClass.generate(yourdata). Yourdata is passed to generate_xml() and hopfully you will get
     the generated report back.
     """
     
@@ -97,7 +102,7 @@ class JasperGenerator(object):
             ET.SubElement(self.root, 'generated_at').text = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
             xml_movement  =  ET.SubElement(xmlroot, 'movement')
             ET.SubElement(xml_movement, "location_from").text = unicode(movement.location_from)
-            return xmlroot  
+            return xmlroot
         """
         raise NotImplementedError
     
