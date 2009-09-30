@@ -55,6 +55,8 @@ class jasper(HttpServlet):
            designs: JasperReports JRXML Report Design when using subreports.
         """
         
+        print "processing request"
+
         data = {'xpath': request.getParameter('xpath'),
                 'design': request.getParameter('design'),
                 'designs':request.getParameter('designs'),
@@ -72,7 +74,6 @@ class jasper(HttpServlet):
             data['designs'] = simplejson.loads(data['designs'])
 
         if not data['designs']:
-            data['design'] = data['design']
             data['designs'] = {'main': data['design']}
 
         out = response.getWriter()

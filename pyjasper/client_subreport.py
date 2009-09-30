@@ -5,7 +5,7 @@ pyJasper clientSubreport.py - Way to access JasperReports from Python using http
 This should be able to run under CPython, IronPython, PyPy, Jython or whatever when (simple)json is available.
 See https://cybernetics.hudora.biz/projects/wiki/pyJasper for further enligthenment.
 
-Created by Johan otten on 2009-09-24.
+Created by Johan Otten on 2009-09-24.
 Consider it BSD licensed.
 """
 
@@ -26,21 +26,29 @@ __revision__ = '$Revision: 4623 $'
 
 class JasperGeneratorWithSubreport(object):
     """Abstract class for generating Documents with subreports out with Jasperreports with.
-    
+
     You have to overwrite generate_xml to make meaningfull use of this class. Then call
     YourClass.generate(yourdata). Yourdata is passed to generate_xml() and hopfully you will get
     the generated report back.
     """
-    
+
     def __init__(self):
         super(JasperGeneratorWithSubreport, self).__init__()
-        self.mainreport = None
-        self.subreportlist = None
+
+        self.mainreport = os.path.abspath(os.path.join(self.reportrootdir, self.reportbase + '.jrxml'))
+
+        #self.mainreport = None
+        self.subreportlist = []
+
+        for filename in os.listdir( os.path.abspath(self.reportrootdir)):
+            if filename.startswith(self.reportbase+'-subreport'):
+                self.subreportlist.append(os.path.join(self.reportrootdir, filename))
+
         self.xpath = None
-    
+
     def generate_xml(self, data=None):
         """To be overwritten by subclasses.
-        
+
         E.g.
         def generate_xml(self, movement):
             ET.SubElement(self.root, 'generator').text = __revision__

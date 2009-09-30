@@ -18,9 +18,10 @@ check:
 # send the jrxml to the pyjasper server and check if what's returned is a PDF
 test: dependencies
 	./pyjasper/backend/tests/test.sh
+	./pyjasper/tests.py
 
 coverage: dependencies
-	PYTHONPATH=. python /usr/local/hudorakit/bin/hd_figleaf --ignore-pylibs ./pyjasper/backend/tests/client.py DPD-Paketschein.jrxml
+	PYTHONPATH=. python /usr/local/hudorakit/bin/hd_figleaf --ignore-pylibs ./pyjasper/backend/tests/test.sh
 	printf '/usr/local/lib/.*\n/opt/.*\ntestenv/.*\n' > figleaf-exclude.txt
 	printf '.*manage.py\n.*settings.py\n.*setup.py\n.*urls.py\n' >> figleaf-exclude.txt
 	# fix pathnames 
