@@ -43,7 +43,7 @@ build: # doc
 	python setup.py build sdist
 
 upload: build
-	rsync dist/* root@cybernetics.hudora.biz:/usr/local/www/apache22/data/nonpublic/eggs/
+	rsync -vpP dist/* root@cybernetics.hudora.biz:/usr/local/www/apache22/data/nonpublic/eggs/
 
 install: build
 	sudo python setup.py install
