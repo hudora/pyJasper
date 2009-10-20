@@ -18,7 +18,8 @@ function test_pdf {
 
 
 #start server:
-/Users/johan/devel/code/projects/pyJasper/trunk/pyjasper/backend/pyJasper-httpd.sh &
+pwd
+../pyJasper-httpd.sh &
 PID=$!
 
 # high sleep is needed for jetty to process the .jar files the first time
