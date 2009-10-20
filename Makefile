@@ -17,8 +17,8 @@ check:
 
 # send the jrxml to the pyjasper server and check if what's returned is a PDF
 test: dependencies
-	./pyjasper/backend/tests/test.sh
-	./pyjasper/tests.py
+	bash pyjasper/backend/tests/test.sh
+	bash pyjasper/tests.py
 
 coverage: dependencies
 	PYTHONPATH=. python /usr/local/hudorakit/bin/hd_figleaf --ignore-pylibs ./pyjasper/backend/tests/test.sh
