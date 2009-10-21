@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/bin/sh
 
 BASEPATH=$(dirname $0)
 
 cd $BASEPATH
 
 FAULT=0
-function test_pdf {
+test_pdf {
     file $(PYTHONPATH=. python client.py $@|grep writing|awk '{ print $3 }')|grep "PDF document"	
     returnval=$?
     echo $FAULT
