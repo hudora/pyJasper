@@ -1,12 +1,13 @@
 #!/bin/sh
 
+PYTHON="python2.6"
 BASEPATH=$(dirname $0)
 
 cd $BASEPATH
 
 FAULT=0
-test_pdf {
-    file $(PYTHONPATH=. python client.py $@|grep writing|awk '{ print $3 }')|grep "PDF document"	
+test_pdf() {
+    file $(PYTHONPATH=. $PYTHON client.py $@ | grep writing | awk '{ print $3 }') | grep "PDF document"	
     returnval=$?
     echo $FAULT
     if [ $returnval -ne 0 ]; then 
