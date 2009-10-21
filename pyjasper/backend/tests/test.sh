@@ -16,9 +16,10 @@ function test_pdf {
     return $returnval
 }
 
+PYJASPER_SERVLET_URL="http://localhost:4580/pyJasper/jasper.py"
 
 #start server:
-../pyJasper-httpd.sh &
+../pyJasper-httpd.sh -Djetty.port=4580 &
 PID=$!
 
 # high sleep is needed for jetty to process the .jar files the first time
