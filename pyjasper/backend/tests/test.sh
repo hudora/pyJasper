@@ -18,7 +18,6 @@ function test_pdf {
 
 
 #start server:
-pwd
 ../pyJasper-httpd.sh &
 PID=$!
 
@@ -28,6 +27,6 @@ sleep 15
 test_pdf bestellanlage.jrxml bestellanlage-subreport1.jrxml bestellanlage-subreport2.jrxml bestellanlage-subreport3.jrxml 
 
 # jetty builtin stop mechanism
-java -DSTOP.KEY=blaat -DSTOP.PORT=8079 -jar /Users/johan/devel/code/projects/pyJasper/trunk/pyjasper/backend/start.jar --stop
+java -DSTOP.KEY=blaat -DSTOP.PORT=8079 -jar ../start.jar --stop
 
 exit $FAULT
