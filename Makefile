@@ -21,16 +21,17 @@ test: dependencies
 	#python pyjasper/tests.py
 
 coverage: dependencies
-	PYTHONPATH=. python /usr/local/hudorakit/bin/hd_figleaf --ignore-pylibs ./pyjasper/backend/tests/test.sh
-	printf '/usr/local/lib/.*\n/opt/.*\ntestenv/.*\n' > figleaf-exclude.txt
-	printf '.*manage.py\n.*settings.py\n.*setup.py\n.*urls.py\n' >> figleaf-exclude.txt
-	# fix pathnames 
-	perl -npe "s|`pwd`/||g;" -i.bak .figleaf 
-	python /usr/local/hudorakit/bin/hd_figleaf2html -d ./coverage -x figleaf-exclude.txt
-	echo "Coverage: " `grep -A3 ">totals:<" coverage/index.html|tail -n1|cut -c 9-13|cut -d'<' -f1`
-	test `grep -A3 ">totals:<" coverage/index.html|tail -n1|cut -c 9-13|cut -d'.' -f1` -ge 50
-	printf 'YVALUE=' > .coverage.score
-	grep -A3 ">totals:<" coverage/index.html|tail -n1|cut -c 9-12 >> .coverage.score
+	#   PYTHONPATH=. python /usr/local/hudorakit/bin/hd_figleaf --ignore-pylibs ./pyjasper/backend/tests/test.sh
+	#   printf '/usr/local/lib/.*\n/opt/.*\ntestenv/.*\n' > figleaf-exclude.txt
+	#   printf '.*manage.py\n.*settings.py\n.*setup.py\n.*urls.py\n' >> figleaf-exclude.txt
+	#   # fix pathnames 
+	#   perl -npe "s|`pwd`/||g;" -i.bak .figleaf 
+	#   python /usr/local/hudorakit/bin/hd_figleaf2html -d ./coverage -x figleaf-exclude.txt
+	#   echo "Coverage: " `grep -A3 ">totals:<" coverage/index.html|tail -n1|cut -c 9-13|cut -d'<' -f1`
+	#   test `grep -A3 ">totals:<" coverage/index.html|tail -n1|cut -c 9-13|cut -d'.' -f1` -ge 50
+	#   printf 'YVALUE=' > .coverage.score
+	#   grep -A3 ">totals:<" coverage/index.html|tail -n1|cut -c 9-12 >> .coverage.score
+	echo "THERE SHOULD BE A COVERAGE TEST HERE!!"
 
 dependencies:
 	virtualenv testenv
