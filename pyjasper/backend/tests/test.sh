@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 PYTHON="python2.6"
 BASEPATH=$(dirname $0)
