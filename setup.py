@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 setup(name='pyJasper',
       maintainer='Maximillian Dornseif',
       maintainer_email='md@hudora.de',
-      url='https://cybernetics.hudora.biz/projects/wiki/pyJasper',
+      url='https://github.com/hudora/pyJasper',
       version='0.3',
       description='toolkit to access JasperReports from Python',
       #long_description=long_description,
