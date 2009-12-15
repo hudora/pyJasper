@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
+
 """
 pyJasper client.py - Way to access JasperReports from Python using http.
 This should be able to run under CPython, IronPython, PyPy, Jython or whatever.
