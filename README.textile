@@ -1,4 +1,4 @@
-h1. pyaAsper
+h1. pyJasper
 
 pyJasper is a set of python based tools to handle JasperReports.
 Since jasper reports is a Java application you need Java installed.
