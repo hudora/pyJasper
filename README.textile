@@ -63,7 +63,7 @@ The Python client finds the URL of the Jasper Servlet by checking the @PYJASPER_
 h2. Installation
 
 Get it at "GitHub":http://github.com/hudora/pyJasper
-To install the Python client interface  just execute @python setup.py install@ as administrator. This should install the requred dependency ([http://code.google.com/p/httplib2/ httplib2]) automatically. For the Server part there exist no automatic setup script. Just copy @pyjasper/backend/@  to a suitable location and start @pyJasper-httpd.sh@ I use Dan Bernsteins [http://cr.yp.to/daemontools/supervise.html supervise] tool for running the Jetty server.
+To install the Python client interface  just execute @python setup.py install@ as administrator. This should install the requred dependency ([http://code.google.com/p/httplib2/ httplib2]) automatically. For the Server part there exist no automatic setup script. Just copy @pyjasper/backend/@  to a suitable location and start @pyJasper-httpd.sh@ I use Dan Bernsteins "supervise":http://cr.yp.to/daemontools/supervise.html tool for running the Jetty server.
 
 h2. History
 
