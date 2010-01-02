@@ -1,4 +1,4 @@
-h1. pyaAsper
+h1. pyJasper
 
 pyJasper is a set of python based tools to handle JasperReports.
 Since jasper reports is a Java application you need Java installed.
@@ -64,6 +64,7 @@ h2. Installation
 
 Get it at the "Python Cheeseshop":http://pypi.python.org/pypi/pyJasper or at "GitHub":http://github.com/hudora/pyJasper
 To install the Python client interface  just execute @python setup.py install@ as administrator. This should install the requred dependency ([http://code.google.com/p/httplib2/ httplib2]) automatically. For the Server part there exist no automatic setup script. Just copy @pyjasper/backend/@  to a suitable location and start @pyJasper-httpd.sh@ I use Dan Bernsteins [http://cr.yp.to/daemontools/supervise.html supervise] tool for running the Jetty server.
+
 
 h2. History
 
