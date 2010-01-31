@@ -83,3 +83,4 @@ h2. Links
 * "JasperReports":http://en.wikipedia.org/wiki/JasperReports
 * "How to Integrate JasperReports with Ruby on Rails":http://wiki.rubyonrails.org/rails/pages/howtointegratejasperreports
 * "jasapp":http://www.vmware.com/appliances/directory/311 a VMWare Virtuall Appliance providing a JasperReports Interface
+* http://geraldo.sourceforge.net/
