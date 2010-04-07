@@ -56,7 +56,7 @@ def get_reportname(base, *args):
     
     In most cases, this will be JasperGenerator.__file__
     """
-    path = os.path.join(os.path.dirname(base), '../reports', *args)
+    path = os.path.join(os.path.dirname(base), 'reports', *args)
     return os.path.abspath(path)
 
 
