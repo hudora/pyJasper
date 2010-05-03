@@ -1,14 +1,13 @@
-from ez_setup import use_setuptools
-use_setuptools()
+import codecs
 from setuptools import setup, find_packages
 
 setup(name='pyJasper',
       maintainer='Maximillian Dornseif',
       maintainer_email='md@hudora.de',
       url='https://github.com/hudora/pyJasper',
-      version='0.3',
+      version='0.41',
       description='toolkit to access JasperReports from Python',
-      #long_description=long_description,
+      long_description=codecs.open('README.textile', "r", "utf-8").read(),
       license='BSD',
       classifiers=['Intended Audience :: Developers',
                    'Programming Language :: Python'],

@@ -48,7 +48,17 @@ def encode_multipart_formdata(fields):
     body = '\r\n'.join([str(x) for x in out])
     content_type = 'multipart/form-data; boundary=%s' % boundary
     return content_type, body
+
+
+def get_reportname(base, *args):
+    """
+    Construct path for report file relative to base
     
+    In most cases, this will be JasperGenerator.__file__
+    """
+    path = os.path.join(os.path.dirname(base), 'reports', *args)
+    return os.path.abspath(path)
+
 
 class JasperClient(object):
     """Generation of JasperReport documents using the Jetty/Jython Servelet."""
