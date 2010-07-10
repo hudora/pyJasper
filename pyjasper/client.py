@@ -18,9 +18,6 @@ from cStringIO import StringIO
 from httplib2 import Http
 
 
-__revision__ = '$Revision$'
-
-
 class JasperException(RuntimeError):
     """This exception indicates Jasper Server problem."""
     pass
@@ -99,10 +96,11 @@ class JasperGenerator(object):
     the generated report back.
     """
     
-    def __init__(self):
+    def __init__(self, debug=False):
         super(JasperGenerator, self).__init__()
         self.reportname = None
         self.xpath = None
+        self.debug = debug
     
     def generate_xml(self, data=None):
         """To be overwritten by subclasses.
@@ -132,6 +130,8 @@ class JasperGenerator(object):
         server = JasperClient()
         design = open(self.reportname).read()
         xmldata = self.get_xml(data)
+        if self.debug:
+            open('/tmp/pyjasper-%s-debug.xml' % os.path.split(self.reportname)[-1], 'w').write(xmldata)
         return server.generate_pdf(design, self.xpath, xmldata)
     
     def generate(self, data=None):
