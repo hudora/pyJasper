@@ -125,10 +125,15 @@ class JasperGenerator(object):
         buf.close()
         return ret
     
+    def get_report(self):
+        """Get JasperReport template"""
+        with open(self.reportname) as report:
+            return report.read()
+    
     def generate_pdf(self, data=None):
         """Generates a PDF document by using Jasper-Reports."""
         server = JasperClient()
-        design = open(self.reportname).read()
+        design = self.get_report()
         xmldata = self.get_xml(data)
         if self.debug:
             open('/tmp/pyjasper-%s-debug.xml' % os.path.split(self.reportname)[-1], 'w').write(xmldata)
