@@ -53,14 +53,15 @@ class jasper(HttpServlet):
            xpath:   XPATH Expression for selecting rows from the datasource
            design:  JasperReports JRXML Report Design
            designs: JasperReports JRXML Report Design when using subreports.
+           keyname: Keyname for signing PDF files - this parameter is optional.
         """
         
-        print "processing request"
-
         data = {'xpath': request.getParameter('xpath'),
                 'design': request.getParameter('design'),
                 'designs':request.getParameter('designs'),
-                'xmldata': request.getParameter('xmldata')}
+                'xmldata': request.getParameter('xmldata'),
+                'keyname': request.getParameter('keyname'),
+               }
         
         if ServletFileUpload.isMultipartContent(request):
             servlet_file_upload = ServletFileUpload(DiskFileItemFactory())
@@ -89,5 +90,5 @@ class jasper(HttpServlet):
         else:
             response.setContentType("application/pdf")
             jaspergenerator = XmlJasperInterface.JasperInterface(data['designs'], data['xpath'])
-            out.write(jaspergenerator.generate(data['xmldata'], 'pdf'))
+            out.write(jaspergenerator.generate(data['xmldata'], 'pdf', keyname=data['keyname']))
         out.close()

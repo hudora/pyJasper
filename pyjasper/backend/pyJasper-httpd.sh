@@ -23,4 +23,8 @@ export LC_CTYPE
 MYCLASSPATH=`echo lib/*.jar|sed 's/ /:/g'`:fonts
 PATH=$PATH:/usr/local/bin
 mkdir -pv log
+
+export PYJASPER_KEYSTORE_PASSWORD="aShu6xa3"
+export PYJASPER_KEYSTORE_FILE="/Users/cklein/Desktop/sign/keystore.ks"
+
 java $@ -cp $MYCLASSPATH -Dfile.encoding=utf-8 -Dpython.home=./lib -DSTOP.KEY=blaat -DSTOP.PORT=8079 -jar start.jar

@@ -6,16 +6,20 @@
 # see https://cybernetics.hudora.biz/projects/wiki/pyJasper
 # this needs JYTHON to run, CPython will not work!
 
+import hashlib
 import os
-import os.path
 import sys
+import tempfile
 import time
-import md5
-import random
 #import warnings
+import uuid
 
+from java.io import ByteArrayOutputStream, FileInputStream
+from java.security import KeyStore
 from java.util import HashMap as JMap
 
+from com.itextpdf.text import Rectangle
+from com.itextpdf.text.pdf import PdfReader, PdfStamper, PdfSignatureAppearance
 
 from net.sf.jasperreports.engine import JRExporterParameter
 from net.sf.jasperreports.engine import JasperExportManager
@@ -29,32 +33,33 @@ from net.sf.jasperreports.engine.export import JRTextExporterParameter
 from net.sf.jasperreports.engine.export import JRXlsExporter
 from net.sf.jasperreports.engine import JasperCompileManager
 
-TMPDIR = '/tmp/pyJasper'
+
+TMPDIR = os.path.join(tempfile.gettempdir(), 'pyJasper')
+#TMPDIR = os.path.join("/tmp", 'pyJasper')
 
 __revision__ = '$Revision$'
 
 
 def ensure_dirs(dirlist):
-    """Ensure that a dir and all it's parents exist."""
+    """Ensure that a dir and all its parents exist."""
     for thedir in dirlist:
         if not os.path.exists(thedir):
-            os.makedirs(thedir)
-    
+            os.makedirs(thedir)    
 
-def gen_uuid():
-    """Generates an hopfully unique ID."""
-    return md5.new("%s-%f" % (time.time(), random.random())).hexdigest()
-    
 
-class JasperInterface:
+class JasperInterface(object):
     """This is the new style pyJasper Interface"""
     
     def __init__(self, designdatalist, xpath):
-        """Constructor
-        designdatalist: a dict {"template_var_name": "JRXML data"}.
-        xpath:      The xpath expression passed to the report.
         """
-        # depreciation check
+        Constructor
+        
+        Parameters:
+        designdatalist: A dictionary of {"template_var_name": "JRXML data"}
+        xpath:          The xpath expression passed to the report
+        """
+        
+        # deprecation check
         if isinstance(designdatalist, basestring):
             #warnings.warn("Passing the JRXML data as a string is deprecated. Use a dict of JRXML strings with template_var_name as key.", DeprecationWarning)
             # fix it anyway
@@ -66,10 +71,11 @@ class JasperInterface:
             self.compiled_design[design_name] = self._update_design(designdatalist[design_name])
 
         self.xpath = xpath
-    
+
     def _update_design(self, designdata):
         """Compile the report design if needed."""
-        designdata_hash = md5.new(designdata.encode('utf-8')).hexdigest()
+        
+        designdata_hash = hashlib.md5(designdata.encode('utf-8')).hexdigest()
         sourcepath = os.path.join(TMPDIR, 'reports')
         destinationpath = os.path.join(TMPDIR, 'compiled-reports')
         ensure_dirs([sourcepath, destinationpath])
@@ -77,22 +83,22 @@ class JasperInterface:
         compiled_design = os.path.join(destinationpath, designdata_hash + '.jasper')
         
         if not os.path.exists(compiled_design):
-            sys.stderr.write("generating report %s\n" % compiled_design)
-            uuid = gen_uuid()
             fdesc = open(source_design, 'w')
             fdesc.write(designdata.encode('utf-8'))
             fdesc.close()
-            JasperCompileManager.compileReportToFile(source_design, compiled_design + uuid)
-            os.rename(compiled_design + uuid, compiled_design)
+            
+            uid = str(uuid.uuid1())
+            JasperCompileManager.compileReportToFile(source_design, compiled_design + uid)
+            os.rename(compiled_design + uid, compiled_design)
 
         return compiled_design
     
-    def generate(self, xmldata, output_type='pdf'):
+    def generate(self, xmldata, output_type='pdf', keyname=None):
         """Generate Output with JasperReports."""
         start = time.time()
         xmlpath = os.path.join(TMPDIR, 'xml')
         outputpath = os.path.join(TMPDIR, 'output')
-        oid = "%s-%s" % (md5.new(xmldata).hexdigest(), gen_uuid())
+        oid = "%s-%s" % (hashlib.md5(xmldata).hexdigest(), uuid.uuid1())
         ensure_dirs([xmlpath, outputpath])
         xmlfile = os.path.join(xmlpath, oid + '.xml')
         fdesc = open(xmlfile, 'w')
@@ -113,9 +119,26 @@ class JasperInterface:
         jasper_print = JasperFillManager.fillReport(self.compiled_design['main'], map, datasource)
 
         if output_type == 'pdf':
+            from java.io import ByteArrayOutputStream, ByteArrayInputStream
+            
+            # Get PDF content from JasperReports
+            stream = ByteArrayOutputStream()
+            JasperExportManager.exportReportToPdfStream(jasper_print, stream)
+            
+            # Try to sign the PDF file if requested
+            if keyname:
+                try:
+                    inputstream = ByteArrayInputStream(stream.toByteArray())
+                    stream = self.sign(inputstream, keyname)
+                except ValueError:
+                    raise
+                    pass
+            
+            # Write PDF to output file
             output_file = open(output_filename, 'wb')
-            JasperExportManager.exportReportToPdfStream(jasper_print, output_file)
+            stream.writeTo(output_file)
             output_file.close()
+            
         elif output_type == 'xml':
             output_file = open(output_filename, 'w')
             JasperExportManager.exportReportToXmlStream(jasper_print, output_file)
@@ -172,7 +195,42 @@ class JasperInterface:
         html_exporter.setParameter(JRExporterParameter.JASPER_PRINT, jasper_print)
         html_exporter.setParameter(JRExporterParameter.OUTPUT_FILE_NAME, output_filename)
         html_exporter.exportReport()
-    
+
+    def getKeychain(self, keyname):
+        """Get key and chain from Keystore"""
+        
+        if not 'PYJASPER_KEYSTORE_FILE' in os.environ:
+            raise ValueError('No keychain defined')
+        
+        password = list(os.environ.get('PYJASPER_KEYSTORE_PASSWORD', ''))
+        keystore = KeyStore.getInstance(KeyStore.getDefaultType())
+        keystore.load(open(os.environ['PYJASPER_KEYSTORE_FILE']), password)
+        if not keystore.containsAlias(keyname):
+            raise ValueError('No key named %s' % keyname)
+        
+        key = keystore.getKey(keyname, password)
+        chain = keystore.getCertificateChain(keyname)
+        return key, chain
+
+    def sign(self, inputstream, keyname, visible=False):
+        """Sign a PDF"""
+        
+        # This might raise a ValueError which will be catched one stack above
+        key, chain = self.getKeychain(keyname)
+        
+        reader = PdfReader(inputstream)
+        outputstream = ByteArrayOutputStream()
+        stp = PdfStamper.createSignature(reader, outputstream, "\0")
+        sap = stp.getSignatureAppearance()
+        sap.setCrypto(key, chain, None, PdfSignatureAppearance.WINCER_SIGNED)
+        sap.setCertificationLevel(PdfSignatureAppearance.CERTIFIED_NO_CHANGES_ALLOWED)
+        sap.setReason("Reason")
+        sap.setLocation("Remscheid, Germany")
+        if visible:
+            sap.setVisibleSignature(Rectangle(100, 100, 200, 200), 1, None)
+        stp.close()
+        return outputstream
+
 
 def usage():
     """Display usage information."""
