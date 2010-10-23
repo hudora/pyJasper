@@ -56,8 +56,6 @@ class JasperInterface:
         """
         # depreciation check
         if isinstance(designdatalist, basestring):
-            #warnings.warn("Passing the JRXML data as a string is deprecated. Use a dict of JRXML strings with template_var_name as key.", DeprecationWarning)
-            # fix it anyway
             designdatalist = {'main': designdatalist}
 
         # Compile design if compiled version doesn't exist
