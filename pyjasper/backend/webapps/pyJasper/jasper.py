@@ -17,8 +17,30 @@ from org.apache.commons.fileupload.disk import DiskFileItemFactory
 import XmlJasperInterface
 
 import simplejson
+import threading
+import urllib2
 
 __revision__ = '$Revision$'
+
+
+def respond(data):
+    """Write response to a given callback"""
+    
+    headers = {"Content-type": "application/pdf"}
+    stream = generate(data)
+    
+    try:
+        request = urllib2.Request(data['callback'], stream, headers)
+        urllib2.urlopen(request)
+    except urllib2.URLError:
+        pass
+
+
+def generate(data):
+    """Get rendered report from JasperReports"""
+    
+    jaspergenerator = XmlJasperInterface.JasperInterface(data['designs'], data['xpath'])
+    return jaspergenerator.generate(data['xmldata'], 'pdf', data['keyname'])
 
 
 class jasper(HttpServlet):
@@ -55,14 +77,15 @@ class jasper(HttpServlet):
            designs: JasperReports JRXML Report Design when using subreports.
            keyname: Keyname for signing PDF files - this parameter is optional.
         """
-        
+
+        parameters = request.getParameterMap()        
         data = {'xpath': request.getParameter('xpath'),
                 'design': request.getParameter('design'),
                 'designs':request.getParameter('designs'),
                 'xmldata': request.getParameter('xmldata'),
                 'keyname': request.getParameter('keyname'),
                }
-        
+                
         if ServletFileUpload.isMultipartContent(request):
             servlet_file_upload = ServletFileUpload(DiskFileItemFactory())
             files = servlet_file_upload.parseRequest(request)
@@ -70,13 +93,13 @@ class jasper(HttpServlet):
             while fiterator.hasNext():
                 file_item = fiterator.next()
                 data[file_item.getFieldName()] = str(java.lang.String(file_item.get()))
-
+        
         if data['designs']:
             data['designs'] = simplejson.loads(data['designs'])
 
         if not data['designs']:
             data['designs'] = {'main': data['design']}
-
+        
         out = response.getWriter()
         if not data['xpath']:
             out.println('No valid xpath: %r\nDocumentation:' % data['xpath'])
@@ -88,7 +111,29 @@ class jasper(HttpServlet):
             out.println('No valid xmldata: %r\nDocumentation:' % data['xmldata'])
             out.println(self.__doc__)
         else:
-            response.setContentType("application/pdf")
-            jaspergenerator = XmlJasperInterface.JasperInterface(data['designs'], data['xpath'])
-            out.write(jaspergenerator.generate(data['xmldata'], 'pdf', keyname=data['keyname']))
+            if 'callback' in data:
+                writer = self.callback_response
+            else:
+                writer = self.immediate_response
+            writer(request, response, data)
+            
         out.close()
+    
+    def callback_response(self, request, response, data):
+        """Return data by calling a webhook"""
+        
+        response.setContentType("text/plain")
+        out = response.getWriter()
+        out.println('Data will be send to %s' % data['callback'])
+        
+        thread = threading.Thread(target=respond, args=(data, ))
+        thread.start()
+    
+    def immediate_response(self, request, response, data):
+        """Return data immediatly"""
+        
+        response.setContentType("application/pdf")
+        out = response.getWriter()
+        data = generate(data)
+        out.write(data)
+

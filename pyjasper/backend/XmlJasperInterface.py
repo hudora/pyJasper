@@ -33,9 +33,7 @@ from net.sf.jasperreports.engine.export import JRTextExporterParameter
 from net.sf.jasperreports.engine.export import JRXlsExporter
 from net.sf.jasperreports.engine import JasperCompileManager
 
-
 TMPDIR = os.path.join(tempfile.gettempdir(), 'pyJasper')
-#TMPDIR = os.path.join("/tmp", 'pyJasper')
 
 __revision__ = '$Revision$'
 
@@ -125,7 +123,7 @@ class JasperInterface(object):
             stream = ByteArrayOutputStream()
             JasperExportManager.exportReportToPdfStream(jasper_print, stream)
             
-            # Try to sign the PDF file if requested
+            # Try to sign the PDF file if a keyname is given
             if keyname:
                 try:
                     inputstream = ByteArrayInputStream(stream.toByteArray())
@@ -197,7 +195,7 @@ class JasperInterface(object):
         html_exporter.exportReport()
 
     def getKeychain(self, keyname):
-        """Get key and chain from Keystore"""
+        """Get key and chain from a Keystore"""
         
         if not 'PYJASPER_KEYSTORE_FILE' in os.environ:
             raise ValueError('No keychain defined')
@@ -224,8 +222,8 @@ class JasperInterface(object):
         sap = stp.getSignatureAppearance()
         sap.setCrypto(key, chain, None, PdfSignatureAppearance.WINCER_SIGNED)
         sap.setCertificationLevel(PdfSignatureAppearance.CERTIFIED_NO_CHANGES_ALLOWED)
-        sap.setReason("Reason")
-        sap.setLocation("Remscheid, Germany")
+        sap.setReason("Reason") # XXX: Configure
+        sap.setLocation("Remscheid, Germany") # XXX: Configure
         if visible:
             sap.setVisibleSignature(Rectangle(100, 100, 200, 200), 1, None)
         stp.close()
