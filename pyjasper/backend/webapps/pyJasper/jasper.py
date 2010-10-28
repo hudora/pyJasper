@@ -84,6 +84,7 @@ class jasper(HttpServlet):
                 'designs':request.getParameter('designs'),
                 'xmldata': request.getParameter('xmldata'),
                 'keyname': request.getParameter('keyname'),
+                'callback': request.getParameter('callback'),
                }
                 
         if ServletFileUpload.isMultipartContent(request):
