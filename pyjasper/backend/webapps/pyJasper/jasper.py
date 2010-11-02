@@ -112,7 +112,7 @@ class jasper(HttpServlet):
             out.println('No valid xmldata: %r\nDocumentation:' % data['xmldata'])
             out.println(self.__doc__)
         else:
-            if 'callback' in data:
+            if data.get('callback'):
                 writer = self.callback_response
             else:
                 writer = self.immediate_response
