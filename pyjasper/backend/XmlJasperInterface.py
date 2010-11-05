@@ -88,13 +88,14 @@ class JasperInterface:
     def generate(self, xmldata, output_type='pdf'):
         """Generate Output with JasperReports."""
         start = time.time()
+        xmldata_utf8 = xmldata.encode('utf-8')
         xmlpath = os.path.join(TMPDIR, 'xml')
         outputpath = os.path.join(TMPDIR, 'output')
-        oid = "%s-%s" % (md5.new(xmldata).hexdigest(), gen_uuid())
+        oid = "%s-%s" % (md5.new(xmldata_utf8).hexdigest(), gen_uuid())
         ensure_dirs([xmlpath, outputpath])
         xmlfile = os.path.join(xmlpath, oid + '.xml')
         fdesc = open(xmlfile, 'w')
-        fdesc.write(xmldata.encode('utf-8'))
+        fdesc.write(xmldata_utf8)
         fdesc.close()
         
         output_filename = os.path.abspath(os.path.join(outputpath, oid + '.' + output_type))
