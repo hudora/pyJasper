@@ -83,7 +83,6 @@ To install the Python client interface  just execute `python setup.py install` a
     cd /usr/local
     sudo git clone https://github.com/hudora/pyJasper.git
     cd /usr/local/pyJasper
-    sudo python setup.py install
 
 ## History
 
