@@ -84,6 +84,10 @@ To install the Python client interface  just execute `python setup.py install` a
     sudo git clone https://github.com/hudora/pyJasper.git
     cd /usr/local/pyJasper
 
+Now you have to add a command to `/etc/crontab` to delete old files from `/tmp/pyJasper/` to keep the temporary files small. For example you can use this line to delete all files older than 7 days in `/tmp/pyJasper/`.
+
+    0  1    * * *   root    /usr/bin/find /tmp/pyJasper/ -mtime +7 -type f -exec /bin/rm {} \;
+
 ## History
 
 * **0.2.1*** public release (Summer 2008)
