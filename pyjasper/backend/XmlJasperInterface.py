@@ -59,8 +59,6 @@ class JasperInterface(object):
         
         # deprecation check
         if isinstance(designdatalist, basestring):
-            #warnings.warn("Passing the JRXML data as a string is deprecated. Use a dict of JRXML strings with template_var_name as key.", DeprecationWarning)
-            # fix it anyway
             designdatalist = {'main': designdatalist}
 
         # Compile design if compiled version doesn't exist
@@ -94,13 +92,14 @@ class JasperInterface(object):
     def generate(self, xmldata, output_type='pdf', keyname=None):
         """Generate Output with JasperReports."""
         start = time.time()
+        xmldata_utf8 = xmldata.encode('utf-8')
         xmlpath = os.path.join(TMPDIR, 'xml')
         outputpath = os.path.join(TMPDIR, 'output')
         oid = "%s-%s" % (hashlib.md5(xmldata).hexdigest(), uuid.uuid1())
         ensure_dirs([xmlpath, outputpath])
         xmlfile = os.path.join(xmlpath, oid + '.xml')
         fdesc = open(xmlfile, 'w')
-        fdesc.write(xmldata.encode('utf-8'))
+        fdesc.write(xmldata_utf8)
         fdesc.close()
         
         output_filename = os.path.abspath(os.path.join(outputpath, oid + '.' + output_type))

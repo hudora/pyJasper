@@ -20,11 +20,21 @@ LC_CTYPE=en_US.UTF-8
 export LC_CTYPE
 
 # generate classpath of all all JARs in lib and the fonts dir
-MYCLASSPATH=`echo lib/*.jar|sed 's/ /:/g'`:fonts
+MYCLASSPATH=`echo lib/*.jar|sed 's/ /:/g'`:fonts:.
 PATH=$PATH:/usr/local/bin
-mkdir -pv log
+mkdir -pv logs
 
-export PYJASPER_KEYSTORE_PASSWORD="aShu6xa3"
-export PYJASPER_KEYSTORE_FILE="/Users/cklein/Desktop/sign/keystore.ks"
+# keytool -genkey -keyalg RSA \
+#         -alias hudora-rechnungen \
+#         -keypass pw \
+#         -keystore keystore.ks \
+#         -dname "cn=HUDORA Rechnungen"
+export PYJASPER_KEYSTORE_PASSWORD="topSecrect"
+export PYJASPER_KEYSTORE_FILE="/usr/local/pyJasper/signature-keystore.ks"
 
-java $@ -cp $MYCLASSPATH -Dfile.encoding=utf-8 -Dpython.home=./lib -DSTOP.KEY=blaat -DSTOP.PORT=8079 -jar start.jar
+java $@ -cp $MYCLASSPATH -Dfile.encoding=utf-8 \
+  -Dnet.sf.jasperreports.awt.ignore.missing.font=true \
+  -Dpython.home=./lib \
+  -Djetty.port=5555 \
+  -DSTOP.KEY=blaat -DSTOP.PORT=8079 \
+  -jar start.jar
