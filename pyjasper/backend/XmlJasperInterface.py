@@ -95,7 +95,7 @@ class JasperInterface(object):
         xmldata_utf8 = xmldata.encode('utf-8')
         xmlpath = os.path.join(TMPDIR, 'xml')
         outputpath = os.path.join(TMPDIR, 'output')
-        oid = "%s-%s" % (hashlib.md5(xmldata).hexdigest(), uuid.uuid1())
+        oid = "%s-%s" % (hashlib.md5(xmldata_utf8).hexdigest(), uuid.uuid1())
         ensure_dirs([xmlpath, outputpath])
         xmlfile = os.path.join(xmlpath, oid + '.xml')
         fdesc = open(xmlfile, 'w')
