@@ -40,7 +40,7 @@ def generate(data):
     """Get rendered report from JasperReports"""
     
     jaspergenerator = XmlJasperInterface.JasperInterface(data['designs'], data['xpath'])
-    return jaspergenerator.generate(data['xmldata'], 'pdf', data['keyname'])
+    return jaspergenerator.generate(data['xmldata'], 'pdf', data['sign_keyname'], sign_reason=data['sign_reason'])
 
 
 class jasper(HttpServlet):
@@ -75,15 +75,17 @@ class jasper(HttpServlet):
            xpath:   XPATH Expression for selecting rows from the datasource
            design:  JasperReports JRXML Report Design
            designs: JasperReports JRXML Report Design when using subreports.
-           keyname: Keyname for signing PDF files - this parameter is optional.
+           sign_keyname: Keyname for signing PDF files - this parameter is optional.
+           sign_reason: Reason to be send w/ signature
         """
 
-        parameters = request.getParameterMap()        
+        parameters = request.getParameterMap()
         data = {'xpath': request.getParameter('xpath'),
                 'design': request.getParameter('design'),
                 'designs':request.getParameter('designs'),
                 'xmldata': request.getParameter('xmldata'),
-                'keyname': request.getParameter('keyname'),
+                'sign_keyname': request.getParameter('sign_keyname'),
+                'sign_reason': request.getParameter('sign_reason'),
                 'callback': request.getParameter('callback'),
                }
                 

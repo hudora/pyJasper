@@ -89,7 +89,7 @@ class JasperInterface(object):
 
         return compiled_design
     
-    def generate(self, xmldata, output_type='pdf', keyname=None):
+    def generate(self, xmldata, output_type='pdf', sign_keyname=None, sign_reason=None):
         """Generate Output with JasperReports."""
         start = time.time()
         xmldata_utf8 = xmldata.encode('utf-8')
@@ -123,10 +123,10 @@ class JasperInterface(object):
             JasperExportManager.exportReportToPdfStream(jasper_print, stream)
             
             # Try to sign the PDF file if a keyname is given
-            if keyname:
+            if sign_keyname:
                 try:
                     inputstream = ByteArrayInputStream(stream.toByteArray())
-                    stream = self.sign(inputstream, keyname)
+                    stream = self.sign(inputstream, sign_keyname, sign_reason)
                 except ValueError:
                     raise
                     pass
@@ -193,7 +193,7 @@ class JasperInterface(object):
         html_exporter.setParameter(JRExporterParameter.OUTPUT_FILE_NAME, output_filename)
         html_exporter.exportReport()
 
-    def getKeychain(self, keyname):
+    def getKeychain(self, sign_keyname):
         """Get key and chain from a Keystore"""
         
         if not 'PYJASPER_KEYSTORE_FILE' in os.environ:
@@ -202,18 +202,18 @@ class JasperInterface(object):
         password = list(os.environ.get('PYJASPER_KEYSTORE_PASSWORD', ''))
         keystore = KeyStore.getInstance(KeyStore.getDefaultType())
         keystore.load(open(os.environ['PYJASPER_KEYSTORE_FILE']), password)
-        if not keystore.containsAlias(keyname):
-            raise ValueError('No key named %s' % keyname)
+        if not keystore.containsAlias(sign_keyname):
+            raise ValueError('No key named %s' % sign_keyname)
         
-        key = keystore.getKey(keyname, password)
-        chain = keystore.getCertificateChain(keyname)
+        key = keystore.getKey(sign_keyname, password)
+        chain = keystore.getCertificateChain(sign_keyname)
         return key, chain
 
-    def sign(self, inputstream, keyname, visible=False):
+    def sign(self, inputstream, sign_keyname, sign_reason, visible=False):
         """Sign a PDF"""
         
         # This might raise a ValueError which will be catched one stack above
-        key, chain = self.getKeychain(keyname)
+        key, chain = self.getKeychain(sign_keyname)
         
         reader = PdfReader(inputstream)
         outputstream = ByteArrayOutputStream()
@@ -221,7 +221,7 @@ class JasperInterface(object):
         sap = stp.getSignatureAppearance()
         sap.setCrypto(key, chain, None, PdfSignatureAppearance.WINCER_SIGNED)
         sap.setCertificationLevel(PdfSignatureAppearance.CERTIFIED_NO_CHANGES_ALLOWED)
-        sap.setReason("Reason") # XXX: Configure
+        sap.setReason(sign_reason)
         sap.setLocation("Remscheid, Germany") # XXX: Configure
         if visible:
             sap.setVisibleSignature(Rectangle(100, 100, 200, 200), 1, None)
