@@ -20,9 +20,15 @@ To try it out you can use curl. E.g. do to pyjasper/backend and start the jetty 
     curl -X POST --form xpath=//lieferscheine/lieferschein 
                  --form design=@reports/Lieferschein.jrxml 
                  --form xmldata=@sample-xml/Lieferschein.xml 
+                 --form sign_keyname={{ alias of the certificate in the KeyStore }} #optional
+                 --form sign_reason={{ reason to be send w/ certificate }} #optional
+                 --form callback={{ callback_URL }} #optional
                  http://localhost:8080/pyJasper/jasper.py > test.pdf
 
 test.pdf should now contain a rendered PDF document.
+If you provided sign_keyname and sign_reason AND your backend installation knows this keyname, you get a signed pdf.
+
+With parameter callback you tell the server to generate the pdf and send it to the given URL instead of immediate return. 
 
 ### Python interface
 
