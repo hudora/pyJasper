@@ -112,7 +112,7 @@ class jasper(HttpServlet):
         # Decode metadata
         if data['metadata']:
             metadata = {}
-            for key, value in cgi.parse_qs(urllib.unquote(data['metadata'])):
+            for key, value in cgi.parse_qs(urllib.unquote(data['metadata'])).items():
                 metadata[key] = value[0]
             data['metadata'] = metadata
             
