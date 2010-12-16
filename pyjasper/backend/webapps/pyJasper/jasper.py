@@ -16,8 +16,10 @@ from org.apache.commons.fileupload.servlet import ServletFileUpload
 from org.apache.commons.fileupload.disk import DiskFileItemFactory
 import XmlJasperInterface
 
+import cgi
 import simplejson
 import threading
+import urllib
 import urllib2
 
 __revision__ = '$Revision$'
@@ -40,7 +42,9 @@ def generate(data):
     """Get rendered report from JasperReports"""
     
     jaspergenerator = XmlJasperInterface.JasperInterface(data['designs'], data['xpath'])
-    return jaspergenerator.generate(data['xmldata'], 'pdf', data['sign_keyname'], sign_reason=data['sign_reason'])
+    return jaspergenerator.generate(data['xmldata'], 'pdf',
+                                    sign_keyname=data['sign_keyname'], sign_reason=data['sign_reason'],
+                                    metadata=data['metadata'])
 
 
 class jasper(HttpServlet):
@@ -77,6 +81,7 @@ class jasper(HttpServlet):
            designs: JasperReports JRXML Report Design when using subreports.
            sign_keyname: Keyname for signing PDF files - this parameter is optional.
            sign_reason: Reason to be send w/ signature
+           metadata: PDF metadata (see http://www.pdfa.org/doku.php?id=artikel:en:pdfa_metadata)
         """
 
         parameters = request.getParameterMap()
@@ -87,6 +92,7 @@ class jasper(HttpServlet):
                 'sign_keyname': request.getParameter('sign_keyname'),
                 'sign_reason': request.getParameter('sign_reason'),
                 'callback': request.getParameter('callback'),
+                'metadata': request.getParameter('metadata'),
                }
                 
         if ServletFileUpload.isMultipartContent(request):
@@ -103,6 +109,13 @@ class jasper(HttpServlet):
         if not data['designs']:
             data['designs'] = {'main': data['design']}
         
+        # Decode metadata
+        if data['metadata']:
+            metadata = {}
+            for key, value in cgi.parse_qs(urllib.unquote(data['metadata'])):
+                metadata[key] = value[0]
+            data['metadata'] = metadata
+            
         out = response.getWriter()
         if not data['xpath']:
             out.println('No valid xpath: %r\nDocumentation:' % data['xpath'])

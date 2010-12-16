@@ -89,7 +89,7 @@ class JasperInterface(object):
 
         return compiled_design
     
-    def generate(self, xmldata, output_type='pdf', sign_keyname=None, sign_reason=None):
+    def generate(self, xmldata, output_type='pdf', sign_keyname=None, sign_reason=None, metadata=None):
         """Generate Output with JasperReports."""
         start = time.time()
         xmldata_utf8 = xmldata.encode('utf-8')
@@ -122,6 +122,14 @@ class JasperInterface(object):
             stream = ByteArrayOutputStream()
             JasperExportManager.exportReportToPdfStream(jasper_print, stream)
             
+            # Add metadata
+            if metadata:
+                try:
+                    inputstream = ByteArrayInputStream(stream.toByteArray())
+                    stream = self.addMetadata(inputstream, metadata)
+                except:
+                    raise
+            
             # Try to sign the PDF file if a keyname is given
             if sign_keyname:
                 try:
@@ -129,7 +137,6 @@ class JasperInterface(object):
                     stream = self.sign(inputstream, sign_keyname, sign_reason)
                 except ValueError:
                     raise
-                    pass
             
             # Write PDF to output file
             output_file = open(output_filename, 'wb')
@@ -225,6 +232,20 @@ class JasperInterface(object):
         sap.setLocation("Remscheid, Germany") # XXX: Configure
         if visible:
             sap.setVisibleSignature(Rectangle(100, 100, 200, 200), 1, None)
+        stp.close()
+        return outputstream
+
+    def addMetadata(self, inputstream, metadata):
+        """Adds metadata to a PDF document"""
+
+        reader = PdfReader(inputstream)
+        outputstream = ByteArrayOutputStream()
+        stp = PdfStamper(reader, outputstream, "\0")
+        meta = reader.getInfo()
+        for key in ('Subject', 'Author', 'Keywords', 'Title', 'Creator', 'CreationDate'):
+            if key in metadata:
+                meta.put(key, metadata[key])
+        stp.setMoreInfo(meta)
         stp.close()
         return outputstream
 
