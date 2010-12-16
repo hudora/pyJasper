@@ -13,6 +13,7 @@ Consider it BSD licensed.
 import os
 import os.path
 import uuid
+import urllib
 import xml.etree.ElementTree as ET
 from cStringIO import StringIO
 from httplib2 import Http
@@ -67,25 +68,28 @@ class JasperClient(object):
         
         return os.getenv('PYJASPER_SERVLET_URL', default='http://localhost:8080/pyJasper/jasper.py')
     
-    def generate_pdf_server(self, design, xpath, xmldata, multi=False):
+    def generate_pdf_server(self, design, xpath, xmldata, metadata, multi=False):
         """Generate report via pyJasperServer."""
 
         url = self.find_server_url()
+        
+        fields = dict(designs=design, xpath=xpath, xmldata=xmldata)
+        if metadata:
+            fields['metadata'] = urllib.urlencode(metadata)
+        
         if multi:
-            content_type, content = encode_multipart_formdata(fields=dict(designs=design, xpath=xpath, 
-                                                                      xmldata=xmldata))
+            content_type, content = encode_multipart_formdata(fields=fields)
         else:
-            content_type, content = encode_multipart_formdata(fields=dict(design=design, xpath=xpath, 
-                                                                      xmldata=xmldata))
+            content_type, content = encode_multipart_formdata(fields=fields)
 
         resp, content = Http().request(url, 'POST', body=content, headers={"Content-Type": content_type})
         if not resp.get('status') == '200':
             raise JasperException("%s -- %r" % (content, resp))
         return content
     
-    def generate_pdf(self, design, xpath, xmldata, multi=False):
+    def generate_pdf(self, design, xpath, xmldata, metadata, multi=False):
         """Generate report via pyJasperServer."""
-        return self.generate_pdf_server(design, xpath, xmldata, multi)
+        return self.generate_pdf_server(design, xpath, xmldata, metadata, multi)
     
 
 class JasperGenerator(object):
@@ -101,6 +105,7 @@ class JasperGenerator(object):
         self.reportname = None
         self.xpath = None
         self.debug = debug
+        self.metadata = None
     
     def generate_xml(self, data=None):
         """To be overwritten by subclasses.
@@ -137,7 +142,7 @@ class JasperGenerator(object):
         xmldata = self.get_xml(data)
         if self.debug:
             open('/tmp/pyjasper-%s-debug.xml' % os.path.split(self.reportname)[-1], 'w').write(xmldata)
-        return server.generate_pdf(design, self.xpath, xmldata)
+        return server.generate_pdf(design, self.xpath, xmldata, self.metadata)
     
     def generate(self, data=None):
         """Generates a report, returns the PDF."""
