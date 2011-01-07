@@ -14,7 +14,7 @@ import time
 #import warnings
 import uuid
 
-from java.io import ByteArrayOutputStream, FileInputStream
+from java.io import ByteArrayInputStream, ByteArrayOutputStream
 from java.security import KeyStore
 from java.util import HashMap as JMap
 
@@ -116,8 +116,6 @@ class JasperInterface(object):
         jasper_print = JasperFillManager.fillReport(self.compiled_design['main'], map, datasource)
 
         if output_type == 'pdf':
-            from java.io import ByteArrayOutputStream, ByteArrayInputStream
-            
             # Get PDF content from JasperReports
             stream = ByteArrayOutputStream()
             JasperExportManager.exportReportToPdfStream(jasper_print, stream)
@@ -229,7 +227,7 @@ class JasperInterface(object):
         sap.setCrypto(key, chain, None, PdfSignatureAppearance.WINCER_SIGNED)
         sap.setCertificationLevel(PdfSignatureAppearance.CERTIFIED_NO_CHANGES_ALLOWED)
         sap.setReason(sign_reason)
-        sap.setLocation("Remscheid, Germany") # XXX: Configure
+        sap.setLocation("Remscheid, Germany")  # TODO: Configure
         if visible:
             sap.setVisibleSignature(Rectangle(100, 100, 200, 200), 1, None)
         stp.close()
