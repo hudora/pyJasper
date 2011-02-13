@@ -42,21 +42,21 @@ def ensure_dirs(dirlist):
     """Ensure that a dir and all its parents exist."""
     for thedir in dirlist:
         if not os.path.exists(thedir):
-            os.makedirs(thedir)    
+            os.makedirs(thedir)
 
 
 class JasperInterface(object):
     """This is the new style pyJasper Interface"""
-    
+
     def __init__(self, designdatalist, xpath):
         """
         Constructor
-        
+
         Parameters:
         designdatalist: A dictionary of {"template_var_name": "JRXML data"}
         xpath:          The xpath expression passed to the report
         """
-        
+
         # deprecation check
         if isinstance(designdatalist, basestring):
             designdatalist = {'main': designdatalist}
@@ -70,25 +70,25 @@ class JasperInterface(object):
 
     def _update_design(self, designdata):
         """Compile the report design if needed."""
-        
+
         designdata_hash = hashlib.md5(designdata.encode('utf-8')).hexdigest()
         sourcepath = os.path.join(TMPDIR, 'reports')
         destinationpath = os.path.join(TMPDIR, 'compiled-reports')
         ensure_dirs([sourcepath, destinationpath])
         source_design = os.path.join(sourcepath, designdata_hash + '.jrxml')
         compiled_design = os.path.join(destinationpath, designdata_hash + '.jasper')
-        
+
         if not os.path.exists(compiled_design):
             fdesc = open(source_design, 'w')
             fdesc.write(designdata.encode('utf-8'))
             fdesc.close()
-            
+
             uid = str(uuid.uuid1())
             JasperCompileManager.compileReportToFile(source_design, compiled_design + uid)
             os.rename(compiled_design + uid, compiled_design)
 
         return compiled_design
-    
+
     def generate(self, xmldata, output_type='pdf', sign_keyname=None, sign_reason=None, metadata=None):
         """Generate Output with JasperReports."""
         start = time.time()
@@ -101,7 +101,7 @@ class JasperInterface(object):
         fdesc = open(xmlfile, 'w')
         fdesc.write(xmldata_utf8)
         fdesc.close()
-        
+
         output_filename = os.path.abspath(os.path.join(outputpath, oid + '.' + output_type))
         datasource = JRXmlDataSource(xmlfile, self.xpath)
 
@@ -119,7 +119,7 @@ class JasperInterface(object):
             # Get PDF content from JasperReports
             stream = ByteArrayOutputStream()
             JasperExportManager.exportReportToPdfStream(jasper_print, stream)
-            
+
             # Add metadata
             if metadata:
                 try:
@@ -127,7 +127,7 @@ class JasperInterface(object):
                     stream = self.addMetadata(inputstream, metadata)
                 except:
                     raise
-            
+
             # Try to sign the PDF file if a keyname is given
             if sign_keyname:
                 try:
@@ -135,12 +135,12 @@ class JasperInterface(object):
                     stream = self.sign(inputstream, sign_keyname, sign_reason)
                 except ValueError:
                     raise
-            
+
             # Write PDF to output file
             output_file = open(output_filename, 'wb')
             stream.writeTo(output_file)
             output_file.close()
-            
+
         elif output_type == 'xml':
             output_file = open(output_filename, 'w')
             JasperExportManager.exportReportToXmlStream(jasper_print, output_file)
@@ -160,7 +160,7 @@ class JasperInterface(object):
         delta = time.time() - start
         sys.stderr.write('report %r generated in %.3f seconds\n' % (output_filename, delta))
         return open(output_filename, 'rb').read()
-    
+
     def generate_rtf(self, jasper_print, output_filename):
         """Generate RTF output."""
         rtf_exporter = JRRtfExporter()
@@ -200,26 +200,26 @@ class JasperInterface(object):
 
     def getKeychain(self, sign_keyname):
         """Get key and chain from a Keystore"""
-        
+
         if not 'PYJASPER_KEYSTORE_FILE' in os.environ:
             raise ValueError('No keychain defined')
-        
+
         password = list(os.environ.get('PYJASPER_KEYSTORE_PASSWORD', ''))
         keystore = KeyStore.getInstance(KeyStore.getDefaultType())
         keystore.load(open(os.environ['PYJASPER_KEYSTORE_FILE']), password)
         if not keystore.containsAlias(sign_keyname):
             raise ValueError('No key named %s' % sign_keyname)
-        
+
         key = keystore.getKey(sign_keyname, password)
         chain = keystore.getCertificateChain(sign_keyname)
         return key, chain
 
     def sign(self, inputstream, sign_keyname, sign_reason, visible=False):
         """Sign a PDF"""
-        
+
         # This might raise a ValueError which will be catched one stack above
         key, chain = self.getKeychain(sign_keyname)
-        
+
         reader = PdfReader(inputstream)
         outputstream = ByteArrayOutputStream()
         stp = PdfStamper.createSignature(reader, outputstream, "\0")
@@ -256,24 +256,24 @@ this will read design.jrxml and compile it to design.jasper
 It then will read input.xml and use it with the <xpath> select expression to
 generate PDF output to output.pdf.
 See net.sf.jasperreports.engine.data.JRXmlDataSource for further information)
-"""    
+"""
 
 
 def main(args):
     """command line interface"""
-    
+
     if len(args) != 5:
         usage()
         sys.exit(1)
-    
+
     design = args[1]
     select = args[2]
     input_file = args[3]
     output_file = args[4]
-    
+
     jasper = JasperInterface(open(design).read(), select)
     open(output_file, 'wb').write(jasper.generate(open(input_file, 'r').read(), 'pdf'))
-    
+
 
 if __name__ == '__main__':
     main(sys.argv)

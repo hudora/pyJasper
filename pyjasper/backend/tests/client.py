@@ -9,9 +9,8 @@ from optparse import OptionParser
 
 command = "curl -X POST --form xpath=%s --form designs=@%s --form xmldata=@%s.xml %s > %s"
 
+
 def get_report(files, url):
-    """
-    """
 
     main_report = files[0]
 
@@ -20,7 +19,7 @@ def get_report(files, url):
 
     cachefile = tempfile.mkstemp(prefix=main_report, suffix=".json")[1]
 
-    # add the contents 
+    # add the contents
     designs = {'main': open(main_report).read().replace("\t", '')}
     for i in files:
         designs[str(os.path.splitext(i)[0])] = open(i).read().replace("\t", '')

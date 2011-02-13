@@ -12,8 +12,9 @@ hudson: clean dependencies test statistics coverage
 	grep "our code has been rated at" < .pylint.out | cut -d '/' -f 1 | cut -d ' ' -f 7 >> .pylint.score
 
 check:
-	-find ./pyjasper/backend/tests/ -name '*.py' | xargs /usr/local/hudorakit/bin/hd_pep8
-	-/usr/local/hudorakit/bin/hd_pylint ./pyjasper/backend/tests/ 
+	pyflakes pyjasper/backend/webapps/ pyjasper/backend/tests/ pyjasper/backend/*.py pyjasper/*.py
+	pep8 -r --ignore=E501 pyjasper/backend/webapps/ pyjasper/backend/tests/ pyjasper/backend/*.py pyjasper/*.py
+	-pylint -iy --max-line-length=110 -d E1101 pyjasper/backend/webapps/ pyjasper/backend/tests/ pyjasper/backend/*.py pyjasper/*.py
 
 # send the jrxml to the pyjasper server and check if what's returned is a PDF
 test: dependencies

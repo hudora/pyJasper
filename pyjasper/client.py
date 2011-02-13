@@ -51,7 +51,7 @@ def encode_multipart_formdata(fields):
 def get_reportname(base, *args):
     """
     Construct path for report file relative to base
-    
+
     In most cases, this will be JasperGenerator.__file__
     """
     path = os.path.join(os.path.dirname(base), 'reports', *args)
@@ -60,23 +60,23 @@ def get_reportname(base, *args):
 
 class JasperClient(object):
     """Generation of JasperReport documents using the Jetty/Jython Servelet."""
-    
+
     def find_server_url(self):
         """Return the URL of the page where the server lives.
-        
+
         Checks the PYJASPER_SERVLET_URL default variable."""
-        
+
         return os.getenv('PYJASPER_SERVLET_URL', default='http://localhost:8080/pyJasper/jasper.py')
-    
+
     def generate_pdf_server(self, design, xpath, xmldata, metadata, multi=False):
         """Generate report via pyJasperServer."""
 
         url = self.find_server_url()
-        
+
         fields = dict(designs=design, xpath=xpath, xmldata=xmldata)
         if metadata:
             fields['metadata'] = urllib.urlencode(metadata)
-        
+
         if multi:
             content_type, content = encode_multipart_formdata(fields=fields)
         else:
@@ -86,30 +86,30 @@ class JasperClient(object):
         if not resp.get('status') == '200':
             raise JasperException("%s -- %r" % (content, resp))
         return content
-    
+
     def generate_pdf(self, design, xpath, xmldata, metadata, multi=False):
         """Generate report via pyJasperServer."""
         return self.generate_pdf_server(design, xpath, xmldata, metadata, multi)
-    
+
 
 class JasperGenerator(object):
     """Abstract class for generating Documents out with Jasperreports.
-    
+
     You have to overwrite generate_xml to make meaningfull use of this class. Then call
     YourClass.generate(yourdata). Yourdata is passed to generate_xml() and hopfully you will get
     the generated report back.
     """
-    
+
     def __init__(self, debug=False):
         super(JasperGenerator, self).__init__()
         self.reportname = None
         self.xpath = None
         self.debug = debug
         self.metadata = None
-    
+
     def generate_xml(self, data=None):
         """To be overwritten by subclasses.
-        
+
         E.g.
         def generate_xml(self, movement):
             ET.SubElement(self.root, 'generator').text = __revision__
@@ -119,7 +119,7 @@ class JasperGenerator(object):
             return xmlroot
         """
         raise NotImplementedError
-    
+
     def get_xml(self, data=None):
         """Serializes the XML in the ElementTree to be send to JasperReports."""
         root = self.generate_xml(data)
@@ -129,12 +129,12 @@ class JasperGenerator(object):
         ret = buf.getvalue()
         buf.close()
         return ret
-    
+
     def get_report(self):
         """Get JasperReport template"""
         with open(self.reportname) as report:
             return report.read()
-    
+
     def generate_pdf(self, data=None):
         """Generates a PDF document by using Jasper-Reports."""
         server = JasperClient()
@@ -143,7 +143,7 @@ class JasperGenerator(object):
         if self.debug:
             open('/tmp/pyjasper-%s-debug.xml' % os.path.split(self.reportname)[-1], 'w').write(xmldata)
         return server.generate_pdf(design, self.xpath, xmldata, self.metadata)
-    
+
     def generate(self, data=None):
         """Generates a report, returns the PDF."""
         return self.generate_pdf(data)

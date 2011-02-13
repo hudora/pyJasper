@@ -4,6 +4,7 @@ import os.path
 
 from pyjasper.client_subreport import JasperGeneratorWithSubreport
 
+
 class TestReport(JasperGeneratorWithSubreport):
 
     def __init__(self):

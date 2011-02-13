@@ -12,16 +12,10 @@ Consider it BSD licensed.
 import xml.etree.ElementTree as ET
 from cStringIO import StringIO
 import os.path
-
-try:
-    import json
-except ImportError:
-    import simplejson as json
+import simplejson as json
 
 
 from client import JasperClient
-
-__revision__ = '$Revision: 4623 $'
 
 
 class JasperGeneratorWithSubreport(object):
@@ -40,8 +34,8 @@ class JasperGeneratorWithSubreport(object):
         #self.mainreport = None
         self.subreportlist = []
 
-        for filename in os.listdir( os.path.abspath(self.reportrootdir)):
-            if filename.startswith(self.reportbase+'-subreport'):
+        for filename in os.listdir(os.path.abspath(self.reportrootdir)):
+            if filename.startswith(self.reportbase + '-subreport'):
                 self.subreportlist.append(os.path.join(self.reportrootdir, filename))
 
         self.xpath = None
@@ -58,7 +52,7 @@ class JasperGeneratorWithSubreport(object):
             return xmlroot
         """
         raise NotImplementedError
-    
+
     def get_xml(self, data=None):
         """Serializes the XML in the ElementTree to be send to JasperReports."""
         root = self.generate_xml(data)
@@ -68,7 +62,7 @@ class JasperGeneratorWithSubreport(object):
         ret = buf.getvalue()
         buf.close()
         return ret
-    
+
     def generate_pdf(self, data=None):
         """Generates a PDF document by using Jasper-Reports."""
         server = JasperClient()
@@ -81,7 +75,7 @@ class JasperGeneratorWithSubreport(object):
 
         xmldata = self.get_xml(data)
         return server.generate_pdf(reportjson, self.xpath, xmldata, multi=True)
-    
+
     def generate(self, data=None):
         """Generates a report, returns the PDF."""
         return self.generate_pdf(data)
