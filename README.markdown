@@ -85,7 +85,7 @@ To install the Python client interface  just execute `python setup.py install` a
     ssh -A ubuntu@dns-name-of-instance.com
     sudo aptitude update
     sudo aptitude safe-upgrade
-    sudo install openjdk-6-jre daemontools daemontools-run git-core
+    sudo aptitude install openjdk-6-jre daemontools daemontools-run git-core
     cd /usr/local
     sudo git clone https://github.com/hudora/pyJasper.git
     cd /usr/local/pyJasper
@@ -93,6 +93,16 @@ To install the Python client interface  just execute `python setup.py install` a
 Now you have to add a command to `/etc/crontab` to delete old files from `/tmp/pyJasper/` to keep the temporary files small. For example you can use this line to delete all files older than 7 days in `/tmp/pyJasper/`.
 
     0  1    * * *   root    /usr/bin/find /tmp/pyJasper/ -mtime +7 -type f -exec /bin/rm {} \;
+
+Optional: Now you have to upload a keystore file for signing your documents and set it in `/usr/local/pyJasper/pyjasper/backend/pyJasper-httpd.sh`
+
+    export PYJASPER_KEYSTORE_PASSWORD="thesecretpassphrase"
+    export PYJASPER_KEYSTORE_FILE="/usr/local/pyJasper/signature-keystore-file.ks"
+
+Finally configure daemontools to run the following command as a service:
+
+    /usr/local/pyJasper/pyjasper/backend/pyJasper-httpd.sh -Xms128m -Xmx1G
+
 
 ## History
 
