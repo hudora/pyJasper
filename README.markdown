@@ -127,3 +127,7 @@ Finally configure daemontools to run the following command as a service:
 * [How to Integrate JasperReports with Ruby on Rails](http://wiki.rubyonrails.org/rails/pages/howtointegratejasperreports)
 * [jasapp](http://www.vmware.com/appliances/directory/311) a VMWare Virtuall Appliance providing a JasperReports Interface
 * [Geraldo](http://geraldo.sourceforge.net/)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/hudora/pyjasper/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
