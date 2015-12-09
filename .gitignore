@@ -6,3 +6,4 @@ dist/
 .DS_Store
 pyjasper/backend/lib/cachedir/
 pyjasper/backend/logs/
+target/

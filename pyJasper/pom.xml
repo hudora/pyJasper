@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>de.hudora.jasperserver</groupId>
+  <artifactId>de.hudora.jasperserver</artifactId>
+  <packaging>war</packaging>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>pyJasper JasperServer</name>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>servlet-api</artifactId>
+    	<version>2.5</version>
+    	<scope>provided</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.python</groupId>
+    	<artifactId>jython-standalone</artifactId>
+    	<version>2.7.0</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sf.jasperreports</groupId>
+      <artifactId>jasperreports</artifactId>
+      <version>6.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <version>1.3.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>3.13</version>
+    </dependency>
+    <dependency>
+      <groupId>xalan</groupId>
+      <artifactId>xalan</artifactId>
+      <version>2.7.1</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.barbecue</groupId>
+      <artifactId>barbecue</artifactId>
+      <version>1.5-beta1</version>
+    </dependency>
+
+<!-- Woher nehmen?
+http://jaspersoft.artifactoryonline.com/jaspersoft/jaspersoft-repo/iReport/iReport-utils/2.0.1/iReport-utils-2.0.1.pom
+<dependency>
+  <groupId>iReport</groupId>
+  <artifactId>iReport-utils</artifactId>
+  <version>2.0.1</version>
+</dependency>
+-->
+  </dependencies>
+  <description>JasperReports webservice</description>
+  <url>https://github.com/hudora/pyJasper</url>
+  <build>
+    <finalName>de.hudora.jasperserver</finalName>
+    <plugins>
+      <plugin>
+        <!-- This plugin is needed for the servlet example -->
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>2.3</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals><goal>copy</goal></goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.eclipse.jetty</groupId>
+                  <artifactId>jetty-runner</artifactId>
+                  <version>9.3.3.v20150827</version>
+                  <destFileName>jetty-runner.jar</destFileName>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+         </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
