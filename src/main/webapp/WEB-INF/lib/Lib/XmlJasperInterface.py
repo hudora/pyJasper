@@ -40,7 +40,7 @@ def concat_filename(dirname, filename):
 
 
 def make_hash(unicodeobj):
-    return hashlib.new('md5', unicodeobj.encode('utf-8')).hexdigest()
+    return hashlib.new('md5', '1' + unicodeobj.encode('utf-8')).hexdigest()
 
 
 def _update_report(data):
@@ -48,7 +48,8 @@ def _update_report(data):
 
     report_hash = make_hash(data)
     compiled_report = concat_filename('compiled-reports', report_hash + '.jasper')
-    if not os.path.exists(compiled_report):
+
+    if True or not os.path.exists(compiled_report):
         sourcefile = concat_filename('reports', report_hash + '.jrxml')
         with codecs.open(sourcefile, 'w', 'utf-8') as fileobj:
             fileobj.write(data)
@@ -89,14 +90,7 @@ class JasperInterface(object):
         # Fill Report without parameters
         jasper_print = JasperFillManager.fillReport(self.compiled_report, None, datasource)
 
-        stream = self._generate_pdf(jasper_print, metadata, sign_keyname, sign_reason)
-
-        # # Warum eigentlich?
-        # output_filename = concat_filename('output', oid + '.pdf')
-        # with open(output_filename, 'wb') as output_file:
-        #     stream.writeTo(output_file)
-
-        return stream
+        return self._generate_pdf(jasper_print, metadata, sign_keyname, sign_reason)
 
     def _generate_pdf(self, jasper_print, metadata=None, sign_keyname=None, sign_reason=''):
         """Generate and sign PDF document"""
@@ -105,8 +99,8 @@ class JasperInterface(object):
         JasperExportManager.exportReportToPdfStream(jasper_print, stream)
 
         # Add metadata and sign document
-        if metadata or sign_keyname:
-            stream = addMetadataAndSign(stream, metadata, sign_keyname, sign_reason)
+        # if metadata or sign_keyname:
+        #     stream = addMetadataAndSign(stream, metadata, sign_keyname, sign_reason)
 
         # Write PDF to output file
         return stream
@@ -137,6 +131,7 @@ def addMetadataAndSign(inputstream, metadata, sign_keyname, sign_reason):
     stamper = PdfStamper.createSignature(reader, outputstream, '\0')
 
     if metadata:
+        print "add metadata", metadata
         info = reader.getInfo()
         for key in 'Subject', 'Author', 'Keywords', 'Title', 'Creator', 'CreationDate':
             if key in metadata:
@@ -144,15 +139,16 @@ def addMetadataAndSign(inputstream, metadata, sign_keyname, sign_reason):
         stamper.setMoreInfo(info)
 
     if sign_keyname:
-        # This might raise a ValueError which will be catched one stack above
-        key, chain = getKeychain(sign_keyname)
+        print "sign document"
+    #     # This might raise a ValueError which will be catched one stack above
+    #     key, chain = getKeychain(sign_keyname)
 
-        sap = stamper.getSignatureAppearance()
-        sap.setCrypto(key, chain, None, PdfSignatureAppearance.WINCER_SIGNED)
-        sap.setCertificationLevel(PdfSignatureAppearance.CERTIFIED_NO_CHANGES_ALLOWED)
-        sap.setReason(sign_reason)
-        # Kann man evtl. Metadaten an den Key hängen?
-        sap.setLocation("Remscheid, Germany")  # TODO: Configure
+    #     sap = stamper.getSignatureAppearance()
+    #     sap.setCrypto(key, chain, None, PdfSignatureAppearance.WINCER_SIGNED)
+    #     sap.setCertificationLevel(PdfSignatureAppearance.CERTIFIED_NO_CHANGES_ALLOWED)
+    #     sap.setReason(sign_reason)
+    #     # Kann man evtl. Metadaten an den Key hängen?
+    #     sap.setLocation("Remscheid, Germany")  # TODO: Configure
 
     stamper.close()
     return outputstream

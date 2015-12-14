@@ -8,7 +8,8 @@ Copyright (c) 2007 HUDORA GmbH. All rights reserved.
 """
 
 import sys
-sys.path.extend(['.'])
+import logging
+# sys.path.append('.')
 
 import cgi
 import json
@@ -21,7 +22,12 @@ import javax.servlet.http
 from org.apache.commons.fileupload.servlet import ServletFileUpload
 from org.apache.commons.fileupload.disk import DiskFileItemFactory
 
-import XmlJasperInterface
+try:
+    import XmlJasperInterface
+except ImportError:
+    logging.error(u'sys.path: %s', sys.path)
+    print u'sys.path: %s' % sys.path
+    raise
 
 
 class pyJasper(javax.servlet.http.HttpServlet):
@@ -76,7 +82,7 @@ class pyJasper(javax.servlet.http.HttpServlet):
             fiterator = files.iterator()
             while fiterator.hasNext():
                 file_item = fiterator.next()
-                data[file_item.getFieldName()] = file_item.getString()
+                data[file_item.getFieldName()] = file_item.getString('utf-8')
 
         # TODO: Das geht auch schöner:
         # Decode metadata
