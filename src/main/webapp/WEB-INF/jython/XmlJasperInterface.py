@@ -21,12 +21,6 @@ from net.sf.jasperreports.engine import JasperExportManager
 from net.sf.jasperreports.engine import JasperFillManager
 from net.sf.jasperreports.engine import JRExporterParameter
 from net.sf.jasperreports.engine.data import JRXmlDataSource
-from net.sf.jasperreports.engine.export import JRCsvExporter
-from net.sf.jasperreports.engine.export import JRHtmlExporter
-from net.sf.jasperreports.engine.export import JRRtfExporter
-from net.sf.jasperreports.engine.export import JRTextExporter
-from net.sf.jasperreports.engine.export import JRTextExporterParameter
-from net.sf.jasperreports.engine.export import JRXlsExporter
 
 
 def concat_filename(dirname, filename):
@@ -77,7 +71,7 @@ class JasperInterface(object):
         self.compiled_report = _update_report(report)
         self.xpath = xpath
 
-    def generate(self, source, sign_keyname=None, sign_reason=None, metadata=None):
+    def generate(self, source, sign_keyname=None, sign_reason=None, metadata=None, parameters=None):
         """Generate Output with JasperReports."""
 
         oid = '{}-{}'.format(make_hash(source), uuid.uuid1())
@@ -87,8 +81,8 @@ class JasperInterface(object):
             fileobj.write(source)
 
         datasource = JRXmlDataSource(xmlfile, self.xpath)
-        # Fill Report without parameters
-        jasper_print = JasperFillManager.fillReport(self.compiled_report, None, datasource)
+
+        jasper_print = JasperFillManager.fillReport(self.compiled_report, parameters, datasource)
 
         return self._generate_pdf(jasper_print, metadata, sign_keyname, sign_reason)
 

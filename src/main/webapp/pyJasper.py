@@ -9,7 +9,6 @@ Copyright (c) 2007 HUDORA GmbH. All rights reserved.
 
 import sys
 import logging
-# sys.path.append('.')
 
 import cgi
 import json
@@ -92,6 +91,11 @@ class pyJasper(javax.servlet.http.HttpServlet):
                 metadata[key] = value[0]
             data['metadata'] = metadata
 
+        parameters = {}
+        for key in request.headerNames:
+            if key.startswith('X-Param-'):
+                parameters[key.split('-', 2)[-1]] = request.getHeader(key)
+
         # TODO: XPath ignorieren.
         # if not data['xpath']:
         #     out.println('No valid xpath: %r\nDocumentation:' % data['xpath'])
@@ -107,7 +111,7 @@ class pyJasper(javax.servlet.http.HttpServlet):
             out.println(self.__doc__)
         else:
             response.setContentType('application/pdf')
-            stream = self.generate_document(data['design'], data['xpath'], data['xmldata'], data)
+            stream = self.generate_document(data['design'], data['xpath'], data['xmldata'], data, parameters)
             out = response.getOutputStream()
             stream.writeTo(out)
 
@@ -116,7 +120,7 @@ class pyJasper(javax.servlet.http.HttpServlet):
     # TODO: doGet eher nur die __doc__
     doGet = doPost
 
-    def generate_document(self, design, xpath, source, data):
+    def generate_document(self, design, xpath, source, data, parameters):
         """TODO: Write doc string"""
 
         jaspergenerator = XmlJasperInterface.JasperInterface(design, xpath)
@@ -124,5 +128,6 @@ class pyJasper(javax.servlet.http.HttpServlet):
             source,
             sign_keyname=data['sign_keyname'],
             sign_reason=data['sign_reason'],
-            metadata=data['metadata'])
+            metadata=data['metadata'],
+            parameters=parameters)
 
