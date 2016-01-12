@@ -1,7 +1,19 @@
-  <?xml version="1.0"?>
-  <!DOCTYPE Configure PUBLIC "-//Mort Bay Consulting//DTD Configure//EN"
-  "http://jetty.mortbay.org/configure.dtd">
-
-  <Configure id="WebAppContext" class="org.mortbay.jetty.webapp.WebAppContext">
-          <Set name="maxFormContentSize" type="int">1048576</Set>
-  </Configure>
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+<!-- =============================================================== -->
+<!-- Configure the Jetty Server                                      -->
+<!--                                                                 -->
+<!-- Documentation of this file format can be found at:              -->
+<!-- http://docs.codehaus.org/display/JETTY/jetty.xml                -->
+<!--                                                                 -->
+<!-- =============================================================== -->
+<Configure id="Server" class="org.eclipse.jetty.server.Server">
+    <Call name="setAttribute">
+        <Arg>org.eclipse.jetty.server.Request.maxFormContentSize</Arg>
+        <Arg>1048576</Arg>
+    </Call>
+    <Call name="setAttribute">
+        <Arg>org.eclipse.jetty.server.Request.maxFormKeys</Arg>
+        <Arg>2000</Arg>
+    </Call>
+</Configure>
