@@ -29,7 +29,11 @@ def concat_filename(dirname, filename):
     tmpdir = os.path.join(tempfile.gettempdir(), 'pyJasper')
     path = os.path.join(tmpdir, dirname)
     if not os.path.exists(path):
-        os.makedirs(path)
+        try:
+            os.makedirs(path)
+        except OSError as error:
+            if error.errno != os.errno.EEXIST:
+                raise
     return os.path.join(path, filename)
 
 
