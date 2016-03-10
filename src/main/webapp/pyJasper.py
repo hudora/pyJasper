@@ -7,6 +7,9 @@ Created by Maximillian Dornseif on 2007-09-09.
 Copyright (c) 2007 HUDORA GmbH. All rights reserved.
 """
 
+import sys
+import logging
+
 import cgi
 import json
 import mimetypes
@@ -15,9 +18,15 @@ import urllib
 import urllib2
 
 import javax.servlet.http
-from org.python.core.util import FileUtil
+from org.apache.commons.fileupload.servlet import ServletFileUpload
+from org.apache.commons.fileupload.disk import DiskFileItemFactory
 
-import XmlJasperInterface
+try:
+    import XmlJasperInterface
+except ImportError:
+    logging.error(u'sys.path: %s', sys.path)
+    print u'sys.path: %s' % sys.path
+    raise
 
 
 class pyJasper(javax.servlet.http.HttpServlet):
@@ -37,6 +46,13 @@ class pyJasper(javax.servlet.http.HttpServlet):
                  --form xmldata=@sample-xml/Lieferschein.xml
                  http://localhost:8080/pyJasper/jasper.py > test.pdf
     """
+
+    # def doGet(self, request, response):
+    #     """Handle GET requests by same handler as POST"""
+    #     # we use the same handler for GET and POST. I wonder:
+    #     # actually GET is correct since there is no state change on the server
+    #     # but POST can handle more data
+    #     self.doPost(request, response)
 
     def doPost(self, request, response):
         """Generates a PDF with JasperReports. To be called with:
@@ -59,15 +75,13 @@ class pyJasper(javax.servlet.http.HttpServlet):
                 'metadata': request.getParameter('metadata'),
                }
 
-        # Multipart-Request auseinanderpflücken:
-        if request.contentType.startswith('multipart/form-data'):
-            for part in request.getParts():
-                fileobj = FileUtil.wrap(part.inputStream)
-                if part.name in {'xpath', 'metadata'}:
-                    value = fileobj.read()
-                else:
-                    value = fileobj
-                data[part.name] = value
+        if ServletFileUpload.isMultipartContent(request):
+            servlet_file_upload = ServletFileUpload(DiskFileItemFactory())
+            files = servlet_file_upload.parseRequest(request)
+            fiterator = files.iterator()
+            while fiterator.hasNext():
+                file_item = fiterator.next()
+                data[file_item.getFieldName()] = file_item.getString('utf-8')
 
         # TODO: Das geht auch schöner:
         # Decode metadata
@@ -81,6 +95,11 @@ class pyJasper(javax.servlet.http.HttpServlet):
         for key in request.headerNames:
             if key.startswith('X-Param-'):
                 parameters[key.split('-', 2)[-1]] = request.getHeader(key)
+
+        # TODO: XPath ignorieren.
+        # if not data['xpath']:
+        #     out.println('No valid xpath: %r\nDocumentation:' % data['xpath'])
+        #     out.println(self.__doc__)
 
         if not data['design']:
             out = response.getWriter()
@@ -98,10 +117,8 @@ class pyJasper(javax.servlet.http.HttpServlet):
 
         out.close()
 
-    def doGet(self, request, response):
-        out = response.getWriter()
-        out.println(self.__doc__)
-        out.close()
+    # TODO: doGet eher nur die __doc__
+    doGet = doPost
 
     def generate_document(self, design, xpath, source, data, parameters):
         """TODO: Write doc string"""

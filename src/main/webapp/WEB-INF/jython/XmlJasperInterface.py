@@ -12,7 +12,6 @@ import os
 import sys
 import tempfile
 import uuid
-import logging
 
 from com.lowagie.text.pdf import PdfReader, PdfStamper, PdfSignatureAppearance
 from java.io import ByteArrayInputStream, ByteArrayOutputStream
@@ -38,23 +37,20 @@ def concat_filename(dirname, filename):
     return os.path.join(path, filename)
 
 
-def make_hash(strobj):
-    if isinstance(strobj, unicode):
-        strobj = strobj.encode('utf-8')
-    return hashlib.new('md5', '1' + strobj).hexdigest()
+def make_hash(unicodeobj):
+    return hashlib.new('md5', '1' + unicodeobj.encode('utf-8')).hexdigest()
 
 
-def _update_report(report):
+def _update_report(data):
     """Compile the report design if needed."""
 
-    data = report.read()
     report_hash = make_hash(data)
     compiled_report = concat_filename('compiled-reports', report_hash + '.jasper')
 
-    if not os.path.exists(compiled_report):
+    if True or not os.path.exists(compiled_report):
         sourcefile = concat_filename('reports', report_hash + '.jrxml')
         with codecs.open(sourcefile, 'w', 'utf-8') as fileobj:
-            fileobj.write(data.decode('utf-8'))
+            fileobj.write(data)
 
         uid = str(uuid.uuid1())
         JasperCompileManager.compileReportToFile(sourcefile, compiled_report + uid)
@@ -82,13 +78,16 @@ class JasperInterface(object):
     def generate(self, source, sign_keyname=None, sign_reason=None, metadata=None, parameters=None):
         """Generate Output with JasperReports."""
 
-        # oid = '{}-{}'.format(make_hash(source), uuid.uuid1())
-        # xmlfile = concat_filename('xml', oid + '.xml')
-        # with codecs.open(xmlfile, 'w', 'utf-8') as fileobj:
-        #     fileobj.write(source)
+        oid = '{}-{}'.format(make_hash(source), uuid.uuid1())
 
-        datasource = JRXmlDataSource(source, self.xpath)
+        xmlfile = concat_filename('xml', oid + '.xml')
+        with codecs.open(xmlfile, 'w', 'utf-8') as fileobj:
+            fileobj.write(source)
+
+        datasource = JRXmlDataSource(xmlfile, self.xpath)
+
         jasper_print = JasperFillManager.fillReport(self.compiled_report, parameters, datasource)
+
         return self._generate_pdf(jasper_print, metadata, sign_keyname, sign_reason)
 
     def _generate_pdf(self, jasper_print, metadata=None, sign_keyname=None, sign_reason=''):
