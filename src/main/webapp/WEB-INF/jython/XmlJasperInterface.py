@@ -47,7 +47,9 @@ def _update_report(data):
     report_hash = make_hash(data)
     compiled_report = concat_filename('compiled-reports', report_hash + '.jasper')
 
-    if True or not os.path.exists(compiled_report):
+    # Temporäre Dateien werden wohl bei Heroku nach einem Request gelöscht.
+    # s. https://devcenter.heroku.com/articles/dynos#ephemeral-filesystem
+    if not os.path.exists(compiled_report):
         sourcefile = concat_filename('reports', report_hash + '.jrxml')
         with codecs.open(sourcefile, 'w', 'utf-8') as fileobj:
             fileobj.write(data)
@@ -72,7 +74,11 @@ class JasperInterface(object):
         """
 
         # Compile design if compiled version doesn't exist
-        self.compiled_report = _update_report(report)
+        try:
+            self.compiled_report = _update_report(report)
+        except Exception as exception:
+            logging.error(u'Exception: %s', type(exception))
+            raise
         self.xpath = xpath
 
     def generate(self, source, sign_keyname=None, sign_reason=None, metadata=None, parameters=None):
