@@ -18,8 +18,8 @@ from java.io import ByteArrayInputStream, ByteArrayOutputStream
 from java.security import KeyStore
 from java.util import HashMap as JMap
 
-from com.lowagie.text import Rectangle
-from com.lowagie.text.pdf import PdfReader, PdfStamper, PdfSignatureAppearance
+from com.itextpdf.text import Rectangle
+from com.itextpdf.text.pdf import PdfReader, PdfStamper, PdfSignatureAppearance
 
 from net.sf.jasperreports.engine import JRExporterParameter
 from net.sf.jasperreports.engine import JasperExportManager
